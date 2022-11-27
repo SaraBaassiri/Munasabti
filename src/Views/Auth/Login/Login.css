@@ -1,0 +1,42 @@
+div {
+    align-content: center;
+    border: #0000 solid 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0000;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 300px;
+}
+
+#header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+    width: 100%;
+}
+
+input {
+    border: #0000 solid 2px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0000;
+    height: 30px;
+    margin: 5px;
+    width: 200px;
+}
+
+#loginButton {
+    background-color: #0000;
+    border: #0000 solid 2px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0000;
+    color: #0000;
+    cursor: pointer;
+    height: 30px;
+    margin: 5px;
+    width: 200px;
+}

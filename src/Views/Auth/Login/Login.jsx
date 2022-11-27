@@ -2,7 +2,12 @@ import React from "react";
 import "./Login.css";
 
 function Login() {
-  return <div>Login</div>;
+  return <div>
+    <h2 id="header">Login Page</h2>
+    <input type="email" id="email" placeholder="Enter email..."/>
+    <input type="password" id="password" placeholder="Enter password..."/>
+    <button id="loginButton">Login</button>
+  </div>;
 }
 
 export default Login;
