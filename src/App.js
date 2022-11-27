@@ -5,6 +5,8 @@ import Users from "./Views/Admin/Users/Users";
 import About from "./Views/Client/About Us/About";
 import Home from "./Views/Client/Home/Home";
 import NoMatch from "./Views/NoMatch/NoMatch";
+import Vendor from "./Views/Vendor/Vendor";
+import VendorDashboard from "./Views/Vendor/Dashboard/VendorDashboard";
 
 function App() {
   return (
@@ -18,6 +20,11 @@ function App() {
         <Route path="/admin">
           <Route index element={<Admin children={<Dashboard />} />} />
           <Route path="/admin/users" element={<Admin children={<Users />} />} />
+          <Route path="*" element={<NoMatch />} />
+        </Route>
+
+        <Route path="/vendor">
+          <Route index element={<Vendor children={<VendorDashboard />} />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
