@@ -3,10 +3,10 @@
     height: 100vh;
     display: flex;
     flex-direction: row;
+    overflow-x: hidden;
 }
 
-
 .InnerContainer {
-    height: 100%;
-    width: 90vw;
+    margin-top: 0;
+    width: 85vw;
 }
