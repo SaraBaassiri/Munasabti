@@ -2,14 +2,13 @@
     width: 15vw;
     height: 100vh;
     background-color: rgb(46, 46, 46);
-    text-align: center;
+    text-align: left;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
     overflow-x: hidden;
     padding-top: 20px;
-
 }
 
 .NavBarItem {
@@ -23,6 +22,7 @@
     font-size: 20px;
     color: rgb(137, 137, 231);
     display: block;
+    margin-left: 2%;
 }
 
 .NavBarItem a:hover {
