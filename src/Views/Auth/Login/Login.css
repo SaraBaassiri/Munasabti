@@ -1,4 +1,4 @@
-div {
+.LoginContainer {
     align-content: center;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@ div {
     width: 100%;
 }
 
-input {
+.LoginContainer input {
     border: 1.5px solid #000;
     border-radius: 10px;
     box-shadow: 0 0 10px #0000;

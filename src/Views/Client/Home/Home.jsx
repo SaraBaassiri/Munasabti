@@ -1,4 +1,16 @@
 import React from "react";
-export default function Home(){
-    return <div>Hello</div>
+import { auth } from "../../../firebase";
+
+export default function Home() {
+  return (
+    <div>
+      home
+      {auth.currentUser && (
+        <>
+          <h1>{auth.currentUser.email}</h1>
+          <button onClick={() => auth.signOut()}>Sign Out</button>
+        </>
+      )}
+    </div>
+  );
 }

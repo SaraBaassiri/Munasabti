@@ -1,0 +1,11 @@
+.NavBar {
+    width: 10vw;
+    height: 100vh;
+    background-color: #000;
+    text-align: center;
+}
+
+.NavBarItem {
+    display: flex;
+    flex-direction: column;
+}
