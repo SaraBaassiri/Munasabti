@@ -1,11 +1,8 @@
 div {
     align-content: center;
-    border: #0000 solid 1px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #0000;
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 350px;
     justify-content: center;
     margin: 0 auto;
     width: 300px;
@@ -21,22 +18,27 @@ div {
 }
 
 input {
-    border: #0000 solid 2px;
-    border-radius: 5px;
+    border: 1.5px solid #000;
+    border-radius: 10px;
     box-shadow: 0 0 10px #0000;
     height: 30px;
     margin: 5px;
     width: 200px;
+    padding: 5px;
+    align-self: center;
+    padding-inline: 15px;
 }
 
 #loginButton {
-    background-color: #0000;
-    border: #0000 solid 2px;
-    border-radius: 5px;
+    background-color: #000;
+    border: 2px solid #000;
+    border-radius: 20px;
     box-shadow: 0 0 10px #0000;
-    color: #0000;
+    color: #fff;
     cursor: pointer;
-    height: 30px;
+    height: 35px;
     margin: 5px;
-    width: 200px;
+    width: 90px;
+    align-self: center;
+    padding-block: 5px;
 }
