@@ -5,15 +5,18 @@
 
 .titleDash {
     margin-top: 0;
+    margin-bottom: 2%;
     padding: 15px 0 0 0;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 500;
     color: #434242;
 }
 
 .topBar {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.694);
     margin-inline: 3%;
+    width: min-content;
+    margin-bottom: 2%;
 }
 
 .firstRow {
@@ -24,7 +27,7 @@
 }
 
 .firstRowItem {
-    border: 0.3px solid black;
+    border: 0.3px solid rgba(0, 0, 0, 0.073);
     width: 30%;
     height: 130px;
     margin: 10px;
@@ -33,4 +36,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow:  rgba(0, 0, 0, 0.094) 3px 3px 3px;
+}
+
+h1 {
+    font-weight: 500;
 }

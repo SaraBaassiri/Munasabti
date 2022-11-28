@@ -1,7 +1,7 @@
 .NavBar {
     width: 15vw;
     height: 100vh;
-    background-color: #222222;
+    background-color: #3b3b3b;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -26,20 +26,20 @@
 }
 
 .NavBarItem a:hover {
-    color:#434242;
+    color:#3b3b3b;
     border: 0px solid #0000;
     border-radius: 10px;
-    background-color: #dcd2c7;
+    background-color: #1cd2c3;
     transition: 0.6s;
 }
 
 .mainNavTitle {
     color: #F5EDDC;
     margin-left: 2%;
-    padding: 0 16px;
+    padding: 0 17px;
     font-weight: 500;
     margin-top: 5;
-    font-size: 2rem; 
+    font-size: 1.5rem; 
 }
 
 .InnerTitle {
@@ -48,6 +48,7 @@
     margin-left: 2%;
     padding: 6px 8px 6px 16px;
     font-weight: 500;
+    border-bottom: 1px solid #F5EDDC;
 }
 
 
@@ -68,5 +69,6 @@
 }
 
 .bottomLogout p:hover {
-    color:#8B7E74;
+    color: #1cd2c3;
+    transition: 0.8s;
 }

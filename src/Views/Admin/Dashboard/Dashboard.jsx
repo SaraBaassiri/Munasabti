@@ -9,29 +9,19 @@ function Dashboard() {
   const [events, setEvents] = React.useState(0);
 
   React.useEffect(() => {
-    db.collection("Users")
-      .get()
-      .then((doc) => {
-        setUsers(doc.size);
-      });
+    (async () => {
+      const users = await db.collection("Users").get();
+      setUsers(users.size);
 
-    db.collection("Vendors")
-      .get()
-      .then((doc) => {
-        setVendors(doc.size);
-      });
+      const vendors = await db.collection("vendors").get();
+      setVendors(vendors.size);
 
-    db.collection("Reviews")
-      .get()
-      .then((doc) => {
-        setReviews(doc.size);
-      });
+      const reviews = await db.collection("reviews").get();
+      setReviews(reviews.size);
 
-    db.collection("Events")
-      .get()
-      .then((doc) => {
-        setEvents(doc.size);
-      });
+      const events = await db.collection("events").get();
+      setEvents(events.size);
+    })();
   }, []);
 
   return (
@@ -41,19 +31,19 @@ function Dashboard() {
       </div>
       <div className="firstRow">
         <div className="firstRowItem">
-          <h2>Users</h2>
+          <h3>Users</h3>
           <p>{users}</p>
         </div>
         <div className="firstRowItem">
-          <h2>Vendors</h2>
+          <h3>Vendors</h3>
           <p>{vendors}</p>
         </div>
         <div className="firstRowItem">
-          <h2>Reviews</h2>
+          <h3>Reviews</h3>
           <p>{reviews}</p>
         </div>
         <div className="firstRowItem">
-          <h2>Events</h2>
+          <h3>Events</h3>
           <p>{events}</p>
         </div>
       </div>
