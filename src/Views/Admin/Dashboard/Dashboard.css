@@ -24,14 +24,13 @@
 }
 
 .firstRowItem {
-    border: 1px solid black;
+    border: 0.3px solid black;
     width: 30%;
-    height: 100px;
+    height: 130px;
     margin: 10px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }

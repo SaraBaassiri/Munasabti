@@ -30,6 +30,7 @@
     border: 0px solid #0000;
     border-radius: 10px;
     background-color: #dcd2c7;
+    transition: 0.6s;
 }
 
 .mainNavTitle {
