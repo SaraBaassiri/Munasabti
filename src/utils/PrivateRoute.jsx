@@ -9,23 +9,25 @@ function PrivateRoute({ children }) {
   const [admin, setIsAdmin] = React.useState(true);
   const dispatch = useDispatch();
 
-  dispatch(setTrue());
-  auth.onAuthStateChanged((user) => {
-    if (auth.currentUser) {
-      db.collection("Users")
-        .doc(auth.currentUser.uid)
-        .get()
-        .then((doc) => {
-          if (!doc.data().isAdmin) {
-            setIsAdmin(false);
-            setLoading(false);
-          } else {
-            setLoading(false);
-          }
-        });
-    }
-  });
-  dispatch(setFalse());
+  React.useEffect(() => {
+    dispatch(setTrue());
+    auth.onAuthStateChanged((user) => {
+      if (auth.currentUser) {
+        db.collection("Users")
+          .doc(auth.currentUser.uid)
+          .get()
+          .then((doc) => {
+            if (!doc.data().isAdmin) {
+              setIsAdmin(false);
+              setLoading(false);
+            } else {
+              setLoading(false);
+            }
+          });
+      }
+    });
+    dispatch(setFalse());
+  }, []);
 
   if (!loading) {
     return !admin ? <Navigate to="/" /> : <Outlet />;
