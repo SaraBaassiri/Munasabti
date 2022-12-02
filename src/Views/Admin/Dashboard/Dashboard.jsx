@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dashboard.css";
-import { auth, db } from "../../../firebase";
+import { db } from "../../../firebase";
 
 function Dashboard() {
   const [users, setUsers] = React.useState(0);
