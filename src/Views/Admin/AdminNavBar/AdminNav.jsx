@@ -21,7 +21,7 @@ function AdminNav() {
           <a href="/admin/vendors">
             <BiStoreAlt /> Vendors
           </a>
-          <a href="/admin/vendors">
+          <a href="/admin/events">
             <BiStoreAlt /> Events
           </a>
           <a href="/admin/reviews">

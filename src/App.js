@@ -20,6 +20,9 @@ import Register from "./Views/Auth/Register/Register";
 import Login from "./Views/Auth/Login/Login";
 import { PrivateRoute } from "./utils/PrivateRoute";
 import Loading from "./Components/Loading";
+import VendorAdmin from "./Views/Admin/Vendors/VendorsAdmin";
+import Reviews from "./Views/Admin/Reviews/Reviews";
+import Events from "./Views/Admin/Events/Events";
 
 export default function App() {
   const loading = useSelector((state) => state.loading.value);
@@ -69,12 +72,11 @@ export default function App() {
 
               {/* Admin Path */}
               <Route path="/admin" exact element={<Admin children={<PrivateRoute />} />} >
-                <Route index element={
-                  <Dashboard />
-                } />
-                <Route path="/admin/users" element={
-                  <Users />
-                } />
+                <Route index element={<Dashboard />} />
+                <Route path="/admin/users" element={<Users />} />
+                <Route path="/admin/vendors" element={<VendorAdmin />} />
+                <Route path="/admin/events" element={<Events />} />
+                <Route path="/admin/reviews" element={<Reviews />} />
               </Route>
 
               <Route path="/vendor">

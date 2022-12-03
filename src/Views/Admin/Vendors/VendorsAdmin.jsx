@@ -1,7 +1,7 @@
 import React from "react";
-import { auth, db } from "../../../firebase";
+import { db } from "../../../firebase";
 
-function Users() {
+function VendorAdmin() {
   const [items, setItems] = React.useState([]);
 
   React.useEffect(() => {
@@ -12,7 +12,7 @@ function Users() {
     setItems([]);
     await db
       .collection("Users")
-      .where("isVendor", "==", false)
+      .where("isVendor", "==", true)
       .get()
       .then((snapshot) => {
         if (!snapshot.empty) {
@@ -27,11 +27,11 @@ function Users() {
   };
 
   return (
-    <div className="AdminUsers">
-      <div className="topBar">
-        <h1 className="titleUsers">Users</h1>
+    <div className="AdminVendor">
+      <div className="TopBarVendor">
+        <h1 className="titleVendor">Vendors</h1>
       </div>
-      <table className="UsersTable">
+      <table className="VendorTable">
         <tbody>
           <tr>
             <th>Name</th>
@@ -53,4 +53,4 @@ function Users() {
   );
 }
 
-export default Users;
+export default VendorAdmin;
