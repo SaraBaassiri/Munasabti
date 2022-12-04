@@ -38,7 +38,7 @@ const SideBar = ({ sidebarOpen, closeSidebar }) => {
         <h2>Feedback</h2>
         <div className="sidebar__link">
           <i className="fa fa-question"></i>
-          <a href="#">Requests</a>
+          <a href="/admin/requests">Requests</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-archive"></i>
@@ -46,7 +46,7 @@ const SideBar = ({ sidebarOpen, closeSidebar }) => {
         </div>
         <div className="sidebar__link">
           <i className="fa fa-sign-out"></i>
-          <a href="#">Policy</a>
+          <a href="/admin/terms">Edit Terms and Services</a>
         </div>
         <div className="sidebar__logout"
           onClick={() => {
