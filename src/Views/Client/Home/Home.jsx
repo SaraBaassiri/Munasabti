@@ -15,6 +15,10 @@ export default function Home() {
         <>
           <h1>{userAuthData.email}</h1>
           <h2>{auth.currentUser.email}</h2>
+          <a href="/admin">Admin</a>
+          <br />
+          <br />
+          <br />
           <button onClick={() => auth.signOut()}>Sign Out</button>
         </>
       )}

@@ -13,6 +13,7 @@ function Users() {
     await db
       .collection("Users")
       .where("isVendor", "==", false)
+      .limit(15)
       .get()
       .then((snapshot) => {
         if (!snapshot.empty) {
@@ -22,6 +23,26 @@ function Users() {
             item.push(data);
           });
           setItems(item);
+        }
+      });
+  };
+
+  //TODO: Add to table
+  const GetNext = async () => {
+    let last = items[items.length - 1];
+    await db
+      .collection("Users")
+      .where("isVendor", "==", false)
+      .startAfter(last.id)
+      .limit(15)
+      .get()
+      .then((snapshot) => {
+        if (!snapshot.empty) {
+          let item = [];
+          snapshot.forEach((doc) => {
+            let data = Object.assign({ id: doc.id }, doc.data());
+            item.push(data);
+          });
         }
       });
   };
