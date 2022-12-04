@@ -48,13 +48,14 @@ const SideBar = ({ sidebarOpen, closeSidebar }) => {
           <i className="fa fa-sign-out"></i>
           <a href="#">Policy</a>
         </div>
-        <div className="sidebar__logout">
-          <i className="fa fa-power-off"></i>
-          <p onClick={() => {
+        <div className="sidebar__logout"
+          onClick={() => {
             auth.signOut().then(() => {
               document.location.href = "/";
             });
-          }}>Log out</p>
+          }}>
+          <i className="fa fa-power-off"></i>
+          <p >Log out</p>
         </div>
       </div>
     </div>

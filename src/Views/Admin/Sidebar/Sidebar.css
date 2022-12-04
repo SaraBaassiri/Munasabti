@@ -82,6 +82,7 @@
 
 .sidebar__logout>p {
   color: #e65061;
+  cursor: pointer;
   text-transform: uppercase;
 }
 

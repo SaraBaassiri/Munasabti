@@ -18,13 +18,15 @@ import Vendor from "./Views/Vendor/Vendor";
 import VendorDashboard from "./Views/Vendor/Dashboard/VendorDashboard";
 import Register from "./Views/Auth/Register/Register";
 import Login from "./Views/Auth/Login/Login";
-import { PrivateRoute } from "./utils/PrivateRoute";
+import { AdminRoute } from "./utils/AdminRoute";
 import Loading from "./Components/Loading";
 import VendorAdmin from "./Views/Admin/Vendors/VendorsAdmin";
 import Reviews from "./Views/Admin/Reviews/Reviews";
 import Events from "./Views/Admin/Events/Events";
+import { AuthRoute } from "./utils/AuthRoute";
 
 export default function App() {
+  const [user, setUser] = React.useState(false);
   const loading = useSelector((state) => state.loading.value);
   const userAuth = useSelector((state) => state.user.isLoggedIn);
   const dispatch = useDispatch();
@@ -35,10 +37,11 @@ export default function App() {
     }
     auth.onAuthStateChanged((user) => {
       if (user) {
+        setUser(true);
+        dispatch(setLoggedIn());
         db.collection("Users").doc(user.uid).onSnapshot((doc) => {
           dispatch(setData(doc.data()));
         });
-        dispatch(setLoggedIn());
       } else {
         dispatch(setLoggedIn());
       }
@@ -61,7 +64,6 @@ export default function App() {
               <Route path="/about"
                 element={<About />} />
 
-              {/* Authentication Path */}
               {
                 !userAuth &&
                 <Route>
@@ -70,8 +72,12 @@ export default function App() {
                 </Route>
               }
 
+
               {/* Admin Path */}
-              <Route path="/admin" exact element={<Admin children={<PrivateRoute />} />} >
+              <Route path="/admin" exact
+                element={
+                  <Admin children={<AdminRoute />} />
+                }>
                 <Route index element={<Dashboard />} />
                 <Route path="/admin/users" element={<Users />} />
                 <Route path="/admin/vendors" element={<VendorAdmin />} />
@@ -79,9 +85,10 @@ export default function App() {
                 <Route path="/admin/reviews" element={<Reviews />} />
               </Route>
 
-              <Route path="/vendor">
+              <Route path="/vendor" element={<AuthRoute />}>
                 <Route index element={<Vendor children={<VendorDashboard />} />} />
               </Route>
+
               <Route path="*" element={<NoMatch />} />
             </Routes>
           </div>

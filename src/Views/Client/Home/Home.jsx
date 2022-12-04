@@ -14,6 +14,7 @@ export default function Home() {
       {auth.currentUser && (
         <>
           <h1>{userAuthData.email}</h1>
+          <h2>{auth.currentUser.email}</h2>
           <button onClick={() => auth.signOut()}>Sign Out</button>
         </>
       )}

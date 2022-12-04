@@ -4,7 +4,7 @@ import { Outlet, Navigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setTrue, setFalse } from "../Redux/reducers/loadingSlice";
 
-function PrivateRoute({ children }) {
+function AdminRoute({ children }) {
   const [loading, setLoading] = React.useState(true);
   const [admin, setIsAdmin] = React.useState(true);
   const dispatch = useDispatch();
@@ -24,6 +24,8 @@ function PrivateRoute({ children }) {
               setLoading(false);
             }
           });
+      } else {
+        document.location.href = "/auth/login";
       }
     });
     dispatch(setFalse());
@@ -34,4 +36,4 @@ function PrivateRoute({ children }) {
   }
 }
 
-export { PrivateRoute };
+export { AdminRoute };
