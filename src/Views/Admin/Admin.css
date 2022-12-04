@@ -1,12 +1,25 @@
-.adminContainer {
-    width:100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    overflow-x: hidden;
+.InnerContainer {
+    background: #f3f4f6;
+    grid-area: main;
+    overflow-y: auto;
 }
 
-.InnerContainer {
-    margin-top: 0;
-    width: 85vw;
-}
+.Admincontainer {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.6fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "sidebar nav nav nav"
+      "sidebar main main main";
+  }
+  
+  @media only screen and (max-width: 978px) {
+    .Admincontainer {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 3fr;
+      grid-template-areas:
+        "nav"
+        "main";
+    }
+  }

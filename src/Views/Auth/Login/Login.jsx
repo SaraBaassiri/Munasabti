@@ -1,19 +1,27 @@
 import React from "react";
 import "./Login.css";
 import { auth } from "../../../firebase";
+import { useDispatch } from "react-redux";
+import { setFalse, setTrue } from "../../../Redux/reducers/loadingSlice";
+import { db } from "../../../firebase";
 
 function Login() {
+  const dispatch = useDispatch();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
   const handleSubmit = () => {
-    console.log(email);
+    dispatch(setTrue());
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
+        dispatch(setFalse());
         document.location.href = "/";
       })
-      .catch((e) => alert(e.message));
+      .catch((e) => {
+        dispatch(setFalse());
+        alert(e.message);
+      });
   };
 
   return (

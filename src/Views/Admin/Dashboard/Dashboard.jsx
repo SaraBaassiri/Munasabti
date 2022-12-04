@@ -1,6 +1,12 @@
 import React from "react";
 import "./Dashboard.css";
 import { db } from "../../../firebase";
+import {
+  AiOutlineUser,
+  AiFillShop,
+  AiFillCalendar,
+  AiFillLike,
+} from "react-icons/ai";
 
 function Dashboard() {
   const [users, setUsers] = React.useState(0);
@@ -13,7 +19,10 @@ function Dashboard() {
       const users = await db.collection("Users").get();
       setUsers(users.size);
 
-      const vendors = await db.collection("vendors").get();
+      const vendors = await db
+        .collection("Users")
+        .where("isVendor", "==", true)
+        .get();
       setVendors(vendors.size);
 
       const reviews = await db.collection("reviews").get();
@@ -26,26 +35,96 @@ function Dashboard() {
 
   return (
     <div className="AdminDash">
-      <div className="topBar">
-        <h1 className="titleDash">Dashboard</h1>
-      </div>
-      <div className="firstRow">
-        <div className="firstRowItem">
-          <h3>Users</h3>
-          <p>{users}</p>
+      <div className="main__container">
+        {/* MAIN TITLE STARTS HERE */}
+
+        <div className="main__title">
+          <div className="main__greeting">
+            <h1>Hello "Add Name Later"</h1>
+            <p>Welcome to your admin dashboard</p>
+          </div>
         </div>
-        <div className="firstRowItem">
-          <h3>Vendors</h3>
-          <p>{vendors}</p>
+        <div className="main__cards">
+          <div className="card">
+            <AiOutlineUser size={42} />
+            <div className="card_inner">
+              <p className="text-primary-p">Number of Users</p>
+              <span className="font-bold text-title">{users}</span>
+            </div>
+          </div>
+
+          <div className="card">
+            <AiFillShop size={42} />
+            <div className="card_inner">
+              <p className="text-primary-p">Number of Vendors</p>
+              <span className="font-bold text-title">{vendors}</span>
+            </div>
+          </div>
+
+          <div className="card">
+            <AiFillCalendar size={42} />
+            <div className="card_inner">
+              <p className="text-primary-p">Number of Events</p>
+              <span className="font-bold text-title">{events}</span>
+            </div>
+          </div>
+
+          <div className="card">
+            <AiFillLike size={42} />
+            <div className="card_inner">
+              <p className="text-primary-p">Number of Likes</p>
+              <span className="font-bold text-title">645</span>
+            </div>
+          </div>
         </div>
-        <div className="firstRowItem">
-          <h3>Reviews</h3>
-          <p>{reviews}</p>
+        {/* MAIN CARDS ENDS HERE */}
+
+        {/* CHARTS STARTS HERE */}
+        <div className="charts">
+          <div className="charts__left">
+            <div className="charts__left__title">
+              <div>
+                <h1>Daily Reports</h1>
+                <p>Cupertino, California, USA</p>
+              </div>
+              <i class="fas fa-euro-sign"></i>
+            </div>
+            {/* <Chart />  */}
+          </div>
+
+          <div className="charts__right">
+            <div className="charts__right__title">
+              <div>
+                <h1>Stats Reports</h1>
+                <p>Cupertino, California, USA</p>
+              </div>
+              <i class="fas fa-euro-sign"></i>
+            </div>
+
+            <div className="charts__right__cards">
+              <div className="card1">
+                <h1>Income</h1>
+                <p>$75,300</p>
+              </div>
+
+              <div className="card2">
+                <h1>Sales</h1>
+                <p>$124,200</p>
+              </div>
+
+              <div className="card3">
+                <h1>Users</h1>
+                <p>3900</p>
+              </div>
+
+              <div className="card4">
+                <h1>Orders</h1>
+                <p>1881</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="firstRowItem">
-          <h3>Events</h3>
-          <p>{events}</p>
-        </div>
+        {/* CHARTS ENDS HERE */}
       </div>
     </div>
   );
