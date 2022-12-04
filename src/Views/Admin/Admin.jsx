@@ -1,5 +1,4 @@
 import React from "react";
-import AdminNav from "./AdminNavBar/AdminNav";
 import "./Admin.css";
 import Navbar from "./navbar/Navbar";
 import SideBar from "./Sidebar/Sidebar";

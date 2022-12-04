@@ -7,12 +7,15 @@ import {
   AiFillCalendar,
   AiFillLike,
 } from "react-icons/ai";
+// import { useDispatch } from "react-redux";
+// import { setFalse, setTrue } from "../../../Redux/reducers/loadingSlice";
 
 function Dashboard() {
   const [users, setUsers] = React.useState(0);
   const [vendors, setVendors] = React.useState(0);
   const [reviews, setReviews] = React.useState(0);
   const [events, setEvents] = React.useState(0);
+  // const dispatch = useDispatch();
 
   React.useEffect(() => {
     (async () => {
@@ -31,13 +34,11 @@ function Dashboard() {
       const events = await db.collection("events").get();
       setEvents(events.size);
     })();
-  }, []);
+  });
 
   return (
     <div className="AdminDash">
       <div className="main__container">
-        {/* MAIN TITLE STARTS HERE */}
-
         <div className="main__title">
           <div className="main__greeting">
             <h1>Hello "Add Name Later"</h1>
@@ -72,14 +73,12 @@ function Dashboard() {
           <div className="card">
             <AiFillLike size={42} />
             <div className="card_inner">
-              <p className="text-primary-p">Number of Likes</p>
-              <span className="font-bold text-title">645</span>
+              <p className="text-primary-p">Number of Reviews</p>
+              <span className="font-bold text-title">{reviews}</span>
             </div>
           </div>
         </div>
-        {/* MAIN CARDS ENDS HERE */}
 
-        {/* CHARTS STARTS HERE */}
         <div className="charts">
           <div className="charts__left">
             <div className="charts__left__title">
@@ -88,7 +87,6 @@ function Dashboard() {
                 <p>Cupertino, California, USA</p>
               </div>
             </div>
-            {/* <Chart />  */}
           </div>
 
           <div className="charts__right">
@@ -122,7 +120,6 @@ function Dashboard() {
             </div>
           </div>
         </div>
-        {/* CHARTS ENDS HERE */}
       </div>
     </div>
   );
