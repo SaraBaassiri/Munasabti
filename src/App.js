@@ -59,11 +59,15 @@ export default function App() {
         ) : (
           <div className="App">
             <Routes>
+
+              {/* Public Routes */}
               <Route index
                 element={<Home />} />
               <Route path="/about"
                 element={<About />} />
 
+
+              {/* Auth Routes (Only accessible when logged out)*/}
               {
                 !userAuth &&
                 <Route>
@@ -85,10 +89,13 @@ export default function App() {
                 <Route path="/admin/reviews" element={<Reviews />} />
               </Route>
 
+              {/* Vendor Routes */}
               <Route path="/vendor" element={<AuthRoute />}>
                 <Route index element={<Vendor children={<VendorDashboard />} />} />
               </Route>
 
+
+              {/* If no match is found */}
               <Route path="*" element={<NoMatch />} />
             </Routes>
           </div>
