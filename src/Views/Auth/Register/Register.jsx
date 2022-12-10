@@ -4,9 +4,11 @@ import { auth, db } from "../../../firebase";
 import { setTrue, setFalse } from "../../../Redux/reducers/loadingSlice";
 import { setData } from "../../../Redux/reducers/userSlice";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [confirmPassword, setConfirmPassword] = React.useState("");
@@ -36,7 +38,7 @@ function Register() {
             .then(() => {
               dispatch(setData(data));
               dispatch(setFalse());
-              document.location.href = "/";
+              navigate("/");
             })
             .catch((e) => {
               dispatch(setFalse());

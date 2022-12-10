@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./NoMatch.css";
 
 export default function NoMatch() {
@@ -9,7 +10,7 @@ export default function NoMatch() {
           <h1>Oops!</h1>
           <h2>404 - The Page can't be found</h2>
         </div>
-        <a href="/">Go Home</a>
+        <Link to="/">Go Home</Link>
       </div>
     </div>
   );

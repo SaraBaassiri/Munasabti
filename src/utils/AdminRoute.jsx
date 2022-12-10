@@ -12,24 +12,18 @@ function AdminRoute({ children }) {
   React.useEffect(() => {
     dispatch(setTrue());
     auth.onAuthStateChanged((user) => {
-      if (auth.currentUser) {
-        db.collection("Users")
-          .doc(auth.currentUser.uid)
-          .get()
-          .then((doc) => {
-            if (!doc.data().isAdmin) {
-              setIsAdmin(false);
-              setLoading(false);
-            } else {
-              setLoading(false);
-            }
-          });
-      } else {
-        document.location.href = "/auth/login";
-      }
+      db.collection("Users")
+        .doc(auth.currentUser.uid)
+        .get()
+        .then((doc) => {
+          if (!doc.data().isAdmin) {
+            setIsAdmin(false);
+          }
+          setLoading(false);
+        });
     });
     dispatch(setFalse());
-  }, []);
+  });
 
   if (!loading) {
     return !admin ? <Navigate to="/" /> : <Outlet />;

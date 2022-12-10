@@ -1,7 +1,9 @@
 import './Sidebar.css';
 import { auth } from '../../../firebase';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SideBar = ({ sidebarOpen, closeSidebar }) => {
+  const navigate = useNavigate();
   return (
     <div className={`sidebar ${sidebarOpen ? 'sidebar-responsive' : ''}`}>
       <div className="sidebar__nav">
@@ -16,42 +18,42 @@ const SideBar = ({ sidebarOpen, closeSidebar }) => {
       <div className="sidebar__menu">
         <div className="sidebar__link ">
           <i className="fa fa-home"></i>
-          <a href="/admin">Dashboard</a>
+          <Link to="/admin">Dashboard</Link>
         </div>
         <h2>Management</h2>
         <div className="sidebar__link">
           <i className="fa fa-user"></i>
-          <a href="/admin/users">Users Management</a>
+          <Link to="/admin/users">Users Management</Link>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-building-o"></i>
-          <a href="/admin/vendors">Vendors Management</a>
+          <Link to="/admin/vendors">Vendors Management</Link>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-user-secret"></i>
-          <a href="/admin/vendors">Admin Management</a>
+          <Link to="/admin/vendors">Admin Management</Link>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-wrench"></i>
-          <a href="/admin/events">Events</a>
+          <Link to="/admin/events">Events</Link>
         </div>
         <h2>Feedback</h2>
         <div className="sidebar__link">
           <i className="fa fa-question"></i>
-          <a href="/admin/requests">Requests</a>
+          <Link to="/admin/requests">Requests</Link>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-archive"></i>
-          <a href="/admin/reviews">Reviews and Feedback</a>
+          <Link to="/admin/reviews">Reviews and Feedback</Link>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-sign-out"></i>
-          <a href="/admin/terms">Edit Terms and Services</a>
+          <Link to="/admin/terms">Edit Terms and Services</Link>
         </div>
         <div className="sidebar__logout"
           onClick={() => {
             auth.signOut().then(() => {
-              document.location.href = "/";
+              navigate('/');
             });
           }}>
           <i className="fa fa-power-off"></i>

@@ -1,6 +1,7 @@
 import './Navbar.css';
 import React from 'react';
 import { FaBars } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ openSidebar }) => {
 
@@ -24,12 +25,12 @@ const Navbar = ({ openSidebar }) => {
         <p className="active_link">{title}</p>
       </div>
       <div className="navbar__right">
-        <a href='/'>
+        <Link to='/'>
           <i className="fa fa-home"></i>
-        </a>
-        <a href="/auth/profile">
+        </Link>
+        <Link to="/auth/profile">
           <i className="fa fa-user"></i>
-        </a>
+        </Link>
       </div>
     </div>
   );

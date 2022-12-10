@@ -4,9 +4,11 @@ import { auth } from "../../../firebase";
 import { useDispatch } from "react-redux";
 import { setFalse, setTrue } from "../../../Redux/reducers/loadingSlice";
 import { db } from "../../../firebase";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
@@ -16,7 +18,7 @@ function Login() {
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
         dispatch(setFalse());
-        document.location.href = "/";
+        navigate("/");
       })
       .catch((e) => {
         dispatch(setFalse());

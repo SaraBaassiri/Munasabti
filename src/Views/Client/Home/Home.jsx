@@ -1,6 +1,7 @@
 import React from "react";
 import { auth } from "../../../firebase";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const userAuthData = useSelector((state) => state.user.data);
@@ -15,7 +16,7 @@ export default function Home() {
         <>
           <h1>{userAuthData.email}</h1>
           <h2>{auth.currentUser.email}</h2>
-          <a href="/admin">Admin</a>
+          <Link to="/admin">Admin</Link>
           <br />
           <br />
           <br />
