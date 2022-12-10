@@ -62,7 +62,7 @@
   border: 0px solid #0000;
   border-radius: 10px;
   background-color: #3a827c;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .sidebar__link>i {

@@ -20,15 +20,15 @@ main {
   }
   
   .main__greeting > h1 {
-    font-size: 24px;
-    color: #2e4a66;
-    margin-bottom: 5px;
+    font-size: 25px;
+    color: #3a827c;
+    /* margin-bottom: 3px; */
   }
   
   .main__greeting > p {
     font-size: 14px;
-    font-weight: 700;
-    color: #a5aaad;
+    font-weight: 600;
+    color: #90999e;
   }
   
   .main__cards {
@@ -46,7 +46,7 @@ main {
     padding: 25px;
     border-radius: 5px;
     background: #ffffff;
-    box-shadow: 5px 5px 13px #d5d4d4, -5px -5px 13px #ffffff;
+    box-shadow: 7px 5px 13px #d5d4d4, -5px -5px 13px #ffffff;
   }
   
   .card_inner {
@@ -56,7 +56,7 @@ main {
   }
   
   .card_inner > span {
-    font-size: 25px;
+    font-size: 20px;
   }
   
   .charts {
@@ -80,8 +80,8 @@ main {
   }
   
   .charts__left__title > div > h1 {
-    font-size: 24px;
-    color: #2e4a66;
+    font-size: 22px;
+    color: #3a827c;
     margin-bottom: 5px;
   }
   
@@ -116,8 +116,8 @@ main {
   }
   
   .charts__right__title > div > h1 {
-    font-size: 24px;
-    color: #2e4a66;
+    font-size: 22px;
+    color: #3a827c;
     margin-bottom: 5px;
   }
   
@@ -146,39 +146,79 @@ main {
   }
   
   .card1 {
-    background: #d1ecf1;
-    color: #35a4ba;
+    background: #a8c5cb;
+    color: #16434d;
     text-align: center;
     padding: 25px;
     border-radius: 5px;
     font-size: 14px;
   }
-  
+
+  .card1 > h1 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .card1 > p {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
   .card2 {
-    background: #d2f9ee;
-    color: #38e1b0;
+    background: #c7e1da;
+    color: #184a3d;
     text-align: center;
     padding: 25px;
     border-radius: 5px;
     font-size: 14px;
+  }
+
+  .card2 > h1 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .card2 > p {
+    font-size: 15px;
+    font-weight: 500;
   }
   
   .card3 {
-    background: #d6d8d9;
-    color: #3a3e41;
+    background: #bbbcbd;
+    color: #2e3134;
     text-align: center;
     padding: 25px;
     border-radius: 5px;
     font-size: 14px;
   }
+
+  .card3 > h1 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .card3 > p {
+    font-size: 15px;
+    font-weight: 500;
+  }
   
   .card4 {
-    background: #fddcdf;
-    color: #f65a6f;
+    background: #a4cdca;
+    color: #1e3b39;
     text-align: center;
     padding: 25px;
     border-radius: 5px;
     font-size: 14px;
+  }
+
+  .card4 > h1 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .card4 > p {
+    font-size: 15px;
+    font-weight: 500;
   }
   
   @media only screen and (max-width: 855px) {
