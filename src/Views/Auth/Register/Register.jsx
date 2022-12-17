@@ -14,6 +14,9 @@ function Register() {
   const [confirmPassword, setConfirmPassword] = React.useState("");
   const [name, setName] = React.useState("");
 
+  React.useEffect(() => {
+    document.title = "Munasabti | Register";
+  }, []);
   const handleRegister = (e) => {
     e.preventDefault();
     dispatch(setTrue());

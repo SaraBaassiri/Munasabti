@@ -2,8 +2,11 @@ import React from "react";
 import "./Admin.css";
 import Navbar from "./navbar/Navbar";
 import SideBar from "./Sidebar/Sidebar";
+import { auth } from "../../firebase";
+import { useNavigate } from "react-router-dom";
 
 function Admin(props) {
+  const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   const openSidebar = (incoming) => {
@@ -15,8 +18,14 @@ function Admin(props) {
   };
 
   React.useEffect(() => {
-    document.title = "Munasabti - Admin";
-  }, []);
+    document.title = "Munasabti | Admin";
+    // if not user redirect to login
+    auth.onAuthStateChanged((user) => {
+      if (!user) {
+        navigate("/auth/login");
+      }
+    });
+  });
 
   return (
     <div className="Admincontainer">

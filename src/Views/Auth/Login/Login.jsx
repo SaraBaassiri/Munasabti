@@ -3,7 +3,6 @@ import "./Login.css";
 import { auth } from "../../../firebase";
 import { useDispatch } from "react-redux";
 import { setFalse, setTrue } from "../../../Redux/reducers/loadingSlice";
-import { db } from "../../../firebase";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
@@ -11,6 +10,10 @@ function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+
+  React.useEffect(() => {
+    document.title = "Munasabti | Login";
+  });
 
   const handleSubmit = () => {
     dispatch(setTrue());
