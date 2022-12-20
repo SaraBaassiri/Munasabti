@@ -34,7 +34,7 @@
 
 .PublicNav__links a {
     color: #0C3651;
-    font-size: 12px;
+    font-size: 0.8rem;
     font-weight: normal;
     margin-right: 40px;
     text-decoration: none;
@@ -84,7 +84,7 @@
 
 .PublicNav__Logins a {
     color: #E8745D;
-    font-size: 11px;
+    font-size: 0.7rem;
     font-weight: normal;
     margin-right: 40px;
     text-decoration: none;
