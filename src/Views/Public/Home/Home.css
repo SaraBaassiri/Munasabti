@@ -2,7 +2,7 @@
     text-align: start;
     font-size: 20px;
     margin-top: 20px;
-    height: 95vh;
+    height: 100vh;
 }   
 
 .Hero-image {
@@ -30,7 +30,7 @@
 }
 
 .hero-text h1 {
-    font-size: 55px;
+    font-size: 50px;
     font-weight: 500;
     margin-bottom: 0;
 }
