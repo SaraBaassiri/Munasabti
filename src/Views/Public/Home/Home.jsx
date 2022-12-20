@@ -1,12 +1,10 @@
 import React from "react";
-// import { auth } from "../../../firebase";
-// import { useSelector } from "react-redux";
-// import { Link } from "react-router-dom";
 import "./Home.css";
 
-export default function Home() {
-  // const userAuthData = useSelector((state) => state.user.data);
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
+export default function Home() {
   React.useEffect(() => {
     document.title = "Munasabti | Home";
   });
@@ -23,26 +21,41 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
+
       <div className="FindProv">
         <div className="FindProv-text">
           <h1>Find Your Provider</h1>
           <p>
             Browse our unique selection of venues and value providers near you
           </p>
-          <input type="text" placeholder="Search for vendors..."/>
+          <input type="text" placeholder="Search for vendors..." />
+        </div>
+
+        <div className="HomeSwiper">
+          <Swiper
+            slidesPerView={3}
+            initialSlide={1}
+            spaceBetween={20}
+            centeredSlides={true}
+            slidesPerGroup={1}
+            // loopFillGroupWithBlank={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+          >
+            <SwiperSlide>
+              <div className="InnerSwiper"></div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="InnerSwiper"></div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="InnerSwiper"></div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
-
-      {/* {auth.currentUser && (
-        <>
-          <h2>{userAuthData.email}</h2>
-          <h2>{auth.currentUser.email}</h2>
-          <Link to="/admin">Admin</Link>
-          <br />
-          <button onClick={() => auth.signOut()}>Sign Out</button>
-        </>
-      )} */}
     </div>
   );
 }
