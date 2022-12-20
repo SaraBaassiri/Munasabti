@@ -44,7 +44,7 @@
 .UsersTable th {
     padding: 12px;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #434242;
 }
@@ -52,7 +52,7 @@
 .UsersTable td {
     padding: 12px;
     text-align: left;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 0.8rem;
+    font-weight: normal;
     color: #434242;
 }
