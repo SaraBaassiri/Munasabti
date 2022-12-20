@@ -1,0 +1,9 @@
+.PublicNav {
+    background-color: #fff;
+    border-bottom: 1px solid #e1e1e1;
+    height: 130px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}

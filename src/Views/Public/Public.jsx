@@ -1,10 +1,17 @@
 import React from "react";
+import PublicNav from "./PublicNav/PublicNav";
 
 function Public({ children }) {
   return (
     <div>
-      Navbar goes here
-      {children}
+      <PublicNav />
+      <div
+        style={{
+          marginTop: "170px",
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 }
