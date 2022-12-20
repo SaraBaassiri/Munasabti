@@ -23,6 +23,16 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
+      <div className="FindProv">
+        <div className="FindProv-text">
+          <h1>Find Your Provider</h1>
+          <p>
+            Browse our unique selection of venues and value providers near you
+          </p>
+          <input type="text" placeholder="Search for vendors..."/>
+        </div>
+      </div>
 
       {/* {auth.currentUser && (
         <>
