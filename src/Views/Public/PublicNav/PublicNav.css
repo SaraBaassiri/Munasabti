@@ -46,7 +46,7 @@
     color: #E8745D;
 }
 
-.PublicNav__Logins {
+/* .PublicNav__Logins {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -67,4 +67,16 @@
 
 #vendor {
     color: #0C3651;
+} */
+
+.PublicNav__Logins {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    justify-content: center;
+}
+
+.PublicNav__Logins:nth-child(1) {
+    display: flex;
+    flex-direction: row;
 }

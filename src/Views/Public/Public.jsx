@@ -7,7 +7,7 @@ function Public({ children }) {
       <PublicNav />
       <div
         style={{
-          marginTop: "170px",
+          marginTop: "120px",
         }}
       >
         {children}

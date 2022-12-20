@@ -14,9 +14,15 @@ export default function PublicNav() {
         <a href="/Inspirations">Inspirations</a>
       </div>
       <div className="PublicNav__Logins">
-        <a href="/Vendor" id="vendor">Are you a vendor?</a>
-        <a href="/Login">Login</a>
-        <a href="/JoinNow">Join Now</a>
+        <div>
+          <a href="/Vendor" id="vendor">
+            Are you a vendor?
+          </a>
+        </div>
+        <div>
+          <a href="/Login">Login</a>
+          <a href="/JoinNow">Join Now</a>
+        </div>
       </div>
     </div>
   );

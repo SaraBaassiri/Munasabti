@@ -1,10 +1,11 @@
 import React from "react";
-import { auth } from "../../../firebase";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+// import { auth } from "../../../firebase";
+// import { useSelector } from "react-redux";
+// import { Link } from "react-router-dom";
+import "./Home.css";
 
 export default function Home() {
-  const userAuthData = useSelector((state) => state.user.data);
+  // const userAuthData = useSelector((state) => state.user.data);
 
   React.useEffect(() => {
     document.title = "Munasabti | Home";
@@ -12,7 +13,15 @@ export default function Home() {
 
   return (
     <div>
-      {auth.currentUser && (
+      <div className="Hero">
+        <div className="Hero-image">
+          <div className="hero-text">
+            <h1>something</h1>
+          </div>
+        </div>
+      </div>
+
+      {/* {auth.currentUser && (
         <>
           <h2>{userAuthData.email}</h2>
           <h2>{auth.currentUser.email}</h2>
@@ -20,7 +29,7 @@ export default function Home() {
           <br />
           <button onClick={() => auth.signOut()}>Sign Out</button>
         </>
-      )}
+      )} */}
     </div>
   );
 }
