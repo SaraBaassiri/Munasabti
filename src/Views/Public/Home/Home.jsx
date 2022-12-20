@@ -16,7 +16,10 @@ export default function Home() {
       <div className="Hero">
         <div className="Hero-image">
           <div className="hero-text">
-            <h1>something</h1>
+            <h1>
+              Find exactly what you’re looking for or check out what’s out
+              there! Your go-to platform for a memorable event experience.
+            </h1>
           </div>
         </div>
       </div>
