@@ -4,7 +4,16 @@ import "./PublicNav.css";
 export default function PublicNav() {
   return (
     <div className="PublicNav">
-      <h1>PublicNav</h1>
+      <div className="PublicNav__logo">
+        <img src="/images/Logo.jpg" alt="logo" />
+      </div>
+      <div className="PublicNav__links">
+        <a href="/">Home</a>
+        <a href="/Vendors">Vendors</a>
+        <a href="/PlanningTools">Planning Tools</a>
+        <a href="/Inspirations">Inspirations</a>
+      </div>
+      
     </div>
   );
 }

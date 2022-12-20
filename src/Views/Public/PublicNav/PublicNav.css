@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/butler');
+
 .PublicNav {
     background-color: #fff;
     border-bottom: 1px solid #e1e1e1;
@@ -6,4 +8,34 @@
     top: 0;
     width: 100%;
     z-index: 100;
+    display: flex;
+}
+
+.PublicNav__logo {
+    height: 100%;
+    width: 100%;
+}
+
+.PublicNav__logo img {
+    height: 130px;
+    width: 180px;
+    margin-left: 40px;
+}
+
+.PublicNav__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.PublicNav__links a {
+    color: #0C3651;
+    font-size: 18px;
+    font-weight: normal;
+    margin-right: 40px;
+    text-decoration: none;
+    font-family: 'Butler', sans-serif;
 }
