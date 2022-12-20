@@ -1,3 +1,7 @@
+/* font import */
+@import url('https://fonts.cdnfonts.com/css/butler');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
 body {
   height: 100%;
   margin: 0;
