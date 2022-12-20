@@ -7,7 +7,6 @@ export const loadingSlice = createSlice({
     },
     reducers: {
         setFalse: (state) => {
-
             state.value = false;
         },
         setTrue: (state) => {

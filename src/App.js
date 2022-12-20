@@ -48,6 +48,8 @@ export default function App() {
           dispatch(setData(doc.data()));
         });
       }
+
+      //Stop the loading since we dont need it anymore
       dispatch(setFalse());
     });
   }, [
@@ -91,9 +93,9 @@ export default function App() {
                 }>
                 <Route index element={<Admin children={<Dashboard />} />} />
                 <Route path="/admin/users" element={<Admin children={<Users />} />} />
-                <Route path="/admin/vendors" element={<VendorAdmin />} />
-                <Route path="/admin/events" element={<Events />} />
-                <Route path="/admin/reviews" element={<Reviews />} />
+                <Route path="/admin/vendors" element={<Admin children={<VendorAdmin />} />} />
+                <Route path="/admin/events" element={<Admin children={<Events />} />} />
+                <Route path="/admin/reviews" element={<Admin children={<Reviews />} />} />
               </Route>
 
               {/* Vendor Routes */}

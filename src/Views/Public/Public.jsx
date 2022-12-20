@@ -3,7 +3,7 @@ import React from "react";
 function Public({ children }) {
   return (
     <div>
-      Penis
+      Navbar goes here
       {children}
     </div>
   );
