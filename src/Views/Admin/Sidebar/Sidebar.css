@@ -17,7 +17,7 @@
 }
 
 .sidebar__title{
-  font-size: 1.7rem;
+  font-size: 2rem;
   margin-left: 10px;
   color: #F5EDDC;
   border-bottom: 1px solid #7a7c81;
@@ -30,14 +30,15 @@
 }
 
 .sidebar__nav>i {
-  font-size: 28px;
+  font-size: 35px;
   display: none;
   margin-right: 15px;
+  padding: 15px;
 }
 
 .sidebar__menu>h2 {
   color: #3a827c;
-  font-size: 16px;
+  font-size: 25px;
   margin-top: 15px;
   margin-bottom: 5px;
   padding: 0 10px;
@@ -54,7 +55,7 @@
 .sidebar__link > a {
   text-decoration: none;
   color: #F5EDDC;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .sidebar__link:hover {
@@ -85,12 +86,12 @@
   color: #e65061;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .sidebar__logout>i {
   margin-right: 10px;
-  font-size: 15px;
+  font-size: 19px;
 }
 
 .sidebar-responsive {

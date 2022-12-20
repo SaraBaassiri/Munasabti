@@ -1,5 +1,6 @@
 import React from "react";
 import { auth, db } from "../../../firebase";
+import "./Users.css";
 
 function Users() {
   const [items, setItems] = React.useState([]);
@@ -49,9 +50,9 @@ function Users() {
 
   return (
     <div className="AdminUsers">
-      <div className="topBar">
+      {/* <div className="topBar">
         <h1 className="titleUsers">Users</h1>
-      </div>
+      </div> */}
       <table className="UsersTable">
         <tbody>
           <tr>

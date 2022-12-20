@@ -1,5 +1,6 @@
 import React from "react";
 import { db } from "../../../firebase";
+import "./Vendors.css";
 
 function VendorAdmin() {
   const [items, setItems] = React.useState([]);
@@ -28,9 +29,9 @@ function VendorAdmin() {
 
   return (
     <div className="AdminVendor">
-      <div className="TopBarVendor">
+      {/* <div className="TopBarVendor">
         <h1 className="titleVendor">Vendors</h1>
-      </div>
+      </div> */}
       <table className="VendorTable">
         <tbody>
           <tr>
