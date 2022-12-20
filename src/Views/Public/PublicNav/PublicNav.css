@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/butler');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
 
 .PublicNav {
     background-color: #fff;
@@ -33,9 +34,37 @@
 
 .PublicNav__links a {
     color: #0C3651;
-    font-size: 18px;
+    font-size: 13px;
     font-weight: normal;
     margin-right: 40px;
     text-decoration: none;
     font-family: 'Butler', sans-serif;
+    text-transform: uppercase;
+}
+
+.PublicNav__links a:hover {
+    color: #E8745D;
+}
+
+.PublicNav__Logins {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    max-width: 20%;
+}
+
+.PublicNav__Logins a {
+    color: #E8745D;
+    font-size: 11px;
+    font-weight: normal;
+    margin-right: 40px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+#vendor {
+    color: #0C3651;
 }
