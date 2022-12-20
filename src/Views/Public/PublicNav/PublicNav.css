@@ -19,22 +19,25 @@
 
 .PublicNav__logo img {
     height:100%;
-    max-width: 20%;
+    max-width: 22%;
     margin-left: 40px;
 }
 
 .PublicNav__links {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
     max-width: 100%;
+    align-items: center;
+    position: absolute;
+    left: 35%;
 }
 
 .PublicNav__links a {
     color: #0C3651;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: normal;
     margin-right: 40px;
     text-decoration: none;
@@ -64,16 +67,32 @@
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 }
+*/
 
 #vendor {
     color: #0C3651;
-} */
+} 
 
 .PublicNav__Logins {
     display: flex;
     flex-direction: column;
     max-width: 30%;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    
+}
+
+.PublicNav__Logins a {
+    color: #E8745D;
+    font-size: 11px;
+    font-weight: normal;
+    margin-right: 40px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 
 .PublicNav__Logins:nth-child(1) {
