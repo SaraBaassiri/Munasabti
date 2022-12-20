@@ -2,7 +2,7 @@
     text-align: start;
     font-size: 20px;
     margin-top: 20px;
-    height: 890px;
+    height: 95vh;
 }   
 
 .Hero-image {
@@ -11,7 +11,7 @@
      rgba(0, 0, 0, 0.2)), 
     url("/public/images/HeroBg.png");
      
-    height: 80%;
+    height: 90%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,8 +23,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80%;
-    max-width: 1015px;
-    margin-left: 10%;
+    height: 90%;
+    max-width: 1000px;
+    margin-left: 5%;
     color: white;
-  }
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
