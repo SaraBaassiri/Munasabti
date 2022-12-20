@@ -13,7 +13,6 @@ export default function PublicNav() {
         <a href="/PlanningTools">Planning Tools</a>
         <a href="/Inspirations">Inspirations</a>
       </div>
-      
     </div>
   );
 }
