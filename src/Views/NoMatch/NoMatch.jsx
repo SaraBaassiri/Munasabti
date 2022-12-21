@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "./NoMatch.css";
 
 export default function NoMatch() {
+  React.useEffect(() => {
+    document.title = "Munasabti | 404";
+  }, []);
+
   return (
     <div id="notfound">
       <div class="notfound">
