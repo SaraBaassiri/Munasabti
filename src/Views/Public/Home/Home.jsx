@@ -2,12 +2,39 @@ import React from "react";
 import "./Home.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Navigation } from "swiper";
 import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
 
 export default function Home() {
   React.useEffect(() => {
     document.title = "Munasabti | Home";
   });
+
+  const tempData = [
+    {
+      id: 1,
+      name: "Venue 1",
+      image: "/images/SliderImageTemp.png",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    },
+    {
+      id: 2,
+      name: "Venue 2",
+      image: "/images/SliderImageTemp.png",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    },
+    {
+      id: 3,
+      name: "Venue 3",
+      image: "/images/SliderImageTemp.png",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    },
+  ];
 
   return (
     <div>
@@ -33,26 +60,35 @@ export default function Home() {
 
         <div className="HomeSwiper">
           <Swiper
-            slidesPerView={3}
             initialSlide={1}
-            spaceBetween={20}
+            effect={"coverflow"}
             centeredSlides={true}
-            slidesPerGroup={1}
-            // loopFillGroupWithBlank={true}
-            pagination={{
-              clickable: true,
-            }}
+            slidesPerView={"auto"}
+            spaceBetween={450}
+            className="mySwiper"
             navigation={true}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 400,
+              modifier: 1,
+              slideShadows: false,
+            }}
+            modules={[EffectCoverflow, Navigation]}
           >
-            <SwiperSlide>
-              <div className="InnerSwiper"></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="InnerSwiper"></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="InnerSwiper"></div>
-            </SwiperSlide>
+            {tempData.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div className="HomeSwiper-Container">
+                  <div className="HomeSwiper-slide-text">
+                    <h1>{item.name}</h1>
+                    <p>{item.description}</p>
+                  </div>
+                  <div className="HomeSwiper-slide-image">
+                    <img src={item.image} alt={item.name} />
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
