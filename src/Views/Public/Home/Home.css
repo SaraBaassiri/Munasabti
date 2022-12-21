@@ -296,11 +296,9 @@
 }
 
 .imagesOne img {
-    width: 95%;
-    height: 95%;
-    /* margin-left: 3%;
-    margin-right: 3%; */
-    margin-bottom: 5%; 
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5%;
 }
 
 .imagesTwo {
@@ -312,11 +310,9 @@
 }
 
 .imagesTwo img {
-    width: 95%;
-    height: 95%;
-    /* margin-left: 3%;
-    margin-right: 3%; */
-    margin-bottom: 5%; 
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5%;
 }
 
 .imagesThree {
@@ -328,11 +324,9 @@
 }
 
 .imagesThree img {
-    width: 95%;
-    height: 95%;
-    /* margin-left: 3%;
-    margin-right: 3%; */
-    margin-bottom: 5%; 
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5%;
 }
 
 .moodboardButton {
