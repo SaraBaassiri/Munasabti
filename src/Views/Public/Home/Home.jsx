@@ -219,7 +219,20 @@ export default function Home() {
           get you inspired!
         </p>
         <div className="moodboardImages">
-          
+          <div className="rows">
+            <div className="imagesOne">
+              <img src="/images/MB1.png" alt="" />
+              <img src="/images/MB2.png" alt="" />
+            </div>
+            <div className="imagesTwo">
+              <img src="/images/MB3.png" alt="" />
+              <img src="/images/MB4.png" alt="" />
+            </div>
+            <div className="imagesThree">
+              <img src="/images/MB5.png" alt="" />
+              <img src="/images/MB6.png" alt="" />  
+            </div>
+          </div>
         </div>
       </div>
     </div>
