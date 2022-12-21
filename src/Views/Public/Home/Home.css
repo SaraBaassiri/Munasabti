@@ -36,7 +36,7 @@
 }
 
 .FindProv {
-  height: 100vh;
+    max-height: 74vh;
   margin-bottom: 20%;
 }
 
