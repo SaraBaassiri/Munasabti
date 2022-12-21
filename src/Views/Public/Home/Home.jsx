@@ -1,11 +1,15 @@
 import React from "react";
 import "./Home.css";
 
+//Swiper Imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
+
+//Material Ui imports
+import { Grid } from "@mui/material";
 
 export default function Home() {
   React.useEffect(() => {
@@ -64,7 +68,7 @@ export default function Home() {
             effect={"coverflow"}
             centeredSlides={true}
             slidesPerView={"auto"}
-            spaceBetween={450}
+            spaceBetween={420}
             className="mySwiper"
             navigation={true}
             coverflowEffect={{
@@ -90,6 +94,23 @@ export default function Home() {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+      </div>
+      <div className="HomeBanner" />
+      <div className="ManageEvents">
+        <h1>Manage your event</h1>
+        <div className="ManageItems">
+          <Grid
+            container
+            spacing={{ xs: 2, md: 3 }}
+            columns={{ xs: 4, sm: 8, md: 12 }}
+          >
+            {Array.from(Array(6)).map((_, index) => (
+              <Grid item xs={2} sm={4} md={4} key={index}>
+                <div>xs=2</div>
+              </Grid>
+            ))}
+          </Grid>
         </div>
       </div>
     </div>
