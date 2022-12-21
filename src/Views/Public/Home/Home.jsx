@@ -216,7 +216,9 @@ export default function Home() {
           An intricately curated archive of our favorite events and sceneries to
           get you inspired!
         </p>
-        <div className="moodboardImages"></div>
+        <div className="moodboardImages">
+          
+        </div>
       </div>
     </div>
   );
