@@ -58,7 +58,6 @@
   
   .notfound a {
     display: inline-block;
-    border-radius: 4px;
     text-decoration: none;
     color: #fff;
     text-decoration: none;
@@ -66,14 +65,14 @@
     outline: none;
     border: none;
     padding: 10px 22px;
-    background: #5af;
+    background: #EEC0C0;
     font-size: 18px;
     transition: all 0.2s ease-in-out;
   }
   
   .notfound a:hover {
     color: #fff;
-    background: #256ce1;
+    background: #e9cccc;
     transition: all 0.2s ease-in-out;
   }
   

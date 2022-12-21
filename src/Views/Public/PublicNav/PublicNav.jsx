@@ -20,8 +20,8 @@ export default function PublicNav() {
           </a>
         </div>
         <div>
-          <a href="/Login">Login</a>
-          <a href="/JoinNow">Join Now</a>
+          <a href="/auth/login">Login</a>
+          <a href="/auth/register">Join Now</a>
         </div>
       </div>
     </div>
