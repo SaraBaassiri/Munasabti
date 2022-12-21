@@ -189,7 +189,6 @@
     padding: 10px;
 }
 
-
 .ManageItems {
     padding-inline: 5%;
     display: flex;
@@ -230,5 +229,30 @@
     text-transform: uppercase;
     font-size: 1rem;
     font-family: "montserrat", sans-serif;
-    margin-bottom: 10%;
+}
+
+.moodboard {
+    font-size: 1.5rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.moodboard h2{
+    color: #E8745D;
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: 10%;
+    padding: 10px;
+}
+
+.moodboard p {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #707070;
+    text-align: center;
+    font-family: "montserrat", sans-serif;
+    align-items: center;
+    padding: 5px;
 }

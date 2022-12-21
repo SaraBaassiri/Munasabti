@@ -182,6 +182,12 @@ export default function Home() {
         </div>
         <button className="planningButton">Start Planning</button>
       </div>
+      <div className="moodboard">
+        <h2>Moodboard</h2>
+        <p>An intricately curated archive of our favorite events and sceneries to get you inspired!</p>
+        <div className="moodboardImages">
+        </div>
+      </div>
     </div>
   );
 }
