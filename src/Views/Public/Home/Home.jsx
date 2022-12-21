@@ -101,8 +101,10 @@ export default function Home() {
           <button className="underSliderButton">VIEW ALL</button>
         </div>
       </div>
-      <div className="HomeBanner" />
       <div className="ManageEvents">
+        <div className="HomeBanner">
+          <img src="/images/Banner.png" alt="" />
+        </div>
         <h1>Manage your event</h1>
         <div className="ManageItems">
           <Grid
