@@ -72,6 +72,7 @@ export default function Home() {
             className="mySwiper"
             loop
             navigation={true}
+            height={500}
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
@@ -96,6 +97,9 @@ export default function Home() {
             ))}
           </Swiper>
         </div>
+        <div className="SliderButton">
+          <button className="underSliderButton">VIEW ALL</button>
+        </div>
       </div>
       <div className="HomeBanner" />
       <div className="ManageEvents">
@@ -106,87 +110,113 @@ export default function Home() {
             spacing={{ xs: 2, md: 3 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
-              <Grid item xs={2} sm={4} md={4}>
-                <div className="grid">
-                  <img src="/images/filler.png" alt="" />
-                  <h4>Service #1</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
-                  </p>
-                </div>
-              </Grid>
-              <Grid item xs={2} sm={4} md={4}>
-                <div className="grid">
-                  <img src="/images/filler.png" alt="" />
-                  <h4>Service #2</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
-                  </p>
-                </div>
-              </Grid>
-              <Grid item xs={2} sm={4} md={4}>
-                <div className="grid">
-                  <img src="/images/filler.png" alt="" />
-                  <h4>Service #3</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
-                  </p>
-                </div>
-              </Grid>
-              <Grid item xs={2} sm={4} md={4}>
-                <div className="grid">
-                  <img src="/images/filler.png" alt="" />
-                  <h4>Service #4</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
-                  </p>
-                </div>
-              </Grid>
-              <Grid item xs={2} sm={4} md={4}>
-                <div className="grid">
-                  <img src="/images/filler.png" alt="" />
-                  <h4>Service #5</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
-                  </p>
-                </div>
-              </Grid>
-              <Grid item xs={2} sm={4} md={4}>
-                <div className="grid">
-                  <img src="/images/filler.png" alt="" />
-                  <h4>Service #6</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
-                  </p>
-                </div>
-              </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <div className="grid">
+                <img src="/images/filler.png" alt="" />
+                <h4>Service #1</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum
+                </p>
+              </div>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <div className="grid">
+                <img src="/images/filler.png" alt="" />
+                <h4>Service #2</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum
+                </p>
+              </div>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <div className="grid">
+                <img src="/images/filler.png" alt="" />
+                <h4>Service #3</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum
+                </p>
+              </div>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <div className="grid">
+                <img src="/images/filler.png" alt="" />
+                <h4>Service #4</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum
+                </p>
+              </div>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <div className="grid">
+                <img src="/images/filler.png" alt="" />
+                <h4>Service #5</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum
+                </p>
+              </div>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <div className="grid">
+                <img src="/images/filler.png" alt="" />
+                <h4>Service #6</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum
+                </p>
+              </div>
+            </Grid>
           </Grid>
         </div>
         <button className="planningButton">Start Planning</button>
       </div>
       <div className="moodboard">
         <h2>Moodboard</h2>
-        <p>An intricately curated archive of our favorite events and sceneries to get you inspired!</p>
-        <div className="moodboardImages">
-        </div>
+        <p>
+          An intricately curated archive of our favorite events and sceneries to
+          get you inspired!
+        </p>
+        <div className="moodboardImages"></div>
       </div>
     </div>
   );
