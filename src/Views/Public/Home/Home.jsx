@@ -70,6 +70,7 @@ export default function Home() {
             slidesPerView={"auto"}
             spaceBetween={420}
             className="mySwiper"
+            loop
             navigation={true}
             coverflowEffect={{
               rotate: 0,
