@@ -73,7 +73,7 @@
 }
 
 
-/* .swiper-button-next,
+.swiper-button-next,
 .swiper-button-prev {
     background-color: white;
     padding: 17px 20px 17px 20px;
@@ -92,21 +92,9 @@
 
 .swiper-button-prev {
     margin-left: 13%;
-} */
+} 
 
 
-.swiper-button-prev{
-    background-image: url("/public/images/Next.png");
-    width: 80px;
-    height: 80px; 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    }
-    
-    .swiper-button-prev::after {
-    display: none;
-    }
   
 .HomeSwiper-Container {
     display: flex;
