@@ -30,7 +30,7 @@
 }
 
 .hero-text h1 {
-    font-size: 2.9rem;
+    font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 0;
 }
@@ -68,7 +68,7 @@
   
 .swiper-slide {
     flex-shrink: 100 !important;
-    width:1150px;
+    width: 60vw;
 }
 
 
@@ -104,7 +104,7 @@
     border-radius: 13px;
     border: 3px solid #EEC0C0;
     background-color: white;
-    width: 1150px;
+    width: 60vw;
 }
 
 .HomeSwiper-slide-text{
