@@ -107,7 +107,7 @@ export default function Home() {
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
               <Grid item xs={2} sm={4} md={4}>
-                <div>
+                <div className="grid">
                   <img src="/images/filler.png" alt="" />
                   <h4>Service #1</h4>
                   <p>
@@ -119,7 +119,7 @@ export default function Home() {
                 </div>
               </Grid>
               <Grid item xs={2} sm={4} md={4}>
-                <div>
+                <div className="grid">
                   <img src="/images/filler.png" alt="" />
                   <h4>Service #2</h4>
                   <p>
@@ -131,7 +131,7 @@ export default function Home() {
                 </div>
               </Grid>
               <Grid item xs={2} sm={4} md={4}>
-                <div>
+                <div className="grid">
                   <img src="/images/filler.png" alt="" />
                   <h4>Service #3</h4>
                   <p>
@@ -143,7 +143,7 @@ export default function Home() {
                 </div>
               </Grid>
               <Grid item xs={2} sm={4} md={4}>
-                <div>
+                <div className="grid">
                   <img src="/images/filler.png" alt="" />
                   <h4>Service #4</h4>
                   <p>
@@ -155,7 +155,7 @@ export default function Home() {
                 </div>
               </Grid>
               <Grid item xs={2} sm={4} md={4}>
-                <div>
+                <div className="grid">
                   <img src="/images/filler.png" alt="" />
                   <h4>Service #5</h4>
                   <p>
@@ -167,7 +167,7 @@ export default function Home() {
                 </div>
               </Grid>
               <Grid item xs={2} sm={4} md={4}>
-                <div>
+                <div className="grid">
                   <img src="/images/filler.png" alt="" />
                   <h4>Service #6</h4>
                   <p>
@@ -180,6 +180,7 @@ export default function Home() {
               </Grid>
           </Grid>
         </div>
+        <button className="planningButton">Start Planning</button>
       </div>
     </div>
   );

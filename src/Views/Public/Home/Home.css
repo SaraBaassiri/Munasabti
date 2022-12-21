@@ -145,41 +145,85 @@
 }
 
 .HomeSwiper-slide-image img {
-        width: 100%;
-        height: 100%;
-        object-fit:cover;
-        border-radius: 0px 10px 10px 0px;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 0px 10px 10px 0px;
 }
 
 
 
 .HomeBanner {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 350px;
-        background-image: url("/public/images/Banner.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    background-image: url("/public/images/Banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
 .ManageEvents {
     margin-top: 3%;
+    font-size: 1.5rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .ManageEvents h1 {
-    font-size: 55px;
-    margin-bottom: 0;
     color: #E8745D;
     text-align: center;
     font-weight: normal;
     text-transform: uppercase;
+    margin-bottom: 5%;
+    margin-top: 10%;
+    padding: 10px;
 }
 
 
 .ManageItems {
     padding-inline: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid h4 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 2%;
+    color: #0C3651;
+    text-align: center;
+    margin-top: 10%;
+    text-transform: uppercase;
+    font-family: "butler", sans-serif;
+}
+
+.grid p {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #707070;
+    text-align: center;
+    font-family: "montserrat", sans-serif;
+    align-items: center;
+    padding: 15px;
+}
+
+.planningButton {
+    justify-self: center;
+    align-self: center;
+    margin-top: 5%;
+    background-color: #EEC0C0;
+    border: 0px;
+    color: white;
+    padding: 10px 35px 10px 35px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: "montserrat", sans-serif;
+    margin-bottom: 10%;
 }
