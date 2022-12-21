@@ -97,6 +97,9 @@ export default function Home() {
             ))}
           </Swiper>
         </div>
+        <div className="SliderButton">
+          <button className="underSliderButton">VIEW ALL</button>
+        </div>
       </div>
       <div className="HomeBanner" />
       <div className="ManageEvents">
