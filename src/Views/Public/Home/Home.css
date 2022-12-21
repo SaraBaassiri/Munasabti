@@ -7,7 +7,7 @@
 
 .Hero-image {
     background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.2),
+    linear-gradient(rgba(0, 0, 0, 0.33),
      rgba(0, 0, 0, 0.2)), 
     url("/public/images/HeroBg.png");
      
