@@ -233,6 +233,7 @@ export default function Home() {
               <img src="/images/MB6.png" alt="" />  
             </div>
           </div>
+          <button className="moodboardButton">View All</button>
         </div>
       </div>
     </div>
