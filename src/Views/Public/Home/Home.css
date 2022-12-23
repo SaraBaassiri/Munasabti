@@ -94,8 +94,8 @@
 
 .SlideLeft,
 .SlideRight {
-    width: 4vw;
-    height: 4vw;
+    width: 3.5vw;
+    height: 3.5vw;
     border-radius: 50%;
     background-color: white;
     border: 1px solid #707070;
@@ -109,16 +109,13 @@
 .SlideLeft {
     position: absolute;
     left: 0;
-    margin-left: 12%;
-    /* Move up */
-    transform: translateY(-35vh);
+    transform: translateY(-35vh) translateX(13vw);
 }
 
 .SlideRight {
     position: absolute;
     right: 0;
-    margin-right: 12%;
-    transform: translateY(-35vh);
+    transform: translateY(-35vh) translateX(-13vw);
 }
 
 .SlideLeft i,
