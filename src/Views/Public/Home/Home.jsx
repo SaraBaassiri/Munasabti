@@ -6,15 +6,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import "swiper/css/navigation";
 
 //Material Ui imports
 import { Grid } from "@mui/material";
 
 export default function Home() {
+  const swiperRef = React.useRef(null);
   React.useEffect(() => {
     document.title = "Munasabti | Home";
-  });
+  }, []);
 
   const tempData = [
     {
@@ -64,11 +64,12 @@ export default function Home() {
 
         <div className="HomeSwiper">
           <Swiper
+            ref={swiperRef}
             initialSlide={1}
             effect={"coverflow"}
             centeredSlides={true}
             slidesPerView={"auto"}
-            spaceBetween={420}
+            spaceBetween={370}
             className="mySwiper"
             loop
             navigation={true}
@@ -96,6 +97,22 @@ export default function Home() {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div
+            onClick={() => {
+              swiperRef.current.swiper.slidePrev();
+            }}
+            className="SlideLeft"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div
+            onClick={() => {
+              swiperRef.current.swiper.slideNext();
+            }}
+            className="SlideRight"
+          >
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
         </div>
         <div className="SliderButton">
           <button className="underSliderButton">VIEW ALL</button>
@@ -230,7 +247,7 @@ export default function Home() {
             </div>
             <div className="imagesThree">
               <img src="/images/MB5.png" alt="" />
-              <img src="/images/MB6.png" alt="" />  
+              <img src="/images/MB6.png" alt="" />
             </div>
           </div>
           <button className="moodboardButton">View All</button>
