@@ -20,7 +20,6 @@ import Reviews from "./Views/Admin/Reviews/Reviews";
 import Events from "./Views/Admin/Events/Events";
 
 //Public Pages & components
-import About from "./Views/Public/About Us/About";
 import Home from "./Views/Public/Home/Home";
 import Public from "./Views/Public/Public";
 import NoMatch from "./Views/NoMatch/NoMatch";
@@ -31,6 +30,7 @@ import Loading from "./Components/Loading";
 //Vendor Pages
 import Vendor from "./Views/Vendor/Vendor";
 import VendorDashboard from "./Views/Vendor/Dashboard/VendorDashboard";
+import Vendors from "./Views/Public/Vendors/Vendors";
 
 export default function App() {
   const loading = useSelector((state) => state.loading.value);
@@ -69,8 +69,8 @@ export default function App() {
               <Route>
                 <Route path="/"
                   element={<Public children={<Home />} />} />
-                <Route path="/about"
-                  element={<Public children={<About />} />} />
+                <Route path="/vendors"
+                  element={<Public children={<Vendors />} />} />
               </Route>
 
 

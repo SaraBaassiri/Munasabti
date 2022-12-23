@@ -9,11 +9,22 @@ import "swiper/css/effect-coverflow";
 
 //Material Ui imports
 import { Grid } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate();
   const swiperRef = React.useRef(null);
+  const [showTopBtn, setShowTopBtn] = React.useState(false);
+
   React.useEffect(() => {
     document.title = "Munasabti | Home";
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        setShowTopBtn(true);
+      } else {
+        setShowTopBtn(false);
+      }
+    });
   }, []);
 
   const tempData = [
@@ -42,6 +53,20 @@ export default function Home() {
 
   return (
     <div>
+      {showTopBtn && (
+        <div
+          className="ScrollToTop"
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
+          <i class="fa-solid fa-chevron-up"></i>
+        </div>
+      )}
+
       <div className="Hero">
         <div className="Hero-image">
           <div className="hero-text">
@@ -115,7 +140,14 @@ export default function Home() {
           </div>
         </div>
         <div className="SliderButton">
-          <button className="underSliderButton">VIEW ALL</button>
+          <button
+            className="underSliderButton"
+            onClick={() => {
+              navigate("/vendors");
+            }}
+          >
+            VIEW ALL
+          </button>
         </div>
       </div>
       <div className="ManageEvents">

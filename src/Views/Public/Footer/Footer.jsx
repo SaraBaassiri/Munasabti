@@ -1,22 +1,20 @@
 import React from "react";
 import "./Footer.css";
-import Logo from "../../../images/logov2.svg"
+import Logo from "../../../media/images/logov2.svg";
 
 export default function Footer() {
   return (
     <div className="Footer">
-      <div className="line"/>
+      <div className="line" />
       <div className="Logo">
         <img src={Logo} alt="logo" />
       </div>
       <div className="Links">
         <div>
           <a href="/">Home</a>
-          <a href="/">About Us</a>
           <a href="/">Services</a>
           <a href="/">Vendors</a>
           <a href="/">Inspirations</a>
-          <a href="/">Contact Us</a>
         </div>
       </div>
       <div className="partTwo">
