@@ -63,7 +63,7 @@ export default function Vendors() {
             effect={"coverflow"}
             centeredSlides={true}
             slidesPerView={"auto"}
-            spaceBetween={200}
+            spaceBetween={130}
             className="mySwiperVendor"
             loop={tempData.length > 1 ? true : false}
             navigation={true}
