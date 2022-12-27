@@ -63,12 +63,12 @@
     height: 65vh;
 }
   
-.swiper-slide {
+/* .swiper-slide {
     flex-shrink: 100 !important;
     max-width: 25vw;
     max-height: 65vh;
     margin-top: -50px;
-}
+} */
 
 
 .swiper-button-next,
