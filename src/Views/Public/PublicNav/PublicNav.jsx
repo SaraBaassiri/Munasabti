@@ -1,12 +1,19 @@
 import React from "react";
 import "./PublicNav.css";
 import { auth } from "../../../firebase";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function PublicNav() {
+  const navigate = useNavigate();
+
   return (
     <div className="PublicNav">
-      <div className="PublicNav__logo">
+      <div
+        className="PublicNav__logo"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
         <img src="/images/Logo.jpg" alt="logo" />
       </div>
       <div className="PublicNav__links">
