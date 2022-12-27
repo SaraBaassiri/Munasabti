@@ -1,5 +1,7 @@
 import React from "react";
 import "./PublicNav.css";
+import { auth } from "../../../firebase";
+import { Link } from "react-router-dom";
 
 export default function PublicNav() {
   return (
@@ -8,22 +10,29 @@ export default function PublicNav() {
         <img src="/images/Logo.jpg" alt="logo" />
       </div>
       <div className="PublicNav__links">
-        <a href="/">Home</a>
-        <a href="/Vendors">Vendors</a>
-        <a href="/PlanningTools">Planning Tools</a>
-        <a href="/Inspirations">Inspirations</a>
+        <Link to="/">Home</Link>
+        <Link to="/Vendors">Vendors</Link>
+        <Link to="/PlanningTools">Planning Tools</Link>
+        <Link to="/Inspirations">Inspirations</Link>
       </div>
-      <div className="PublicNav__Logins">
-        <div>
-          <a href="/Vendor" id="vendor">
-            Are you a vendor?
-          </a>
+      {auth.currentUser ? (
+        <div className="PublicNav__Logins">
+          <Link to="/auth/profile">Profile</Link>
+          <Link to="/admin">admin</Link>
         </div>
-        <div>
-          <a href="/auth/login">Login</a>
-          <a href="/auth/register">Join Now</a>
+      ) : (
+        <div className="PublicNav__Logins">
+          <div>
+            <Link to="/Vendor" id="vendor">
+              Are you a vendor?
+            </Link>
+          </div>
+          <div>
+            <Link to="/auth/login">Login</Link>
+            <Link to="/auth/register">Join Now</Link>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
