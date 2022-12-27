@@ -35,20 +35,20 @@ export default function Home() {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
     },
-    {
-      id: 2,
-      name: "Venue 2",
-      image: "/images/SliderImageTemp.png",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-    },
-    {
-      id: 3,
-      name: "Venue 3",
-      image: "/images/SliderImageTemp.png",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-    },
+    // {
+    //   id: 2,
+    //   name: "Venue 2",
+    //   image: "/images/SliderImageTemp.png",
+    //   description:
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    // },
+    // {
+    //   id: 3,
+    //   name: "Venue 3",
+    //   image: "/images/SliderImageTemp.png",
+    //   description:
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    // },
   ];
 
   return (
@@ -96,7 +96,7 @@ export default function Home() {
             slidesPerView={"auto"}
             spaceBetween={370}
             className="mySwiper"
-            loop
+            loop={tempData.length > 1 ? true : false}
             navigation={true}
             height={500}
             coverflowEffect={{
@@ -158,6 +158,7 @@ export default function Home() {
         <div className="ManageItems">
           <Grid
             container
+            justifyContent={{ xs: "center" }}
             spacing={{ xs: 2, md: 3 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
@@ -241,7 +242,7 @@ export default function Home() {
                 </p>
               </div>
             </Grid>
-            <Grid item xs={2} sm={4} md={4}>
+            {/* <Grid item xs={2} sm={4} md={4}>
               <div className="grid">
                 <img src="/images/filler.png" alt="" />
                 <h4>Service #6</h4>
@@ -256,7 +257,7 @@ export default function Home() {
                   mollit anim id est laborum
                 </p>
               </div>
-            </Grid>
+            </Grid> */}
           </Grid>
         </div>
         <button className="planningButton">Start Planning</button>
