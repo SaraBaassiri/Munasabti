@@ -87,7 +87,7 @@ export default function Vendors() {
               </SwiperSlide>
             ))}
           </Swiper>
-          {/* <div
+          <div
             onClick={() => {
               swiperRef.current.swiper.slidePrev();
             }}
@@ -102,7 +102,7 @@ export default function Vendors() {
             className="SlideRight"
           >
             <i class="fa-solid fa-chevron-right"></i>
-          </div> */}
+          </div>
         </div>
         <div className="SliderButton">
           <button
