@@ -15,24 +15,28 @@ export default function Vendors() {
   const tempData = [
     {
       id: 1,
-      name: "Venue 1",
-      image: "/images/SliderImageTemp.png",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      name: "Souvenirs",
+      image: "/images/Souvenir.png",
     },
     {
       id: 2,
-      name: "Venue 2",
-      image: "/images/SliderImageTemp.png",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      name: "Event Planner",
+      image: "/images/EventPlanner.png",
     },
     {
       id: 3,
-      name: "Venue 3",
-      image: "/images/SliderImageTemp.png",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      name: "Catering",
+      image: "/images/Catering.png",
+    },
+    {
+      id: 4,
+      name: "Venue",
+      image: "/images/Venues.png",
+    },
+    {
+      id: 5,
+      name: "Entertainment",
+      image: "/images/Entertainment.png",
     },
   ];
 
@@ -52,7 +56,7 @@ export default function Vendors() {
         <p>Find suppliers and value providers near you wherever you are</p>
         <input type="text" placeholder="Enter text here..."/>
 
-        <div className="HomeSwiper">
+        <div className="VendorSwiper">
           <Swiper
             ref={swiperRef}
             initialSlide={1}
@@ -75,14 +79,9 @@ export default function Vendors() {
           >
             {tempData.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="HomeSwiper-Container">
-                  <div className="HomeSwiper-slide-text">
-                    <h1>{item.name}</h1>
-                    <p>{item.description}</p>
-                  </div>
-                  <div className="HomeSwiper-slide-image">
-                    <img src={item.image} alt={item.name} />
-                  </div>
+                <div className="VendorSwiper-Container">
+                  <h1>{item.name}</h1>
+                  <img src={item.image} alt={item.name} />
                 </div>
               </SwiperSlide>
             ))}
