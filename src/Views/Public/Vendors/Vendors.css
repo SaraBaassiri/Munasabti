@@ -1,0 +1,55 @@
+.VendorHero {
+    text-align: start;
+    font-size: 20px;
+    margin-top: 20px;
+    height: 100vh;
+    display: flexbox;
+}  
+
+.VendorImage {
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.33),
+     rgba(0, 0, 0, 0.2)), 
+    url("/public/images/VendorHero.png");
+    height: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.VendorText {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    max-width: 850px;
+    margin-left: 5%;
+    color: white;
+    font-family: "butler", sans-serif;
+}
+
+.VendorText h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 15%;
+}
+
+.VendorEvents {
+    text-align: center;
+}
+
+.VendorEvents h2 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 0;
+    color: #E8745D;
+}
+
+.VendorEvents p {
+    font-weight: lighter;
+    margin-top: 0;
+    color: #0C3651;
+    font-size: 1.2rem;
+}
