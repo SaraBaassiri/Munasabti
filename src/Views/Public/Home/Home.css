@@ -12,7 +12,6 @@
 
 .Hero {
     text-align: start;
-    font-size: 20px;
     margin-top: 20px;
     height: 100vh;
     display: flexbox;
@@ -285,7 +284,6 @@
 .planningButton {
     justify-self: center;
     align-self: center;
-    /* margin-top: 5%; */
     background-color: #EEC0C0;
     border: 0px;
     color: white;
