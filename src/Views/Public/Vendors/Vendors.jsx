@@ -54,24 +54,24 @@ export default function Vendors() {
       <div className="VendorEvents">
         <h2>For Events Across Lebanon</h2>
         <p>Find suppliers and value providers near you wherever you are</p>
-        <input type="text" placeholder="Enter text here..."/>
+        <input type="text" placeholder="Enter text here..." />
 
         <div className="VendorSwiper">
           <Swiper
             ref={swiperRef}
-            initialSlide={1}
+            initialSlide={2}
             effect={"coverflow"}
             centeredSlides={true}
             slidesPerView={"auto"}
-            spaceBetween={370}
-            className="mySwiper"
+            spaceBetween={200}
+            className="mySwiperVendor"
             loop={tempData.length > 1 ? true : false}
             navigation={true}
-            height={500}
+            // height={500}
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
-              depth: 400,
+              depth: 100,
               modifier: 1,
               slideShadows: false,
             }}
@@ -81,12 +81,14 @@ export default function Vendors() {
               <SwiperSlide key={item.id}>
                 <div className="VendorSwiper-Container">
                   <h1>{item.name}</h1>
-                  <img src={item.image} alt={item.name} />
+                  <div className="VendorSwiperImage">
+                    <img src={item.image} alt={item.name} />
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-          <div
+          {/* <div
             onClick={() => {
               swiperRef.current.swiper.slidePrev();
             }}
@@ -101,7 +103,7 @@ export default function Vendors() {
             className="SlideRight"
           >
             <i class="fa-solid fa-chevron-right"></i>
-          </div>
+          </div> */}
         </div>
         <div className="SliderButton">
           <button
@@ -115,5 +117,5 @@ export default function Vendors() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -95,7 +95,7 @@ export default function Home() {
             centeredSlides={true}
             slidesPerView={"auto"}
             spaceBetween={370}
-            className="mySwiper"
+            className="mySwiperHome"
             loop={tempData.length > 1 ? true : false}
             navigation={true}
             height={500}
