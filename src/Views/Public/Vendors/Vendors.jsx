@@ -31,7 +31,7 @@ export default function Vendors() {
     {
       id: 4,
       name: "Venue",
-      image: "/images/Venues.png",
+      image: "/images/Temp.png",
     },
     {
       id: 5,
@@ -67,7 +67,6 @@ export default function Vendors() {
             className="mySwiperVendor"
             loop={tempData.length > 1 ? true : false}
             navigation={true}
-            // height={500}
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
