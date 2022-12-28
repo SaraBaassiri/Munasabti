@@ -43,7 +43,7 @@
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.5em;
     font-weight: 500;
     margin-bottom: 0;
 }
@@ -54,7 +54,7 @@
 }
 
 .FindProv-text {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     margin-bottom: 0;
     color: #E8745D;
     text-align: center;
@@ -120,7 +120,7 @@
 
 .SlideLeft i,
 .SlideRight i {
-    font-size: 2rem;
+    font-size: 2em;
     color: #707070;
 }
 
@@ -213,7 +213,7 @@
     color: white;
     padding: 10px 35px 10px 35px;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1em;
     font-family: "montserrat", sans-serif;
     cursor: pointer;
 }
@@ -236,7 +236,7 @@
 
 .ManageEvents {
     margin-top: 20px;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -261,7 +261,7 @@
 }
 
 .grid h4 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: normal;
     margin-bottom: 2%;
     color: #0C3651;
@@ -272,7 +272,7 @@
 }
 
 .grid p {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: lighter;
     color: #707070;
     text-align: center;
@@ -289,13 +289,13 @@
     color: white;
     padding: 10px 35px 10px 35px;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1em;
     font-family: "montserrat", sans-serif;
     cursor: pointer;
 }
 
 .moodboard {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -315,7 +315,7 @@
 }
 
 .moodboard p {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: lighter;
     color: #707070;
     text-align: center;
@@ -383,7 +383,7 @@
     color: white;
     padding: 10px 35px 10px 35px;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1em;
     font-family: "montserrat", sans-serif;
     cursor: pointer;
 }

@@ -88,7 +88,12 @@ export default function Vendors() {
             modules={[EffectCoverflow, Navigation]}
           >
             {tempData.map((item) => (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide
+                key={item.id}
+                onClick={() => {
+                  navigate("/vendors/" + item.name);
+                }}
+              >
                 <div className="VendorSwiper-Container">
                   <h1>{item.name}</h1>
                   <div className="VendorSwiperImage">
@@ -137,7 +142,12 @@ export default function Vendors() {
           >
             {Array.from(Array(8)).map((item, index) => (
               <Grid item xs={2} sm={4} md={3}>
-                <div className="grid">
+                <div
+                  className="gridVendor"
+                  onClick={() => {
+                    navigate("/vendor/" + index);
+                  }}
+                >
                   <img src="/images/vendorFiller.png" alt="" />
                   <div>
                     <h2>thingy {index}</h2>

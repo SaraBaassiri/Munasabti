@@ -30,7 +30,7 @@
 }
 
 .VendorText h1 {
-    font-size: 2.2rem;
+    font-size: 2.2em;
     font-weight: 500;
     margin-bottom: 15%;
 }
@@ -42,7 +42,7 @@
 .VendorEvents h2 {
     font-weight: normal;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 2em;
     margin-bottom: 0;
     color: #E8745D;
 }
@@ -51,7 +51,7 @@
     font-weight: lighter;
     margin-top: 0;
     color: #0C3651;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 
@@ -66,6 +66,7 @@
 .swiper-slide  {
     flex-shrink: 100 !important;
     max-width: 80vw;
+    cursor: pointer;
 }
 
 
@@ -102,7 +103,7 @@
 
 .SlideLeftVendor i,
 .SlideRightVendor i {
-    font-size: 2rem;
+    font-size: 2em;
     color: #707070;
 }
 
@@ -123,7 +124,7 @@
 }
 
 .VendorSwiper-Container h1 {
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: normal;
     color: white;
     position: relative;
@@ -170,7 +171,7 @@
     color: white;
     padding: 10px 35px 10px 35px;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1em;
     font-family: "montserrat", sans-serif;
     cursor: pointer;
 }
@@ -185,7 +186,7 @@
 }
 
 .TopVendors h2 {
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: normal;
     color: #0C3651;
     text-transform: uppercase;
@@ -193,7 +194,8 @@
     padding-bottom: 2%;
 }
 
-.grid {
+.gridVendor {
+    cursor: pointer;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
@@ -203,7 +205,7 @@
     text-align: start;
 }
 
-.grid div {
+.gridVendor div {
     padding: 0;
     margin: 0;
     padding-left: 10%;
@@ -212,7 +214,7 @@
     padding-bottom: 2%;
 }
 
-.grid img {
+.gridVendor img {
     width: 100%;
     height: 50%;
     object-fit: fill;
@@ -221,7 +223,7 @@
     margin: 0;
 }
 
-.grid h2 {
+.gridVendor  h2 {
     font-size: 21px;
     font-weight: normal;
     color: #0C3651;
@@ -231,7 +233,7 @@
     margin: 0;
 }
 
-.grid p {
+.gridVendor p {
     font-size: 14px;
     font-weight: lighter;
     color: #707070;
@@ -267,7 +269,7 @@
 }
 
 .vendorRegister h2 {
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: normal;
     color: #e8745d;
     text-transform: uppercase;
@@ -276,7 +278,7 @@
 }
 
 .vendorRegister p {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: lighter;
     color: #707070;
     font-family: "montserrat", sans-serif;
@@ -324,7 +326,7 @@
 }
 
 .RgeisterVendorInner h1 {
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: normal;
     color: #E8745D;
     text-transform: uppercase;
@@ -334,7 +336,7 @@
 }
 
 .RgeisterVendorInner p {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: lighter;
     font-family: "Montserat", sans-serif;
     width: 85%;
@@ -347,7 +349,7 @@
     color: white;
     padding: 10px 35px 10px 35px;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1em;
     font-family: "montserrat", sans-serif;
     cursor: pointer;
     margin-top: 10%;

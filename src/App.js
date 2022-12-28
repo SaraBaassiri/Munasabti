@@ -31,6 +31,9 @@ import Loading from "./Components/Loading";
 import Vendor from "./Views/Vendor/Vendor";
 import VendorDashboard from "./Views/Vendor/Dashboard/VendorDashboard";
 import Vendors from "./Views/Public/Vendors/Vendors";
+import InnerVendor from "./Views/Public/Vendors/InnerVendor/InnerVendor";
+import SpecificVendor from "./Views/Public/Vendors/SpecificVendor/SpecificVendor";
+import AllVendors from "./Views/Public/Vendors/AllVendors/AllVendors";
 
 export default function App() {
   const loading = useSelector((state) => state.loading.value);
@@ -71,10 +74,13 @@ export default function App() {
                   element={<Public children={<Home />} />} />
                 <Route path="/vendors"
                   element={<Public children={<Vendors />} />} />
+                <Route path="/ourvendors"
+                  element={<Public children={<AllVendors />} />} />
+                <Route path="/vendors/:id"
+                  element={<Public children={<InnerVendor />} />} />
+                <Route path="/vendor/:id"
+                  element={<Public children={<SpecificVendor />} />} />
               </Route>
-
-
-
               {/* Auth Routes (Only accessible when logged out)*/}
               {
                 !userAuth &&
