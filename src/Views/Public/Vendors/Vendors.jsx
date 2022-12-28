@@ -65,6 +65,7 @@ export default function Vendors() {
             slidesPerView={"auto"}
             spaceBetween={130}
             className="mySwiperVendor"
+            slideActiveClass="VendorSwiper-ActiveSlide"
             loop={tempData.length > 1 ? true : false}
             navigation={true}
             coverflowEffect={{
@@ -91,7 +92,7 @@ export default function Vendors() {
             onClick={() => {
               swiperRef.current.swiper.slidePrev();
             }}
-            className="SlideLeft"
+            className="SlideLeftVendor"
           >
             <i class="fa-solid fa-chevron-left"></i>
           </div>
@@ -99,7 +100,7 @@ export default function Vendors() {
             onClick={() => {
               swiperRef.current.swiper.slideNext();
             }}
-            className="SlideRight"
+            className="SlideRightVendor"
           >
             <i class="fa-solid fa-chevron-right"></i>
           </div>

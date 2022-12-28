@@ -58,26 +58,18 @@
 .mySwiperVendor {
     width: 100%;
     padding-bottom: 50px;
-    margin-top: 2%;
     user-select: none;
     height: 65vh;
 }
   
-/* .swiper-slide {
-    flex-shrink: 100 !important;
-    max-width: 25vw;
-    max-height: 65vh;
-    margin-top: -50px;
-} */
-
 
 .swiper-button-next,
 .swiper-button-prev {
     display: none;
 }
 
-.SlideLeft,
-.SlideRight {
+.SlideLeftVendor,
+.SlideRightVendor {
     width: 3.5vw;
     height: 3.5vw;
     border-radius: 50%;
@@ -90,20 +82,20 @@
     z-index: 10;
 }
 
-.SlideLeft {
+.SlideLeftVendor {
     position: absolute;
     left: 0;
-    transform: translateY(-35vh) translateX(13vw);
+    transform: translateY(-32vh) translateX(5vw);
 }
 
-.SlideRight {
+.SlideRightVendor {
     position: absolute;
     right: 0;
-    transform: translateY(-35vh) translateX(-13vw);
+    transform: translateY(-32vh) translateX(-5vw);
 }
 
-.SlideLeft i,
-.SlideRight i {
+.SlideLeftVendor i,
+.SlideRightVendor i {
     font-size: 2rem;
     color: #707070;
 }
@@ -132,6 +124,7 @@
     top: 60%;
     text-transform: uppercase;
     font-family: "butler", sans-serif;
+    z-index: 10;
 }
 
 .VendorSwiperImage {
@@ -143,6 +136,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(80%);
 }
 
 .SliderButton {
