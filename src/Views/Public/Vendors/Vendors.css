@@ -160,3 +160,20 @@
     font-family: "montserrat", sans-serif;
     cursor: pointer;
 }
+
+.TopVendors {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #e8745d2f ;
+}
+
+.TopVendors h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    color: #0C3651;
+    text-transform: uppercase;
+    font-family: "butler", sans-serif;
+    padding: 1%;
+}
+
