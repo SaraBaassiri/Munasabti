@@ -139,9 +139,20 @@ export default function Vendors() {
               <Grid item xs={2} sm={4} md={3}>
                 <div className="grid">
                   <img src="/images/vendorFiller.png" alt="" />
-                  <h4>thingy{item}</h4>
-                  <p>Location</p>
-                  <Rating name="read-only" value={0} precision={0.5} readOnly className="rating"/>
+                  <div>
+                    <h2>thingy {index}</h2>
+                    <p>Location</p>
+                    <div className="InnerVendorGrid">
+                      <Rating
+                        size="small"
+                        name="read-only"
+                        value={4}
+                        precision={0.5}
+                        readOnly
+                      />
+                      <p>{index} reviews</p>
+                    </div>
+                  </div>
                 </div>
               </Grid>
             ))}
