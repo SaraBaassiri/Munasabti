@@ -69,6 +69,9 @@ export default function Vendors() {
             spaceBetween={130}
             className="mySwiperVendor"
             slideActiveClass="VendorSwiper-ActiveSlide"
+            onActiveIndexChange={(swiper) => {
+              console.log(swiper.activeIndex);
+            }}
             loop={tempData.length > 1 ? true : false}
             navigation={true}
             coverflowEffect={{
