@@ -227,16 +227,16 @@
     color: #0C3651;
     text-transform: uppercase;
     font-family: "butler", sans-serif;
-    padding:0;
+    padding: 0;
     margin: 0;
 }
 
 .grid p {
     font-size: 14px;
     font-weight: lighter;
-    color: #0C3651;
+    color: #707070;
     font-family: "montserrat", sans-serif;
-    padding:0;
+    padding: 0;
     margin: 0;
     text-align: start;
 }
@@ -297,6 +297,10 @@
     display: flex;
     flex-direction: row;
     padding: 0;
+    margin: 0;
+    justify-content: left;
+    align-items: left;
+
 }
 
 .InnerVendorGrid p{
@@ -307,4 +311,13 @@
     padding:0;
     margin: 0;
     text-align: start;
+}
+
+.Rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: left;
+    padding: 0;
+    margin-left: 0;
 }

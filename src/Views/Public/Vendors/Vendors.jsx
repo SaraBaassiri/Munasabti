@@ -146,9 +146,10 @@ export default function Vendors() {
                       <Rating
                         size="small"
                         name="read-only"
-                        value={4}
+                        value={0}
                         precision={0.5}
                         readOnly
+                        className="Rating"
                       />
                       <p>{index} reviews</p>
                     </div>
