@@ -15,6 +15,10 @@ export default function Vendors() {
   const navigate = useNavigate();
   const swiperRef = React.useRef(null);
 
+  React.useEffect(() => {
+    document.title = "Munasabti | Vendors";
+  }, []);
+
   const tempData = [
     {
       id: 1,
