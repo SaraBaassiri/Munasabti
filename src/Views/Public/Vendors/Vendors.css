@@ -148,6 +148,7 @@
 
 .VendorSwiper-ActiveSlide 
 .VendorSwiperImage  {
+    margin-top: -10%;
     width: 25vw;
     height: 80vh;
 }
