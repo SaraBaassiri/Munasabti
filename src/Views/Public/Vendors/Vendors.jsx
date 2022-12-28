@@ -165,9 +165,15 @@ export default function Vendors() {
         <p>For venues, vendors, and value providers</p>
         <div className="RegisterBus">
           <div className="RegisterImage">
-            <div className="RegisterText">
+            <div className="RgeisterVendorInner">
               <h1>Get Listed</h1>
-              <p>We’re always on the look out for caterers with a passion for taste, spaces with an affinity for the magical, and entertainers with an ability to uplift crowds. Create your account to start accepting requests and benefit from our CRM & quotation platforms! Growing your client base one conversion at a time</p>
+              <p>
+                We’re always on the look out for caterers with a passion for
+                taste, spaces with an affinity for the magical, and entertainers
+                with an ability to uplift crowds. Create your account to start
+                accepting requests and benefit from our CRM & quotation
+                platforms! Growing your client base one conversion at a time
+              </p>
               <button>Register Now</button>
             </div>
           </div>
