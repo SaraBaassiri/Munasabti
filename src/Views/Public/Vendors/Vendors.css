@@ -198,7 +198,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
     display: flex;
-    max-height: 320px;
+    height: auto;
     flex-direction: column;
     text-align: start;
 }
@@ -214,7 +214,7 @@
 
 .grid img {
     width: 100%;
-    height: 100%;
+    height: 50%;
     object-fit: fill;
     border-radius: 15px 15px 0 0;
     padding: 0;
@@ -241,6 +241,26 @@
     text-align: start;
 }
 
+.Rating {
+    margin-left: -12%;
+}
+
+.InnerVendorGrid {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.InnerVendorGrid p{
+    font-size: 14px;
+    font-weight: lighter;
+    color: #0C3651;
+    font-family: "montserrat", sans-serif;
+    padding:0;
+    margin: 0;
+    text-align: start;
+}
+
 .vendorRegister {
     text-align: center;
     justify-content: center;
@@ -261,6 +281,7 @@
     color: #707070;
     font-family: "montserrat", sans-serif;
 }
+
 
 .RegisterBus {
     text-align: start;
@@ -333,31 +354,3 @@
     margin-bottom: 5%;
 }
 
-.InnerVendorGrid {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
-    justify-content: left;
-    align-items: left;
-
-}
-
-.InnerVendorGrid p{
-    font-size: 14px;
-    font-weight: lighter;
-    color: #0C3651;
-    font-family: "montserrat", sans-serif;
-    padding:0;
-    margin: 0;
-    text-align: start;
-}
-
-.Rating {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: left;
-    padding: 0;
-    margin-left: 0;
-}
