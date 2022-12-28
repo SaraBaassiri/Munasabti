@@ -70,7 +70,7 @@ export default function Vendors() {
             effect={"coverflow"}
             centeredSlides={true}
             slidesPerView={"auto"}
-            spaceBetween={130}
+            spaceBetween={100}
             className="mySwiperVendor"
             slideActiveClass="VendorSwiper-ActiveSlide"
             onActiveIndexChange={(swiper) => {

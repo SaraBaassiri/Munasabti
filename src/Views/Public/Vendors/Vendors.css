@@ -91,13 +91,13 @@
 .SlideLeftVendor {
     position: absolute;
     left: 0;
-    transform: translateY(-32vh) translateX(5vw);
+    transform: translateY(-40vh) translateX(5vw);
 }
 
 .SlideRightVendor {
     position: absolute;
     right: 0;
-    transform: translateY(-32vh) translateX(-5vw);
+    transform: translateY(-40vh) translateX(-5vw);
 }
 
 .SlideLeftVendor i,
