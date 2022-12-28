@@ -224,3 +224,54 @@
     font-family: "montserrat", sans-serif;
 }
 
+.vendorRegister {
+    text-align: center;
+    justify-content: center;
+}
+
+.vendorRegister h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    color: #e8745d;
+    text-transform: uppercase;
+    font-family: "butler", sans-serif;
+    padding-top: 5%;
+}
+
+.vendorRegister p {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #707070;
+    font-family: "montserrat", sans-serif;
+}
+
+.RegisterBus {
+    text-align: start;
+    font-size: 20px;
+    margin-top: 20px;
+    height: 100vh;
+    display: flexbox;
+}
+
+.RegisterImage {
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.33),
+     rgba(0, 0, 0, 0.2)), 
+    url("/public/images/coverRegisterBus.png");
+    height: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.RegisterText {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    max-width: 850px;
+    margin-left: 5%;
+    color: white;
+    font-family: "butler", sans-serif;
+}
