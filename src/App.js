@@ -74,7 +74,7 @@ export default function App() {
                   element={<Public children={<Home />} />} />
                 <Route path="/vendors"
                   element={<Public children={<Vendors />} />} />
-                <Route path="/ourvendors"
+                <Route path="/our-vendors"
                   element={<Public children={<AllVendors />} />} />
                 <Route path="/vendors/:id"
                   element={<Public children={<InnerVendor />} />} />

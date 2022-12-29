@@ -124,7 +124,7 @@ export default function Vendors() {
           <button
             className="underSliderButton"
             onClick={() => {
-              navigate("/vendors");
+              navigate("/our-vendors");
             }}
           >
             VIEW ALL
