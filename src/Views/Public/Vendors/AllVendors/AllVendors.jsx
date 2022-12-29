@@ -1,9 +1,12 @@
 import React from "react";
 import "./AllVendors.css";
 import { db } from "../../../../firebase";
+import { Grid, Rating } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function AllVendors() {
   const [vendors, setVendors] = React.useState([]);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     fetchData();
@@ -50,20 +53,67 @@ function AllVendors() {
           <p>{vendors.length} total vendors</p>
           <div className="FilterSelectors">
             <select name="city" className="AllVendorsSelector">
+              <option selected hidden>
+                City
+              </option>
               <option value="beirut">Beirut</option>
               <option value="tripoli">Tripoli</option>
               <option value="saida">Saida</option>
             </select>
             <select name="city" className="AllVendorsSelector">
+              <option selected hidden>
+                Sort by
+              </option>
               <option value="beirut">Beirut</option>
               <option value="tripoli">Tripoli</option>
               <option value="saida">Saida</option>
             </select>
             <select name="city" className="AllVendorsSelector">
+              <option selected hidden>
+                Availability
+              </option>
               <option value="beirut">Beirut</option>
               <option value="tripoli">Tripoli</option>
               <option value="saida">Saida</option>
             </select>
+          </div>
+        </div>
+        <div>
+          <div className="AllVendorGridOuter">
+            <Grid
+              container
+              justifyContent={{ xs: "center" }}
+              spacing={{ xs: 2, md: 2.5 }}
+              columns={{ xs: 2, sm: 8, md: 9 }}
+            >
+              {Array.from(Array(9)).map((item, index) => (
+                <Grid item xs={2} sm={3} md={3} key={index}>
+                  <div
+                    className="AllVendorGrid"
+                    onClick={() => {
+                      navigate("/vendor/" + index);
+                    }}
+                  >
+                    <img src="/images/vendorFiller.png" alt="" />
+                    <div>
+                      <h2>thingy {index}</h2>
+                      <p>Location</p>
+                      <div className="InnerAllVendorGrid">
+                        <Rating
+                          size="small"
+                          name="read-only"
+                          value={0}
+                          precision={0.5}
+                          readOnly
+                          className="RatingVendor"
+                        />
+                        <p>{index} reviews</p>
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+              ))}
+            </Grid>
           </div>
         </div>
       </div>
