@@ -1,0 +1,143 @@
+.InnerVendorHero {
+    text-align: start;
+    font-size: 20px;
+    margin-top: 20px;
+    height: 50vh;
+    display: flexbox;
+}  
+
+.InnerVendorImage {
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.33),
+     rgba(0, 0, 0, 0.2)), 
+    url("/public/images/InnerVendor.png");
+    height: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.InnerVendorImage input {
+    margin-left: 12%;
+}
+
+.InnerVendorText {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    height: 70%;
+    max-width: 850px;
+    margin-left: 5%;
+    color: white;
+    font-family: "butler", sans-serif;
+}
+
+.InnerVendorText h1 {
+    font-size: 2em;
+    font-weight: normal;
+    /* margin-bottom: 5%; */
+    margin-left: 10%;
+    text-transform: uppercase;
+}
+
+.InnerVendorsBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-inline: 7%;
+}
+
+.InnerVendorsBottom p {
+    color: #0C3651;
+    font-size: 0.9em;
+    font-family: "montserrat", sans-serif;
+}
+
+.FilterSelectors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.InnerVendorsSelector {
+    border: #A1CCD8 1.5px solid;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 10em;
+    font-size: smaller;
+    margin-left: 10px;
+}
+
+.InnerVendorGridOuter {
+    padding: 5%;
+}
+
+.InnerVendorGrid {
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    text-align: start;
+    width: 90%;
+}
+
+.InnerVendorGrid div {
+    padding: 0;
+    margin: 0;
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.InnerVendorGrid img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    padding: 0;
+    margin: 0;
+}
+
+.InnerVendorGrid  h2 {
+    font-size: 21px;
+    font-weight: normal;
+    color: #0C3651;
+    text-transform: uppercase;
+    font-family: "butler", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.InnerVendorGrid p {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #707070;
+    font-family: "montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+}
+
+.RatingVendor {
+    margin-left: -12%;
+}
+
+.InnerInnerVendorGrid {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.InnerInnerVendorGrid p{
+    font-size: 14px;
+    font-weight: lighter;
+    color: #0C3651;
+    font-family: "montserrat", sans-serif;
+    padding:0;
+    margin: 0;
+    text-align: start;
+}

@@ -79,7 +79,7 @@ function AllVendors() {
           </div>
         </div>
         <div>
-          <div className="AllVendorGridOuter">
+          <div className="InnerVendorGridOuter">
             <Grid
               container
               justifyContent={{ xs: "center" }}
@@ -89,7 +89,7 @@ function AllVendors() {
               {Array.from(Array(9)).map((item, index) => (
                 <Grid item xs={2} sm={3} md={3} key={index}>
                   <div
-                    className="AllVendorGrid"
+                    className="InnerVendorGrid"
                     onClick={() => {
                       navigate("/vendor/" + index);
                     }}
@@ -98,7 +98,7 @@ function AllVendors() {
                     <div>
                       <h2>thingy {index}</h2>
                       <p>Location</p>
-                      <div className="InnerAllVendorGrid">
+                      <div className="InnerInnerVendorGrid">
                         <Rating
                           size="small"
                           name="read-only"
