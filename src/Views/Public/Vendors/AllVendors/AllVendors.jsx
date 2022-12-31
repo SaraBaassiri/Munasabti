@@ -68,14 +68,12 @@ function AllVendors() {
               <option value="tripoli">Tripoli</option>
               <option value="saida">Saida</option>
             </select>
-            <select name="city" className="AllVendorsSelector">
-              <option selected hidden>
-                Availability
-              </option>
-              <option value="beirut">Beirut</option>
-              <option value="tripoli">Tripoli</option>
-              <option value="saida">Saida</option>
-            </select>
+            <input
+              placeholder="Availability"
+              type={"text"}
+              onFocus={(e) => (e.target.type = "date")}
+              className="AllVendorsSelector"
+            />
           </div>
         </div>
         <div>
