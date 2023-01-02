@@ -4,6 +4,7 @@ import "./Users.css";
 
 function Users() {
   const [items, setItems] = React.useState([]);
+  const [email, setEmail] = React.useState("");
 
   React.useEffect(() => {
     fetchData();
@@ -48,11 +49,35 @@ function Users() {
       });
   };
 
+  const MakeVendor = async () => {
+    await db
+      .collection("Users")
+      .where("email", "==", email)
+      .get()
+      .then((snapshot) => {
+        if (!snapshot.empty) {
+          snapshot.forEach((doc) => {
+            db.collection("Users").doc(doc.id).update({
+              isVendor: true,
+            });
+          });
+        }
+      });
+    setEmail("");
+  };
+
   return (
     <div className="AdminUsers">
-      {/* <div className="topBar">
-        <h1 className="titleUsers">Users</h1>
-      </div> */}
+      <div>
+        <h3>Add a Vendor</h3>
+        <input
+          type="email"
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+        />
+        <button onClick={MakeVendor}>Add</button>
+      </div>
       <table className="UsersTable">
         <tbody>
           <tr>

@@ -29,9 +29,6 @@ function VendorAdmin() {
 
   return (
     <div className="AdminVendor">
-      {/* <div className="TopBarVendor">
-        <h1 className="titleVendor">Vendors</h1>
-      </div> */}
       <table className="VendorTable">
         <tbody>
           <tr>

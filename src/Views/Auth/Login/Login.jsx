@@ -32,9 +32,10 @@ function Login() {
       });
   };
 
-  const handleRegisterWithGoogle = () => {
-    auth.signInWithPopup(provider).then((result) => {});
-  };
+  // TODO: fix
+  // const handleRegisterWithGoogle = () => {
+  //   auth.signInWithPopup(provider).then((result) => {});
+  // };
 
   return (
     <div className="LoginContainer">

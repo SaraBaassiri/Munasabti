@@ -4,6 +4,7 @@ import "./AdminMan.css";
 
 function AdminMan() {
   const [items, setItems] = React.useState([]);
+  const [email, setEmail] = React.useState("");
 
   React.useEffect(() => {
     fetchData();
@@ -13,7 +14,7 @@ function AdminMan() {
     setItems([]);
     await db
       .collection("Users")
-      .where("isVendor", "==", false)
+      .where("isAdmin", "==", true)
       .limit(15)
       .get()
       .then((snapshot) => {
@@ -28,21 +29,66 @@ function AdminMan() {
       });
   };
 
+  const MakeAdmin = async () => {
+    await db
+      .collection("Users")
+      .where("email", "==", email)
+      .get()
+      .then((snapshot) => {
+        if (!snapshot.empty) {
+          snapshot.forEach((doc) => {
+            db.collection("Users").doc(doc.id).update({
+              isAdmin: true,
+            });
+          });
+        }
+      });
+    setEmail("");
+  };
+
   return (
     <div className="AdminMangment">
+      <div>
+        <h3>Add an Admin</h3>
+        <input
+          type="email"
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+        />
+        <button onClick={MakeAdmin}>Add</button>
+      </div>
       <table className="AdminTable">
         <tbody>
           <tr>
             <th>Name</th>
             <th>Email</th>
             <th>Gender</th>
+            <th>Remove</th>
           </tr>
           {items.map((item, index) => {
             return (
               <tr key={index}>
                 <td>{item.name}</td>
                 <td>{item.email}</td>
-                <td>{item.Gender}</td>
+                <td>{item.Gender === "" ? "Unspecified" : item.Gender}</td>
+                <td>
+                  <button
+                    onClick={() => {
+                      db.collection("Users")
+                        .doc(item.id)
+                        .update({
+                          isAdmin: false,
+                        })
+                        .then(() => {
+                          let temp = items.filter((i) => i.id !== item.id);
+                          setItems(temp);
+                        });
+                    }}
+                  >
+                    Remove
+                  </button>
+                </td>
               </tr>
             );
           })}

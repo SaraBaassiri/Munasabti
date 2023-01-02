@@ -63,18 +63,27 @@ function SpecificVendor() {
           <h3>{vendor.name}</h3>
           <p>{vendor.Location}</p>
           <div className="socials">
-            <BsInstagram size={"25"} id="insta"  
-              onMouseOver={({target})=>target.style.color="#0C3651"}
-              onMouseOut={({target})=>target.style.color="#707070"}/>
-            <BsGlobe2 size={"25"} id="web" 
-              onMouseOver={({target})=>target.style.color="#0C3651"}
-              onMouseOut={({target})=>target.style.color="#707070"}/>
-            <BsTelephone size={"25"} id="phone" 
-              onMouseOver={({target})=>target.style.color="#0C3651"}
-              onMouseOut={({target})=>target.style.color="#707070"}/>
+            <BsInstagram
+              size={"25"}
+              id="insta"
+              onMouseOver={({ target }) => (target.style.color = "#0C3651")}
+              onMouseOut={({ target }) => (target.style.color = "#707070")}
+            />
+            <BsGlobe2
+              size={"25"}
+              id="web"
+              onMouseOver={({ target }) => (target.style.color = "#0C3651")}
+              onMouseOut={({ target }) => (target.style.color = "#707070")}
+            />
+            <BsTelephone
+              size={"25"}
+              id="phone"
+              onMouseOver={({ target }) => (target.style.color = "#0C3651")}
+              onMouseOut={({ target }) => (target.style.color = "#707070")}
+            />
           </div>
-          <div className="line"></div>
-          <h6>About {vendor.name.split(" ")[0]}</h6>
+          <div className="lineVendor"></div>
+          <h6>About {vendor.name && vendor.name.split(" ")[0]}</h6>
           <p>{vendor.Description}</p>
         </div>
       </div>

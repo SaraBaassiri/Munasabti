@@ -140,8 +140,9 @@
     padding-left: 15px;
 }
 
-.line {
+.lineVendor {
     border-bottom: 1px solid #DDDDDD;
+    margin-top: 2%;
 }
 
 .vendorInfo__left h6 {
