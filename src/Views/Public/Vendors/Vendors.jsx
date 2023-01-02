@@ -167,7 +167,7 @@ export default function Vendors() {
                 <div
                   className="gridVendor"
                   onClick={() => {
-                    navigate("/vendor/" + index);
+                    navigate("/vendor/" + item.id);
                   }}
                 >
                   <img src="/images/vendorFiller.png" alt="" />
