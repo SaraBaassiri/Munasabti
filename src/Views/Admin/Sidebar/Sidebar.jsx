@@ -28,7 +28,7 @@ const SideBar = ({ sidebarOpen, closeSidebar }) => {
         </div>
         <div className="sidebar__link">
           <i className="fa fa-user-secret"></i>
-          <Link to="/admin/vendors">Admin Management</Link>
+          <Link to="/admin/managment">Admin Management</Link>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-wrench"></i>

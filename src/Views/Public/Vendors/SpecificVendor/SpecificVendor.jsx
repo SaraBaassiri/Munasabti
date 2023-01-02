@@ -46,9 +46,6 @@ function SpecificVendor() {
           <img src="/images/MB6.png" alt="" />
         </div>
       </div>
-      {id}
-      {vendor.Description}
-      {vendor.Location}
     </div>
   );
 }
