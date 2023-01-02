@@ -1,9 +1,10 @@
 import React from "react";
 import "./Login.css";
-import { auth } from "../../../firebase";
+import { auth, db } from "../../../firebase";
 import { useDispatch } from "react-redux";
 import { setFalse, setTrue } from "../../../Redux/reducers/loadingSlice";
 import { useNavigate } from "react-router-dom";
+import { GoogleAuthProvider } from "firebase/auth";
 
 function Login() {
   const dispatch = useDispatch();
@@ -14,6 +15,8 @@ function Login() {
   React.useEffect(() => {
     document.title = "Munasabti | Login";
   });
+
+  const provider = new GoogleAuthProvider();
 
   const handleSubmit = () => {
     dispatch(setTrue());
@@ -27,6 +30,10 @@ function Login() {
         dispatch(setFalse());
         alert(e.message);
       });
+  };
+
+  const handleRegisterWithGoogle = () => {
+    auth.signInWithPopup(provider).then((result) => {});
   };
 
   return (
