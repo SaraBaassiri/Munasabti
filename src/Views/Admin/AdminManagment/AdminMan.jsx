@@ -1,5 +1,5 @@
 import React from "react";
-import { auth, db } from "../../../firebase";
+import { db } from "../../../firebase";
 import "./AdminMan.css";
 
 function AdminMan() {
@@ -28,32 +28,9 @@ function AdminMan() {
       });
   };
 
-  //TODO: Add to table
-  const GetNext = async () => {
-    let last = items[items.length - 1];
-    await db
-      .collection("Users")
-      .where("isVendor", "==", false)
-      .startAfter(last.id)
-      .limit(15)
-      .get()
-      .then((snapshot) => {
-        if (!snapshot.empty) {
-          let item = [];
-          snapshot.forEach((doc) => {
-            let data = Object.assign({ id: doc.id }, doc.data());
-            item.push(data);
-          });
-        }
-      });
-  };
-
   return (
-    <div className="AdminUsers">
-      {/* <div className="topBar">
-        <h1 className="titleUsers">Users</h1>
-      </div> */}
-      <table className="UsersTable">
+    <div className="AdminMangment">
+      <table className="AdminTable">
         <tbody>
           <tr>
             <th>Name</th>

@@ -5,6 +5,7 @@ import { setTrue, setFalse } from "../../../Redux/reducers/loadingSlice";
 import { setData } from "../../../Redux/reducers/userSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { GoogleAuthProvider } from "firebase/auth";
 
 function Register() {
   const dispatch = useDispatch();
@@ -13,6 +14,8 @@ function Register() {
   const [password, setPassword] = React.useState("");
   const [confirmPassword, setConfirmPassword] = React.useState("");
   const [name, setName] = React.useState("");
+
+  const provider = new GoogleAuthProvider();
 
   React.useEffect(() => {
     document.title = "Munasabti | Register";
@@ -67,6 +70,41 @@ function Register() {
     }
   };
 
+  const handleRegisterWithGoogle = () => {
+    auth.signInWithPopup(provider).then((result) => {
+      const data = Object.assign({
+        email: result.user.email,
+        name: result.user.displayName,
+        isAdmin: false,
+        isVendor: false,
+      });
+      db.collection("Users")
+        .doc(result.user.uid)
+        .set({
+          email: result.user.email,
+          name: result.user.displayName,
+          isAdmin: false,
+          isVendor: false,
+          Description: "",
+          Location: "",
+          Phone: "",
+          About: "",
+          Socials: {
+            Instagram: "",
+            Website: "",
+          },
+          VerifiedVendor: false,
+        })
+        .then(() => {
+          dispatch(setData(data));
+          navigate("/");
+        })
+        .catch((e) => {
+          alert(e.message);
+        });
+    });
+  };
+
   return (
     <div>
       <div className="regContainer">
@@ -109,6 +147,10 @@ function Register() {
           <br />
           <button id="btn">Register</button>
         </form>
+
+        <div onClick={handleRegisterWithGoogle}>
+          <p>Sign Up with google</p>
+        </div>
       </div>
     </div>
   );
