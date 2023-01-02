@@ -32,20 +32,18 @@ function SpecificVendor() {
 
   return (
     <div>
-      <div className="images">
-        <div className="imagesrows">
-          <div className="imgOne">
-            <img src="/images/MB1.png" alt="" />
-            <img src="/images/MB2.png" alt="" />
-          </div>
-          <div className="imgTwo">
-            <img src="/images/MB3.png" alt="" />
-            <img src="/images/MB4.png" alt="" />
-          </div>
-          <div className="imgThree">
-            <img src="/images/MB5.png" alt="" />
-            <img src="/images/MB6.png" alt="" />
-          </div>
+      <div className="rowsImage">
+        <div className="imgOne">
+          <img src="/images/MB1.png" alt="" />
+          <img src="/images/MB2.png" alt="" />
+        </div>
+        <div className="imgTwo">
+          <img src="/images/MB3.png" alt="" />
+          <img src="/images/MB4.png" alt="" />
+        </div>
+        <div className="imgThree">
+          <img src="/images/MB5.png" alt="" />
+          <img src="/images/MB6.png" alt="" />
         </div>
       </div>
       {id}

@@ -1,11 +1,6 @@
-.images {
-    align-items: center;
-    justify-content: center;
-    padding-left: 50px;
-    padding-right: 50px;
-}
 
-.imagesrows {
+
+.rowsImage {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
