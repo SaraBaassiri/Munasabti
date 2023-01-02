@@ -78,4 +78,78 @@
     padding-top: 15px;
     margin-right: 5%;
     cursor: pointer;
+    font-family: "montserrat", sans-serif;
+}
+
+.vendorInfo__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 10%;
+}
+
+.vendorInfo__left h3 {
+    color: #0C3651;
+    text-align: left;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    margin-bottom: 0;
+    font-family: "butler", sans-serif;
+    font-size: 2em;
+}
+
+.vendorInfo__left p {
+    font-size: 1em;
+    font-weight: lighter;
+    color: #707070;
+    text-align: left;
+    font-family: "montserrat", sans-serif;
+    align-items: center;
+    padding: 3px;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 1%;
+}
+
+#insta{
+    cursor: pointer;
+    border-right: 1.5px solid #707070;
+    padding-right: 15px;
+    /* padding-left: 15px; */
+}
+
+#web {
+    cursor: pointer;
+    border-right: 1.5px solid #707070;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#phone {
+    cursor: pointer;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.line {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.vendorInfo__left h6 {
+    color: #0C3651;
+    text-align: left;
+    font-weight: 700;
+    padding-bottom: 3px;
+    margin-bottom: 0;
+    font-family: "butler", sans-serif;
+    font-size: 1.3em;
 }
