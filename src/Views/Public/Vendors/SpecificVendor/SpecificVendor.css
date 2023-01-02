@@ -1,0 +1,55 @@
+.images {
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.imagesrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.imgOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgOne img {
+    width: 95%;
+    height: 95%;
+    margin-bottom: 5%;
+}
+
+.imgTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgTwo img {
+    width: 95%;
+    height: 95%;
+    margin-bottom: 5%;
+}
+
+.imgThree {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgThree img {
+    width: 95%;
+    height: 95%;
+    margin-bottom: 5%;
+}
