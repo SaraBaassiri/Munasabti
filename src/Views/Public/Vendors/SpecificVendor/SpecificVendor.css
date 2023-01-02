@@ -1,9 +1,7 @@
-
-
 .rowsImage {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 5%;
     margin-bottom: 2%;
@@ -13,38 +11,71 @@
 .imgOne {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 }
 
 .imgOne img {
     width: 95%;
-    height: 95%;
+    height: 55%;
     margin-bottom: 5%;
 }
 
 .imgTwo {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 }
 
 .imgTwo img {
     width: 95%;
-    height: 95%;
+    height: 55%;
     margin-bottom: 5%;
 }
 
 .imgThree {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 }
 
 .imgThree img {
     width: 95%;
-    height: 95%;
+    height: 55%;
     margin-bottom: 5%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    padding-top: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+    width: 88%;
+    margin-inline: 5.5%;
+}
+
+.navitems {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.navitems button {
+    color: #0C3651;
+    font-size: 1em;
+    border: 0;
+    background-color: transparent;
+    padding: 10px;
+    padding-top: 15px;
+    margin-right: 5%;
+    cursor: pointer;
 }
