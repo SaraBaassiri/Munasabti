@@ -8,16 +8,38 @@ import { EffectCoverflow, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 
+import { db } from "../../../firebase";
+
 //material UI Imports
 import { Grid, Rating } from "@mui/material";
 
 export default function Vendors() {
   const navigate = useNavigate();
   const swiperRef = React.useRef(null);
+  const [vendors, setVendors] = React.useState([]);
 
   React.useEffect(() => {
     document.title = "Munasabti | Vendors";
+    fetchData();
   }, []);
+
+  const fetchData = async () => {
+    setVendors([]);
+    await db
+      .collection("Users")
+      .where("isVendor", "==", true)
+      .get()
+      .then((snapshot) => {
+        if (!snapshot.empty) {
+          let item = [];
+          snapshot.forEach((doc) => {
+            let data = Object.assign({ id: doc.id }, doc.data());
+            item.push(data);
+          });
+          setVendors(item);
+        }
+      });
+  };
 
   const tempData = [
     {
@@ -140,7 +162,7 @@ export default function Vendors() {
             spacing={{ xs: 2, md: 4 }}
             columns={{ xs: 2, sm: 8, md: 12 }}
           >
-            {Array.from(Array(8)).map((item, index) => (
+            {vendors.map((item, index) => (
               <Grid item xs={2} sm={4} md={3}>
                 <div
                   className="gridVendor"
@@ -150,8 +172,8 @@ export default function Vendors() {
                 >
                   <img src="/images/vendorFiller.png" alt="" />
                   <div>
-                    <h2>thingy {index}</h2>
-                    <p>Location</p>
+                    <h2>{item.name}</h2>
+                    <p>{item.Location}</p>
                     <div className="InnerVendorGridInner">
                       <Rating
                         size="small"
@@ -184,7 +206,13 @@ export default function Vendors() {
                 accepting requests and benefit from our CRM & quotation
                 platforms! Growing your client base one conversion at a time
               </p>
-              <button>Register Now</button>
+              <button
+                onClick={() => {
+                  navigate("/auth/register");
+                }}
+              >
+                Register Now
+              </button>
             </div>
           </div>
         </div>
