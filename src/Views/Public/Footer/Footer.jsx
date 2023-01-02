@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import Logo from "../../../media/images/logov2.svg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -11,10 +12,10 @@ export default function Footer() {
       </div>
       <div className="Links">
         <div>
-          <a href="/">Home</a>
-          <a href="/">Services</a>
-          <a href="/">Vendors</a>
-          <a href="/">Inspirations</a>
+          <Link to="/">Home</Link>
+          <Link to="/">Services</Link>
+          <Link to="/vendors">Vendors</Link>
+          <Link to="/">Inspirations</Link>
         </div>
       </div>
       <div className="partTwo">

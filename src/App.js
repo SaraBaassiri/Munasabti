@@ -69,6 +69,7 @@ export default function App() {
             <Routes>
 
               {/* Public Routes */}
+
               <Route>
                 <Route path="/"
                   element={<Public children={<Home />} />} />
@@ -108,7 +109,6 @@ export default function App() {
               <Route path="/vendor" element={<AuthRoute />}>
                 <Route index element={<Vendor children={<VendorDashboard />} />} />
               </Route>
-
 
               {/* If no match is found */}
               <Route path="*" element={<NoMatch />} />
