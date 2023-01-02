@@ -23,9 +23,13 @@ export default function PublicNav() {
         <Link to="/Inspirations">Inspirations</Link>
       </div>
       {auth.currentUser ? (
-        <div className="PublicNav__Logins">
-          <Link to="/auth/profile">Profile</Link>
-          <Link to="/admin">admin</Link>
+        <div className="PublicNav__LoggedIn">
+          <Link to="/auth/profile">
+            <i className="fa fa-user"></i>
+          </Link>
+          <Link to="/admin">
+            <i className="fa fa-user-secret"></i>
+          </Link>
         </div>
       ) : (
         <div className="PublicNav__Logins">

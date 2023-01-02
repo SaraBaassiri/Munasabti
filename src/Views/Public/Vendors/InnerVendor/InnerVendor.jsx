@@ -43,7 +43,7 @@ function InnerVendor() {
         </div>
       </div>
       <div className="InnerVendorsBottom">
-        <p>{vendors.length}total vendors</p>
+        <p>{vendors.length} total vendors</p>
         <div className="FilterSelectors">
           <select name="city" className="AllVendorsSelector">
             <option selected hidden>
