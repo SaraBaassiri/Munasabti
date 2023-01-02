@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dashboard.css";
-import { db } from "../../../firebase";
+import { auth, db } from "../../../firebase";
 import {
   AiOutlineUser,
   AiFillShop,
@@ -41,7 +41,7 @@ function Dashboard() {
       <div className="main__container">
         <div className="main__title">
           <div className="main__greeting">
-            <h1>Hello "Add Name Later"</h1>
+            <h1>Hello {auth.currentUser.displayName}</h1>
             <p>Welcome to your admin dashboard</p>
           </div>
         </div>

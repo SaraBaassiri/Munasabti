@@ -152,7 +152,7 @@ export default function Vendors() {
                   <div>
                     <h2>thingy {index}</h2>
                     <p>Location</p>
-                    <div className="InnerVendorGrid">
+                    <div className="InnerVendorGridInner">
                       <Rating
                         size="small"
                         name="read-only"

@@ -37,6 +37,15 @@ function Register() {
               name: name,
               isAdmin: false,
               isVendor: false,
+              Description: "",
+              Location: "",
+              Phone: "",
+              About: "",
+              Socials: {
+                Instagram: "",
+                Website: "",
+              },
+              VerifiedVendor: false,
             })
             .then(() => {
               dispatch(setData(data));
