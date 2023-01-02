@@ -15,7 +15,6 @@
 .PublicNav__logo {
     cursor: pointer;
     height: 100%;
-    width: fit-content;
 }
 
 .PublicNav__logo img {
