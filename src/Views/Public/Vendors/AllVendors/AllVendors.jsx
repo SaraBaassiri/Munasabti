@@ -84,18 +84,18 @@ function AllVendors() {
               spacing={{ xs: 2, md: 2.5 }}
               columns={{ xs: 2, sm: 8, md: 9 }}
             >
-              {Array.from(Array(9)).map((item, index) => (
+              {vendors.map((item, index) => (
                 <Grid item xs={2} sm={3} md={3} key={index}>
                   <div
                     className="InnerVendorGrid"
                     onClick={() => {
-                      navigate("/vendor/" + index);
+                      navigate("/vendor/" + item.id);
                     }}
                   >
                     <img src="/images/vendorFiller.png" alt="" />
                     <div>
-                      <h2>thingy {index}</h2>
-                      <p>Location</p>
+                      <h2>{item.name}</h2>
+                      <p>{item.Location}</p>
                       <div className="InnerInnerVendorGrid">
                         <Rating
                           size="small"
