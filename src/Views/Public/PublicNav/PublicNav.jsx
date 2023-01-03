@@ -2,6 +2,7 @@ import React from "react";
 import "./PublicNav.css";
 import { auth } from "../../../firebase";
 import { Link, useNavigate } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
 
 export default function PublicNav() {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ export default function PublicNav() {
       {auth.currentUser ? (
         <div className="PublicNav__LoggedIn">
           <Link to="/auth/profile">
-            <i className="fa fa-user"></i>
+            <CgProfile size={35} />
           </Link>
           <Link to="/admin">
             <i className="fa fa-user-secret"></i>
