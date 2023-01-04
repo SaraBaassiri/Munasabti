@@ -196,7 +196,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 6.5%;
+    width: 65px;
 }
 
 .IconsInnerVendorInfo span {
@@ -243,5 +243,5 @@
     color: #0C3651;
     font-size: 1.5em;
     margin-right: 5%;
-    margin-top: 2%;
+    margin-top: 3%;
 }
