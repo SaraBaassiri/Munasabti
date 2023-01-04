@@ -10,6 +10,7 @@ import {
   BsHeart,
   BsHeartFill,
   BsShare,
+  BsCheck2,
 } from "react-icons/bs";
 import { Grid } from "@mui/material";
 
@@ -131,18 +132,20 @@ function SpecificVendor() {
           <p>{vendor.Description}</p>
           <div className="details">
             <h1>Details</h1>
-            <div className="InnerRightVendorInfo">
-              <Grid container spacing={2} columns={16}>
+            <Grid container spacing={2} columns={16}>
                 {Object.keys(details).map((key) => {
                   return (
                     <Grid item xs={8}>
                       <div className="detailsInner">
+                        <BsCheck2 size={25} id="checkIcon"/>
                         <p>{key}</p>
                       </div>
                     </Grid>
                   );
                 })}
               </Grid>
+            <div className="InnerRightVendorInfo">
+              
             </div>
           </div>
         </div>

@@ -217,7 +217,7 @@
     text-align: left;
     font-weight: 700;
     padding-bottom: 3px;
-    margin-bottom: 0;
+    margin-bottom: 3%;
     font-family: "montserrat", sans-serif;
     font-size: 1.3em;
     margin-top: 10%;
@@ -226,12 +226,11 @@
 .detailsInner {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 2%;
-    float: left;
-    margin: 0;
+    /* align-items: left; */
+    /* width: 100%; */
+    /* margin-top: 2%; */
+    /* float: left; */
+    /* margin: 0; */
 }
 
 .detailsInner p {
@@ -240,8 +239,14 @@
     color: #707070;
     text-align: left;
     font-family: "montserrat", sans-serif;
-    align-items: center;
-    padding: 3px;
-    padding-top: 0;
-    margin-bottom: 0;
+    align-items: left;
+    /* padding: 3px; */
+    /* padding-top: 0; */
+    /* margin-bottom: 0; */
+}
+
+#checkIcon {
+    color: #0C3651;
+    font-size: 1.5em;
+    margin-right: 5%;
 }
