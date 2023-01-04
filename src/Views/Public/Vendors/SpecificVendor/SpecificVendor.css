@@ -226,11 +226,7 @@
 .detailsInner {
     display: flex;
     flex-direction: row;
-    /* align-items: left; */
-    /* width: 100%; */
-    /* margin-top: 2%; */
-    /* float: left; */
-    /* margin: 0; */
+    align-items: center;
 }
 
 .detailsInner p {
@@ -240,13 +236,12 @@
     text-align: left;
     font-family: "montserrat", sans-serif;
     align-items: left;
-    /* padding: 3px; */
-    /* padding-top: 0; */
-    /* margin-bottom: 0; */
+
 }
 
 #checkIcon {
     color: #0C3651;
     font-size: 1.5em;
     margin-right: 5%;
+    margin-top: 2%;
 }

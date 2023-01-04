@@ -133,20 +133,17 @@ function SpecificVendor() {
           <div className="details">
             <h1>Details</h1>
             <Grid container spacing={2} columns={16}>
-                {Object.keys(details).map((key) => {
-                  return (
-                    <Grid item xs={8}>
-                      <div className="detailsInner">
-                        <BsCheck2 size={25} id="checkIcon"/>
-                        <p>{key}</p>
-                      </div>
-                    </Grid>
-                  );
-                })}
-              </Grid>
-            <div className="InnerRightVendorInfo">
-              
-            </div>
+              {Object.keys(details).map((key) => {
+                return (
+                  <Grid item xs={8}>
+                    <div className="detailsInner">
+                      <BsCheck2 size={23} id="checkIcon" />
+                      <p>{key}</p>
+                    </div>
+                  </Grid>
+                );
+              })}
+            </Grid>
           </div>
         </div>
         <div className="vendorInfo__right"></div>
