@@ -78,29 +78,43 @@ function Register() {
         isAdmin: false,
         isVendor: false,
       });
+
       db.collection("Users")
         .doc(result.user.uid)
-        .set({
-          email: result.user.email,
-          name: result.user.displayName,
-          isAdmin: false,
-          isVendor: false,
-          Description: "",
-          Location: "",
-          Phone: "",
-          About: "",
-          Socials: {
-            Instagram: "",
-            Website: "",
-          },
-          VerifiedVendor: false,
-        })
-        .then(() => {
-          dispatch(setData(data));
-          navigate("/");
+        .get()
+        .then((doc) => {
+          if (doc.exists) {
+            dispatch(setData(data));
+            navigate("/");
+          } else {
+            db.collection("Users")
+              .doc(result.user.uid)
+              .set({
+                email: result.user.email,
+                name: result.user.displayName,
+                isAdmin: false,
+                isVendor: false,
+                Description: "",
+                Location: "",
+                Phone: "",
+                About: "",
+                Socials: {
+                  Instagram: "",
+                  Website: "",
+                },
+                VerifiedVendor: false,
+              })
+              .then(() => {
+                dispatch(setData(data));
+                navigate("/");
+              })
+              .catch((e) => {
+                alert(e.message);
+              });
+          }
         })
         .catch((e) => {
-          alert(e.message);
+          console.log(e.message);
         });
     });
   };

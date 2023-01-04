@@ -3,6 +3,7 @@ import "./PublicNav.css";
 import { auth } from "../../../firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
+import { RiAdminLine } from "react-icons/ri";
 
 export default function PublicNav() {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ export default function PublicNav() {
             <CgProfile size={35} />
           </Link>
           <Link to="/admin">
-            <i className="fa fa-user-secret"></i>
+            <RiAdminLine size={35} />
           </Link>
         </div>
       ) : (

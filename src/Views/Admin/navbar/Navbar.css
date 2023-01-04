@@ -18,6 +18,19 @@
   color: #a5aaad;
 }
 
+.navbar__left {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.navbar__left div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
 .navbar__left>a {
   margin-right: 30px;
   text-decoration: none;
@@ -66,4 +79,10 @@
   .navbar__left {
     display: none;
   }
+}
+
+.ProfilePhotoNavbar {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
 }

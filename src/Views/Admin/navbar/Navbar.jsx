@@ -23,6 +23,21 @@ const Navbar = ({ openSidebar }) => {
       </div>
 
       <div className="navbar__left">
+        <div>
+          {auth.currentUser.photoURL ? (
+            <img
+              src={auth.currentUser.photoURL}
+              alt="logo"
+              className="ProfilePhotoNavbar"
+            />
+          ) : (
+            <img
+              src="/images/profile_default.jpg"
+              alt="logo"
+              className="ProfilePhotoNavbar"
+            />
+          )}
+        </div>
         <p className="active_link">{auth.currentUser.displayName}</p>
       </div>
       <div className="navbar__right">

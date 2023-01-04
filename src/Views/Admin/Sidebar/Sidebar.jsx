@@ -34,6 +34,19 @@ const SideBar = ({ sidebarOpen, closeSidebar }) => {
           <i className="fa fa-wrench"></i>
           <Link to="/admin/events">Events</Link>
         </div>
+        <h2>Website Configuration</h2>
+        <div className="sidebar__link">
+          <i class="fa-solid fa-image"></i>
+          <Link to="/admin/requests">Display Images</Link>
+        </div>
+        <div className="sidebar__link">
+          <i class="fa-solid fa-toolbox"></i>
+          <Link to="/admin/reviews">Vendor Section Configuration</Link>
+        </div>
+        <div className="sidebar__link">
+          <i className="fa fa-sign-out"></i>
+          <Link to="/admin/terms">Add Something later</Link>
+        </div>
         <h2>Feedback</h2>
         <div className="sidebar__link">
           <i className="fa fa-question"></i>

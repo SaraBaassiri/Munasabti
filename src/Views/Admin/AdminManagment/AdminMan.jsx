@@ -58,42 +58,44 @@ function AdminMan() {
         />
         <button onClick={MakeAdmin}>Add</button>
       </div>
-      <table className="AdminTable">
-        <tbody>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Gender</th>
-            <th>Remove</th>
-          </tr>
-          {items.map((item, index) => {
-            return (
-              <tr key={index}>
-                <td>{item.name}</td>
-                <td>{item.email}</td>
-                <td>{item.Gender === "" ? "Unspecified" : item.Gender}</td>
-                <td>
-                  <button
-                    onClick={() => {
-                      db.collection("Users")
-                        .doc(item.id)
-                        .update({
-                          isAdmin: false,
-                        })
-                        .then(() => {
-                          let temp = items.filter((i) => i.id !== item.id);
-                          setItems(temp);
-                        });
-                    }}
-                  >
-                    Remove
-                  </button>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <div className="InnerView">
+        <table className="AdminTable">
+          <tbody>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Gender</th>
+              <th>Remove</th>
+            </tr>
+            {items.map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td>{item.name}</td>
+                  <td>{item.email}</td>
+                  <td>{item.Gender === "" ? "Unspecified" : item.Gender}</td>
+                  <td>
+                    <button
+                      onClick={() => {
+                        db.collection("Users")
+                          .doc(item.id)
+                          .update({
+                            isAdmin: false,
+                          })
+                          .then(() => {
+                            let temp = items.filter((i) => i.id !== item.id);
+                            setItems(temp);
+                          });
+                      }}
+                    >
+                      Remove
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

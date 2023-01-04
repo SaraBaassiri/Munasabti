@@ -47,7 +47,7 @@ function Dashboard() {
         </div>
         <div className="main__cards">
           <div className="card">
-            <AiOutlineUser size={42} />
+            <i className="fa fa-user"></i>
             <div className="card_inner">
               <p className="text-primary-p">Number of Users</p>
               <span className="font-bold text-title">{users}</span>
@@ -55,7 +55,7 @@ function Dashboard() {
           </div>
 
           <div className="card">
-            <AiFillShop size={42} />
+            <i class="fa-solid fa-building"></i>
             <div className="card_inner">
               <p className="text-primary-p">Number of Vendors</p>
               <span className="font-bold text-title">{vendors}</span>
@@ -63,7 +63,7 @@ function Dashboard() {
           </div>
 
           <div className="card">
-            <AiFillCalendar size={42} />
+            <i class="fa-solid fa-calendar-days"></i>
             <div className="card_inner">
               <p className="text-primary-p">Number of Events</p>
               <span className="font-bold text-title">{events}</span>
@@ -71,7 +71,7 @@ function Dashboard() {
           </div>
 
           <div className="card">
-            <AiFillLike size={42} />
+            <i class="fa-solid fa-heart"></i>
             <div className="card_inner">
               <p className="text-primary-p">Number of Reviews</p>
               <span className="font-bold text-title">{reviews}</span>
