@@ -1,12 +1,14 @@
 import React from "react";
 import "./PublicNav.css";
-import { auth } from "../../../firebase";
+import { auth, db } from "../../../firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { RiAdminLine } from "react-icons/ri";
+import { useSelector } from "react-redux";
 
 export default function PublicNav() {
   const navigate = useNavigate();
+  const user = useSelector((state) => state.user.data);
 
   return (
     <div className="PublicNav">
@@ -29,9 +31,11 @@ export default function PublicNav() {
           <Link to="/auth/profile">
             <CgProfile size={35} />
           </Link>
-          <Link to="/admin">
-            <RiAdminLine size={35} />
-          </Link>
+          {user.isAdmin && (
+            <Link to="/admin">
+              <RiAdminLine size={35} />
+            </Link>
+          )}
         </div>
       ) : (
         <div className="PublicNav__Logins">
