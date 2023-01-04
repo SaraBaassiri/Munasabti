@@ -76,7 +76,7 @@ function Users() {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
         />
-        <button onClick={MakeVendor}>Add</button>
+        <button onClick={MakeVendor} id="add">Add</button>
       </div>
       <table className="UsersTable">
         <tbody>

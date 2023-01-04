@@ -47,7 +47,7 @@ function AdminMan() {
   };
 
   return (
-    <div className="AdminMangment">
+    <div className="AdminManagement">
       <div>
         <h3>Add an Admin</h3>
         <input
@@ -56,7 +56,7 @@ function AdminMan() {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
         />
-        <button onClick={MakeAdmin}>Add</button>
+        <button onClick={MakeAdmin} id="addbtn">Add</button>
       </div>
       <div className="InnerView">
         <table className="AdminTable">
