@@ -128,18 +128,21 @@ function SpecificVendor() {
           <div className="lineVendor"></div>
           <h6>About {vendor.name && vendor.name.split(" ")[0]}</h6>
           <p>{vendor.Description}</p>
+          <div className="details">
+            <h1>Details</h1>
+            <div className="InnerRightVendorInfo">
+              {Object.keys(details).map((key) => {
+                return (
+                  <div className="detailsInner">
+                    <p>{key}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
         <div className="vendorInfo__right">
-          <h1>Details</h1>
-          <div className="InnerRightVendorInfo">
-            {Object.keys(details).map((key) => {
-              return (
-                <div className="details">
-                  <p>{key}</p>
-                </div>
-              );
-            })}
-          </div>
+          
         </div>
       </div>
     </div>
