@@ -42,7 +42,7 @@ function Dashboard() {
         <div className="main__title">
           <div className="main__greeting">
             <h1>
-              Hello
+              Hello{" "}
               {auth.currentUser.displayName &&
                 auth.currentUser.displayName.split(" ")[0]}
             </h1>
