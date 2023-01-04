@@ -3,19 +3,41 @@ import { useParams } from "react-router-dom";
 import { db } from "../../../../firebase";
 import { useNavigate } from "react-router-dom";
 import "./SpecificVendor.css";
-
-import { BsGlobe2, BsTelephone, BsInstagram } from "react-icons/bs";
+import {
+  BsGlobe2,
+  BsTelephone,
+  BsInstagram,
+  BsHeart,
+  BsHeartFill,
+  BsShare,
+} from "react-icons/bs";
 
 function SpecificVendor() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [vendor, setVendor] = React.useState({});
+  const [isFav, setIsFav] = React.useState(false);
+  const [details, setDetails] = React.useState({
+    Category: "",
+    SubCategory: "",
+    Outdoor: false,
+    Capacity: 0,
+    Catering: false,
+    Alcohol: false,
+    Parking: false,
+    Wifi: false,
+    AC: false,
+    ReadyForbadWeather: false,
+    Smoking: false,
+  });
 
   React.useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = () => {
+    console.log(details);
+
     db.collection("Users")
       .doc(id)
       .get()
@@ -60,8 +82,29 @@ function SpecificVendor() {
       </div>
       <div className="vendorInfo">
         <div className="vendorInfo__left">
-          <h3>{vendor.name}</h3>
-          <p>{vendor.Location}</p>
+          <div className="VendorInfo__left__Inner">
+            <div>
+              <h3>{vendor.name}</h3>
+              <p>{vendor.Location}</p>
+            </div>
+            <div className="IconsInnerVendorInfo">
+              <span
+                onClick={() => {
+                  setIsFav(!isFav);
+                }}
+              >
+                {isFav ? <BsHeartFill size={"25"} /> : <BsHeart size={"25"} />}
+              </span>
+              <span
+                onClick={() => {
+                  navigator.clipboard.writeText(window.location.href);
+                }}
+              >
+                <BsShare size={"25"} />
+              </span>
+            </div>
+          </div>
+
           <div className="socials">
             <BsInstagram
               size={"25"}
@@ -85,6 +128,18 @@ function SpecificVendor() {
           <div className="lineVendor"></div>
           <h6>About {vendor.name && vendor.name.split(" ")[0]}</h6>
           <p>{vendor.Description}</p>
+        </div>
+        <div className="vendorInfo__right">
+          <h1>Details</h1>
+          <div className="InnerRightVendorInfo">
+            {Object.keys(details).map((key) => {
+              return (
+                <div className="details">
+                  <p>{key}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

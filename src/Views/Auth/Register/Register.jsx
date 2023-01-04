@@ -49,6 +49,19 @@ function Register() {
                 Website: "",
               },
               VerifiedVendor: false,
+              VendorDetails: {
+                Category: "",
+                SubCategory: "",
+                Outdoor: false,
+                Capacity: 0,
+                Catering: false,
+                Alcohol: false,
+                Parking: false,
+                Wifi: false,
+                AC: false,
+                ReadyForbadWeather: false,
+                Smoking: false,
+              },
             })
             .then(() => {
               dispatch(setData(data));

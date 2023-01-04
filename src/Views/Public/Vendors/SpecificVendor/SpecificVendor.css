@@ -180,3 +180,34 @@
     font-family: "butler", sans-serif;
     font-size: 1.3em;
 }
+
+
+.VendorInfo__left__Inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.IconsInnerVendorInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 6.5%;
+}
+
+.IconsInnerVendorInfo span {
+    cursor: pointer;
+}
+
+.InnerRightVendorInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+}
