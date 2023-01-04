@@ -11,6 +11,7 @@ import {
   BsHeartFill,
   BsShare,
 } from "react-icons/bs";
+import { Grid } from "@mui/material";
 
 function SpecificVendor() {
   const { id } = useParams();
