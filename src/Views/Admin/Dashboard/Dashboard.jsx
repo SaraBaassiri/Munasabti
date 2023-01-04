@@ -1,12 +1,6 @@
 import React from "react";
 import "./Dashboard.css";
 import { auth, db } from "../../../firebase";
-import {
-  AiOutlineUser,
-  AiFillShop,
-  AiFillCalendar,
-  AiFillLike,
-} from "react-icons/ai";
 // import { useDispatch } from "react-redux";
 // import { setFalse, setTrue } from "../../../Redux/reducers/loadingSlice";
 

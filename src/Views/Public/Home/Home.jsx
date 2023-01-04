@@ -10,14 +10,29 @@ import "swiper/css/effect-coverflow";
 //Material Ui imports
 import { Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { db } from "../../../firebase";
 
 export default function Home() {
   const navigate = useNavigate();
   const swiperRef = React.useRef(null);
   const [showTopBtn, setShowTopBtn] = React.useState(false);
+  const [data, setData] = React.useState([]);
 
   React.useEffect(() => {
     document.title = "Munasabti | Home";
+
+    db.collection("Users")
+      .where("isVendor", "==", true)
+      .limit(3)
+      .get()
+      .then((querySnapshot) => {
+        const tempData = [];
+        querySnapshot.forEach((doc) => {
+          tempData.push(doc.data());
+        });
+        setData(tempData);
+      });
+
     window.addEventListener("scroll", () => {
       if (window.scrollY > 400) {
         setShowTopBtn(true);
@@ -112,11 +127,16 @@ export default function Home() {
               <SwiperSlide key={item.id}>
                 <div className="HomeSwiper-Container">
                   <div className="HomeSwiper-slide-text">
+                    {/* {item?.isFeatured && (
+                      <div className="HomeSwiper-slide-text-featured">
+                        <p>Featured</p>
+                      </div>
+                    )} */}
                     <h1>{item.name}</h1>
                     <p>{item.description}</p>
                   </div>
                   <div className="HomeSwiper-slide-image">
-                    <img src={item.image} alt={item.name} />
+                    <img src={"/images/SliderImageTemp.png"} alt={item.name} />
                   </div>
                 </div>
               </SwiperSlide>
