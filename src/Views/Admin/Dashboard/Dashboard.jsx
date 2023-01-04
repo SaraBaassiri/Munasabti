@@ -44,6 +44,7 @@ function Dashboard() {
             <h1>
               Hello {auth.currentUser.displayName &&
                 auth.currentUser.displayName.split(" ")[0]},
+
             </h1>
             <p>Welcome to your admin dashboard</p>
           </div>
