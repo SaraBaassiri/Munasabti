@@ -28,7 +28,7 @@
 .VendorTable th {
     padding: 12px;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 1em;
     font-weight: 500;
     color: #434242;
 }
@@ -36,7 +36,7 @@
 .VendorTable td {
     padding: 12px;
     text-align: left;
-    font-size: 1rem;
+    font-size: 0.8em;
     font-weight: 400;
     color: #434242;
 }
