@@ -58,6 +58,7 @@ function SpecificVendor() {
         if (doc.exists) {
           if (doc.data().isVendor) {
             setVendor(doc.data());
+            document.title = `Munasabti | ${doc.data().name}`;
           } else {
             navigate("/");
           }

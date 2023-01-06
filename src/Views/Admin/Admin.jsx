@@ -4,6 +4,7 @@ import Navbar from "./navbar/Navbar";
 import SideBar from "./Sidebar/Sidebar";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
+import AnimatedRoutes from "../../Components/AnimatedRoutes";
 
 function Admin(props) {
   const navigate = useNavigate();
@@ -28,11 +29,13 @@ function Admin(props) {
   });
 
   return (
+    // <AnimatedRoutes>
     <div className="Admincontainer">
       <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
       <div className="InnerContainer">{props.children}</div>
       <SideBar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
     </div>
+    // </AnimatedRoutes>
   );
 }
 
