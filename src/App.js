@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { auth, db } from "./firebase";
 
 //Redux
@@ -35,11 +35,13 @@ import InnerVendor from "./Views/Public/Vendors/InnerVendor/InnerVendor";
 import SpecificVendor from "./Views/Public/Vendors/SpecificVendor/SpecificVendor";
 import AllVendors from "./Views/Public/Vendors/AllVendors/AllVendors";
 import AdminMan from "./Views/Admin/AdminManagment/AdminMan";
+import { AnimatePresence } from "framer-motion";
 
 export default function App() {
   const loading = useSelector((state) => state.loading.value);
   const userAuth = useSelector((state) => state.user.isLoggedIn);
   const dispatch = useDispatch();
+  const location = useLocation();
 
   React.useEffect(() => {
     if (document.location.pathname === "/") {
@@ -67,7 +69,8 @@ export default function App() {
           <Loading />
         ) : (
           <div className="App">
-            <Routes>
+            {/* <AnimatePresence> */}
+            <Routes key={location.pathname} location={location}>
 
               {/* Public Routes */}
 
@@ -115,6 +118,7 @@ export default function App() {
               {/* If no match is found */}
               <Route path="*" element={<NoMatch />} />
             </Routes>
+            {/* </AnimatePresence> */}
           </div>
         )
       }

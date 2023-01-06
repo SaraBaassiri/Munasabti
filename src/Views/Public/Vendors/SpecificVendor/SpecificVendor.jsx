@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { db } from "../../../../firebase";
+import { auth, db } from "../../../../firebase";
 import { useNavigate } from "react-router-dom";
 import "./SpecificVendor.css";
 import {
@@ -12,7 +12,10 @@ import {
   BsShare,
   BsCheck2,
 } from "react-icons/bs";
-import { Grid } from "@mui/material";
+import { Grid, Rating } from "@mui/material";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 function SpecificVendor() {
   const { id } = useParams();
@@ -32,6 +35,14 @@ function SpecificVendor() {
     ReadyForbadWeather: false,
     Smoking: false,
   });
+
+  const [startDate, setStartDate] = React.useState(new Date());
+  const [endDate, setEndDate] = React.useState(null);
+  const onChangeDate = (dates) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
 
   React.useEffect(() => {
     fetchData();
@@ -146,7 +157,54 @@ function SpecificVendor() {
             </Grid>
           </div>
         </div>
-        <div className="vendorInfo__right"></div>
+        <div className="vendorInfo__right">
+          <div className="TopReviewVendor">
+            <img src="/images/profile_default.jpg" alt="" />
+            <h4>User Name</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
+              incidunt quasi labore dolorum nobis nesciunt maiores ad voluptate
+              explicabo deserunt accusantium accusamus sit voluptates, quos
+              cumque, sed repellat quis necessitatibus.
+            </p>
+            <Rating
+              size="medium"
+              name="read-only"
+              value={4}
+              precision={0.5}
+              readOnly
+            />
+            <p>0 Reviews</p>
+          </div>
+          <div className="RequestVendorSpecific">
+            <h2>Request a quote</h2>
+            {auth.currentUser && auth.currentUser.emailVerified ? (
+              <button>Request</button>
+            ) : (
+              <button
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                Login
+              </button>
+            )}
+          </div>
+          <div className="VendorAvailabilitySpecific">
+            <h3>Availability</h3>
+            <DatePicker
+              className="datePickerVendor"
+              selected={startDate}
+              onChange={onChangeDate}
+              startDate={startDate}
+              endDate={endDate}
+              // excludeDates={[addDays(new Date(), 1), addDays(new Date(), 5)]}
+              selectsRange
+              selectsDisabledDaysInRange
+              inline
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

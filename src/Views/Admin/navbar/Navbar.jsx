@@ -5,17 +5,6 @@ import { Link } from "react-router-dom";
 import { auth } from "../../../firebase";
 
 const Navbar = ({ openSidebar }) => {
-  const [title, setTitle] = React.useState("Dashboard");
-
-  React.useEffect(() => {
-    if (document.location.pathname !== "/admin") {
-      let title =
-        document.location.pathname.split("/")[2].charAt(0).toUpperCase() +
-        document.location.pathname.split("/")[2].slice(1);
-      setTitle(title);
-    }
-  }, []);
-
   return (
     <div className="navbar">
       <div className="nav_icon" onClick={() => openSidebar("navbar")}>
@@ -24,9 +13,9 @@ const Navbar = ({ openSidebar }) => {
 
       <div className="navbar__left">
         <div>
-          {auth.currentUser.photoURL ? (
+          {auth.currentUser?.photoURL !== "" ? (
             <img
-              src={auth.currentUser.photoURL}
+              src={auth.currentUser?.photoURL}
               alt="logo"
               className="ProfilePhotoNavbar"
             />

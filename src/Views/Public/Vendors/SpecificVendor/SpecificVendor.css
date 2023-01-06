@@ -106,12 +106,20 @@
     font-family: "montserrat", sans-serif;
 }
 
+.vendorInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
 .vendorInfo__left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 50%;
-    margin-left: 10%;
+    width: 72%;
+    margin-right: 3%;
+    padding-left: 10%;
 }
 
 .vendorInfo__left h3 {
@@ -244,4 +252,120 @@
     font-size: 1.5em;
     margin-right: 5%;
     margin-top: 3%;
+}
+
+.vendorInfo__right {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding-right: 5%;
+    margin-top: 2.5%;
+}
+
+.TopReviewVendor {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #A1CCD8;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+}
+
+.TopReviewVendor img {
+    width: 4em;
+    height: 4em;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.TopReviewVendor h4 {
+    color: #0C3651;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 3px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: "montserrat", sans-serif;
+    font-size: 1em;
+}
+
+.TopReviewVendor p {
+    font-size: 1em;
+    font-weight: lighter;
+    color: #0C3651;
+    text-align: center;
+    font-family: "montserrat", sans-serif;
+    align-items: center;
+    padding: 3px;
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+
+
+.RequestVendorSpecific {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #A1CCD8;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    margin-top: 5%;
+    padding-block: 5%;
+}
+
+.RequestVendorSpecific h2 {
+    font-family: "montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 5%;
+    color: #0C3651;
+    text-transform: capitalize;
+}
+
+.RequestVendorSpecific button {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    background: #EEC0C0;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.RequestVendorSpecific button:hover {
+    color: #fff;
+    background: #e9cccc;
+    transition: all 0.2s ease-in-out;
+}
+
+.VendorAvailabilitySpecific {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #A1CCD8;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    padding-block: 5%;
+    margin-top: 5%;
+}
+
+.VendorAvailabilitySpecific h3 {
+    font-family: "montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 5%;
+    color: #0C3651;
+    text-transform: capitalize;
+}
+
+
+.datePickerVendor {
+color: #0C3651;
 }

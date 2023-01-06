@@ -12,15 +12,17 @@ function AdminRoute({ children }) {
   React.useEffect(() => {
     dispatch(setTrue());
     auth.onAuthStateChanged((user) => {
-      db.collection("Users")
-        .doc(auth.currentUser.uid)
-        .get()
-        .then((doc) => {
-          if (!doc.data().isAdmin) {
-            setIsAdmin(false);
-          }
-          setLoading(false);
-        });
+      if (user) {
+        db.collection("Users")
+          .doc(auth.currentUser?.uid)
+          .get()
+          .then((doc) => {
+            if (!doc.data().isAdmin) {
+              setIsAdmin(false);
+            }
+            setLoading(false);
+          });
+      }
     });
     dispatch(setFalse());
   });

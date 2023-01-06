@@ -1,6 +1,6 @@
 import React from "react";
 import "./PublicNav.css";
-import { auth, db } from "../../../firebase";
+import { auth } from "../../../firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { RiAdminLine } from "react-icons/ri";
