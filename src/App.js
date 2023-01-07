@@ -106,7 +106,7 @@ export default function App() {
                 <Route path="/admin/users" element={<Admin children={<Users />} />} />
                 <Route path="/admin/vendors" element={<Admin children={<VendorAdmin />} />} />
                 <Route path="/admin/events" element={<Admin children={<Events />} />} />
-                <Route path="/admin/reviews" element={<Admin children={<Reviews />} />} />\
+                <Route path="/admin/reviews" element={<Admin children={<Reviews />} />} />
                 <Route path="/admin/managment" element={<Admin children={<AdminMan />} />} />
               </Route>
 
