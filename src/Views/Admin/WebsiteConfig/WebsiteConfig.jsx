@@ -1,5 +1,6 @@
 import React from "react";
 import { db } from "../../../firebase";
+import "./WebsiteConfig.css";
 
 function WebsiteConfig() {
   const [data, setData] = React.useState({});
@@ -33,9 +34,9 @@ function WebsiteConfig() {
       });
   };
   return (
-    <div>
-      <h1>Website Config</h1>
-      <label>Email</label>
+    <div className="webConfig">
+      <h1>Website Configuration</h1>
+      <label>Email:</label>
       <input
         type="text"
         placeholder="Display Email"
@@ -45,7 +46,7 @@ function WebsiteConfig() {
         }}
       />
 
-      <label>Phone Number</label>
+      <label>Phone Number:</label>
       <input
         type="text"
         placeholder="Display Number"
