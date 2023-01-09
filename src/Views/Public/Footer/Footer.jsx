@@ -30,8 +30,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="partTwo">
-        <a href="/">{data.Email}</a>
-        <a href="/">{data.PhoneNumber}</a>
+        <p>{data.Email}</p>
+        <p>{data.PhoneNumber}</p>
       </div>
       <h6>Copyright {new Date().getFullYear()}</h6>
     </div>
