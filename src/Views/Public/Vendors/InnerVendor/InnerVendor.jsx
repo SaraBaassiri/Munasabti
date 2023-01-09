@@ -40,10 +40,14 @@ function InnerVendor() {
           <div className="InnerVendorText">
             <h1>{id}</h1>
           </div>
-          <div className="firstinp">
-            <BsSearch className="searchIcon" color="#0C3651" size={20}/>
-            <input type="text" placeholder="Search for vendors..." id="inp1"/>
-            <input type="text" placeholder="in Where..." id="inp2"/>
+          <div className="firstinpVendor">
+            <BsSearch className="searchIconVendor" color="#0C3651" size={20} />
+            <input
+              type="text"
+              placeholder="Search for vendors..."
+              id="inp1Vendor"
+            />
+            <input type="text" placeholder="in Where..." id="inp2Vendor" />
           </div>
         </div>
       </div>
