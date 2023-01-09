@@ -36,9 +36,10 @@ function Dashboard() {
         <div className="main__title">
           <div className="main__greeting">
             <h1>
-              Hello {auth.currentUser.displayName &&
-                auth.currentUser.displayName.split(" ")[0]},
-
+              Hello{" "}
+              {auth.currentUser.displayName &&
+                auth.currentUser.displayName.split(" ")[0]}
+              ,
             </h1>
             <p>Welcome to your admin dashboard</p>
           </div>
@@ -81,8 +82,7 @@ function Dashboard() {
           <div className="charts__left">
             <div className="charts__left__title">
               <div>
-                <h1>Daily Reports</h1>
-                <p>Cupertino, California, USA</p>
+                <h1>New Reviews</h1>
               </div>
             </div>
           </div>

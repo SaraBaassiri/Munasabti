@@ -56,7 +56,9 @@ function AdminMan() {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
         />
-        <button onClick={MakeAdmin} id="addbtn">Add</button>
+        <button onClick={MakeAdmin} id="addbtn">
+          Add
+        </button>
       </div>
       <div className="InnerView">
         <table className="AdminTable">
@@ -87,7 +89,7 @@ function AdminMan() {
                           });
                       }}
                     >
-                      Remove
+                      <i class="fa-solid fa-trash"></i>
                     </button>
                   </td>
                 </tr>
