@@ -4,6 +4,7 @@ import "./InnerVendor.css";
 import { db } from "../../../../firebase";
 import { Grid, Rating } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { BsSearch } from "react-icons/bs";
 
 function InnerVendor() {
   const { id } = useParams();
@@ -39,7 +40,11 @@ function InnerVendor() {
           <div className="InnerVendorText">
             <h1>{id}</h1>
           </div>
-          <input type="text" placeholder="text here..." />
+          <div className="firstinp">
+            <BsSearch className="searchIcon" color="#0C3651" size={20}/>
+            <input type="text" placeholder="Search for vendors..." id="inp1"/>
+            <input type="text" placeholder="in Where..." id="inp2"/>
+          </div>
         </div>
       </div>
       <div className="InnerVendorsBottom">
