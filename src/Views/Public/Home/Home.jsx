@@ -107,9 +107,6 @@ export default function Home() {
               <input type="text" placeholder="in Where..." id="inp2"/>
               <BsSearch className="searchIcon" color="#0C3651" size={20}/>
             </div>
-            <div className="secondinp">
-              
-            </div>
           </div>
 
           <div className="HomeSwiper">
