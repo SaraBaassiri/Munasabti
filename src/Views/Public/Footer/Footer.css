@@ -39,6 +39,12 @@
     color: #E8745D;
 }
 
+.partTwo {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
 .partTwo p {
     color: #0C3651;
     text-decoration: none;
@@ -47,10 +53,6 @@
     font-size: 0.8em;
     font-family: "montserrat", sans-serif;
     font-weight: light;
-}
-
-.partTwo p:hover {
-    color: #E8745D;
 }
 
 .Footer h6 {
