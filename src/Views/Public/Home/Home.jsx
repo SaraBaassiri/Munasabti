@@ -101,7 +101,13 @@ export default function Home() {
             <p>
               Browse our unique selection of venues and value providers near you
             </p>
-            <input type="text" placeholder="Search for vendors..." />
+            <div className="firstinp">
+              <input type="text" placeholder="Search for vendors..." id="inp1"/>
+              <input type="text" placeholder="in Where..." id="inp2"/>
+            </div>
+            <div className="secondinp">
+              
+            </div>
           </div>
 
           <div className="HomeSwiper">
