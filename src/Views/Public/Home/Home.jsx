@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import { BsSearch } from "react-icons/bs";
 
 //Swiper Imports
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -104,6 +105,7 @@ export default function Home() {
             <div className="firstinp">
               <input type="text" placeholder="Search for vendors..." id="inp1"/>
               <input type="text" placeholder="in Where..." id="inp2"/>
+              <BsSearch className="searchIcon" color="#0C3651" size={20}/>
             </div>
             <div className="secondinp">
               
