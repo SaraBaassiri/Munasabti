@@ -1,5 +1,6 @@
 import React from "react";
 import "./Vendors.css";
+import { BsSearch } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
 //Swiper Imports
@@ -85,7 +86,11 @@ export default function Vendors() {
         <div className="VendorEvents">
           <h2>For Events Across Lebanon</h2>
           <p>Find suppliers and value providers near you wherever you are</p>
-          <input type="text" placeholder="Enter text here..." />
+          <div className="firstinp">
+            <input type="text" placeholder="Search for vendors..." id="inp1"/>
+            <input type="text" placeholder="in Where..." id="inp2"/>
+            <BsSearch className="searchIcon" color="#0C3651" size={20}/>
+          </div>
 
           <div className="VendorSwiper">
             <Swiper
