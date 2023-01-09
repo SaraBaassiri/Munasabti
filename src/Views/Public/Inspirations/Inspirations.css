@@ -1,0 +1,84 @@
+.inspoHero {
+    text-align: start;
+    margin-top: 20px;
+    height: 100vh;
+    display: flexbox;
+} 
+
+.inspoHeroImage {
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.33),
+     rgba(0, 0, 0, 0.2)), 
+    url("/public/images/HeroBg.png");
+     
+    height: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.inspoHeroText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+}
+
+.inspoHeroText h1 {
+    font-size: 3em;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 25%;
+    color: white;
+    font-family: "butler", sans-serif;
+    text-align: center;
+}
+
+.latestEvents {
+    justify-content: center;
+    text-align: center;
+}
+
+.latestEvents h1 {
+    font-size: 2em;
+    color: #E8745D;
+    font-weight: normal;
+    font-family: "butler", sans-serif;
+    text-transform: uppercase;
+}
+
+.latestEvents p {
+    font-size: 1.2em;
+    color: #707070;
+    font-family: "montserrat", sans-serif;
+    font-weight: lighter;
+    /* margin-bottom: 3%; */
+}
+
+.inspoGrid1 {
+    padding: 40px;
+}
+
+.inspoGrid1 p {
+    color: #0C3651;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: "butler", sans-serif;
+    margin-bottom: 10%;
+}
+
+.inspoGrid2 {
+    background-color: #e8745d4a;
+    padding: 50px;
+}
+
+.inspoGrid2 p {
+    color: #0C3651;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: "butler", sans-serif;
+}
