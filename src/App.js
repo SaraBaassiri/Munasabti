@@ -38,6 +38,9 @@ import AdminMan from "./Views/Admin/AdminManagment/AdminMan";
 import { AnimatePresence } from "framer-motion";
 import WebsiteConfig from "./Views/Admin/WebsiteConfig/WebsiteConfig";
 
+//Inspirations
+import Inspirations from "./Views/Public/Inspirations/Inspirations";
+
 export default function App() {
   const loading = useSelector((state) => state.loading.value);
   const userAuth = useSelector((state) => state.user.isLoggedIn);
@@ -86,6 +89,8 @@ export default function App() {
                   element={<Public children={<InnerVendor />} />} />
                 <Route path="/vendor/:id"
                   element={<Public children={<SpecificVendor />} />} />
+                <Route path="/inspirations"
+                  element={<Public children={<Inspirations />} />} />
               </Route>
               {/* Auth Routes (Only accessible when logged out)*/}
               {
