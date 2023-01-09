@@ -40,6 +40,7 @@ import WebsiteConfig from "./Views/Admin/WebsiteConfig/WebsiteConfig";
 
 //Inspirations
 import Inspirations from "./Views/Public/Inspirations/Inspirations";
+import EditImages from "./Views/Admin/EditImages/EditImages";
 
 export default function App() {
   const loading = useSelector((state) => state.loading.value);
@@ -115,6 +116,8 @@ export default function App() {
                 <Route path="/admin/reviews" element={<Admin children={<Reviews />} />} />
                 <Route path="/admin/managment" element={<Admin children={<AdminMan />} />} />
                 <Route path="/admin/website-config" element={<Admin children={<WebsiteConfig />} />} />
+                <Route path="/admin/edit-images" element={<Admin children={<EditImages />} />} />
+
               </Route>
 
               {/* Vendor Routes */}

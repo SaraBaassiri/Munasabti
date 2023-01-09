@@ -37,7 +37,7 @@ const SideBar = ({ sidebarOpen, closeSidebar }) => {
         <h2>Website Configuration</h2>
         <div className="sidebar__link">
           <i class="fa-solid fa-image"></i>
-          <Link to="/admin/requests">Display Images</Link>
+          <Link to="/admin/edit-images">Display Images</Link>
         </div>
         <div className="sidebar__link">
           <i class="fa-solid fa-toolbox"></i>

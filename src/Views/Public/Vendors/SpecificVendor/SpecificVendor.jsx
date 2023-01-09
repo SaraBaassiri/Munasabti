@@ -1,19 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { auth, db } from "../../../../firebase";
+import { db } from "../../../../firebase";
 import { useNavigate } from "react-router-dom";
 import "./SpecificVendor.css";
-import {
-  BsGlobe2,
-  BsTelephone,
-  BsInstagram,
-  BsHeart,
-  BsHeartFill,
-  BsShare,
-  BsCheck2,
-} from "react-icons/bs";
-import { Grid, Rating } from "@mui/material";
-import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import Details from "./SpecficInner/Detais";
@@ -27,7 +16,6 @@ function SpecificVendor() {
   const navigate = useNavigate();
   const [display, setDisplay] = React.useState("About");
   const [vendor, setVendor] = React.useState({});
-  const [isFav, setIsFav] = React.useState(false);
   const [details, setDetails] = React.useState({
     Category: "",
     SubCategory: "",
@@ -41,14 +29,6 @@ function SpecificVendor() {
     ReadyForbadWeather: false,
     Smoking: false,
   });
-
-  const [startDate, setStartDate] = React.useState(new Date());
-  const [endDate, setEndDate] = React.useState(null);
-  const onChangeDate = (dates) => {
-    const [start, end] = dates;
-    setStartDate(start);
-    setEndDate(end);
-  };
 
   React.useEffect(() => {
     fetchData();
