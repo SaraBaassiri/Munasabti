@@ -36,6 +36,7 @@ import SpecificVendor from "./Views/Public/Vendors/SpecificVendor/SpecificVendor
 import AllVendors from "./Views/Public/Vendors/AllVendors/AllVendors";
 import AdminMan from "./Views/Admin/AdminManagment/AdminMan";
 import { AnimatePresence } from "framer-motion";
+import WebsiteConfig from "./Views/Admin/WebsiteConfig/WebsiteConfig";
 
 export default function App() {
   const loading = useSelector((state) => state.loading.value);
@@ -108,6 +109,7 @@ export default function App() {
                 <Route path="/admin/events" element={<Admin children={<Events />} />} />
                 <Route path="/admin/reviews" element={<Admin children={<Reviews />} />} />
                 <Route path="/admin/managment" element={<Admin children={<AdminMan />} />} />
+                <Route path="/admin/website-config" element={<Admin children={<WebsiteConfig />} />} />
               </Route>
 
               {/* Vendor Routes */}

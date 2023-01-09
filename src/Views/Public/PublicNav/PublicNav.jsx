@@ -1,6 +1,6 @@
 import React from "react";
 import "./PublicNav.css";
-import { auth } from "../../../firebase";
+import { auth, db } from "../../../firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { RiAdminLine } from "react-icons/ri";
@@ -8,7 +8,21 @@ import { useSelector } from "react-redux";
 
 export default function PublicNav() {
   const navigate = useNavigate();
-  const user = useSelector((state) => state.user.data);
+  const [admin, setAdmin] = React.useState(false);
+
+  React.useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      db.collection("Users")
+        .doc(user.uid)
+        .get()
+        .then((doc) => {
+          if (doc.data().isAdmin) {
+            setAdmin(true);
+          }
+        });
+    });
+    return unsubscribe;
+  });
 
   return (
     <div className="PublicNav">
@@ -31,7 +45,7 @@ export default function PublicNav() {
           <Link to="/auth/profile">
             <CgProfile size={35} />
           </Link>
-          {user.isAdmin && (
+          {admin && (
             <Link to="/admin">
               <RiAdminLine size={35} />
             </Link>
