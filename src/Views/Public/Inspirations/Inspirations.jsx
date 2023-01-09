@@ -1,4 +1,5 @@
 import React from "react";
+import AnimatedRoutes from "../../../Components/AnimatedRoutes";
 
 function Inspirations(props) {
   return (
