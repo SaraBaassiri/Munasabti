@@ -9,6 +9,7 @@
 }
 
 .InnerTable table {
+    width: 30em;
     border-collapse: collapse;
     border: 1px solid #ddd;
     font-size: 14px;
@@ -24,6 +25,6 @@
 }
 
 .InnerTable th img{
-    height: 100px;
-    width: 100px;
+    height: 130px;
+    width: 130px;
 }

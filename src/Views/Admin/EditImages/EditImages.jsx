@@ -63,6 +63,19 @@ function EditImages() {
                 </button>
               </th>
             </tr>
+            <tr>
+              <th>
+                <img src="https://via.placeholder.com/150" alt="placeholder" />
+              </th>
+              <th>
+                <button>
+                  <i className="fas fa-save"></i>
+                </button>
+                <button>
+                  <i className="fas fa-trash-alt"></i>
+                </button>
+              </th>
+            </tr>
           </tbody>
         </table>
       </div>
