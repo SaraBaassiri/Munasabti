@@ -1,10 +1,11 @@
 import "./Navbar.css";
 import React from "react";
 import { FaBars } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../../firebase";
 
 const Navbar = ({ openSidebar }) => {
+  const navigate = useNavigate();
   return (
     <div className="navbar">
       <div className="nav_icon" onClick={() => openSidebar("navbar")}>
@@ -36,6 +37,16 @@ const Navbar = ({ openSidebar }) => {
         <Link to="/auth/profile">
           <i className="fa fa-user"></i>
         </Link>
+        <div
+          to="/auth/profile"
+          onClick={() => {
+            auth.signOut().then(() => {
+              navigate("/");
+            });
+          }}
+        >
+          <i className="fa fa-power-off"></i>
+        </div>
       </div>
     </div>
   );

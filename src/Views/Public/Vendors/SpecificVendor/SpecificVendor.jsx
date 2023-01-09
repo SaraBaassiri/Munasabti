@@ -16,10 +16,16 @@ import { Grid, Rating } from "@mui/material";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
+import Details from "./SpecficInner/Detais";
+import SpecificPhotos from "./SpecficInner/SpecificPhotos";
+import SpecificVideos from "./SpecficInner/SpecificVideos";
+import SpecificReviews from "./SpecficInner/SpecificReviews";
+import SpecificMap from "./SpecficInner/SpecificMap";
 
 function SpecificVendor() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [display, setDisplay] = React.useState("About");
   const [vendor, setVendor] = React.useState({});
   const [isFav, setIsFav] = React.useState(false);
   const [details, setDetails] = React.useState({
@@ -87,125 +93,56 @@ function SpecificVendor() {
       </div>
       <div className="nav">
         <div className="navitems">
-          <button>About</button>
-          <button>Photos</button>
-          <button>Videos</button>
-          <button>Reviews</button>
-          <button>Map</button>
+          <button
+            onClick={() => {
+              setDisplay("About");
+            }}
+          >
+            About
+          </button>
+          <button
+            onClick={() => {
+              setDisplay("Photos");
+            }}
+          >
+            Photos
+          </button>
+          <button
+            onClick={() => {
+              setDisplay("Videos");
+            }}
+          >
+            Videos
+          </button>
+          <button
+            onClick={() => {
+              setDisplay("Reviews");
+            }}
+          >
+            Reviews
+          </button>
+          <button
+            onClick={() => {
+              setDisplay("Map");
+            }}
+          >
+            Map
+          </button>
         </div>
       </div>
-      <div className="vendorInfo">
-        <div className="vendorInfo__left">
-          <div className="VendorInfo__left__Inner">
-            <div>
-              <h3>{vendor.name}</h3>
-              <p>{vendor.Location}</p>
-            </div>
-            <div className="IconsInnerVendorInfo">
-              <span
-                onClick={() => {
-                  setIsFav(!isFav);
-                }}
-              >
-                {isFav ? <BsHeartFill size={"25"} /> : <BsHeart size={"25"} />}
-              </span>
-              <span
-                onClick={() => {
-                  navigator.clipboard.writeText(window.location.href);
-                }}
-              >
-                <BsShare size={"25"} />
-              </span>
-            </div>
-          </div>
 
-          <div className="socials">
-            <BsInstagram
-              size={"25"}
-              id="insta"
-              onMouseOver={({ target }) => (target.style.color = "#0C3651")}
-              onMouseOut={({ target }) => (target.style.color = "#707070")}
-            />
-            <BsGlobe2
-              size={"25"}
-              id="web"
-              onMouseOver={({ target }) => (target.style.color = "#0C3651")}
-              onMouseOut={({ target }) => (target.style.color = "#707070")}
-            />
-            <BsTelephone
-              size={"25"}
-              id="phone"
-              onMouseOver={({ target }) => (target.style.color = "#0C3651")}
-              onMouseOut={({ target }) => (target.style.color = "#707070")}
-            />
-          </div>
-          <div className="lineVendor"></div>
-          <h6>About {vendor.name && vendor.name.split(" ")[0]}</h6>
-          <p>{vendor.Description}</p>
-          <div className="details">
-            <h1>Details</h1>
-            <Grid container spacing={2} columns={16}>
-              {Object.keys(details).map((key) => {
-                return (
-                  <Grid item xs={8}>
-                    <div className="detailsInner">
-                      <BsCheck2 size={23} id="checkIcon" />
-                      <p>{key}</p>
-                    </div>
-                  </Grid>
-                );
-              })}
-            </Grid>
-          </div>
-        </div>
-        <div className="vendorInfo__right">
-          <div className="TopReviewVendor">
-            <img src="/images/profile_default.jpg" alt="" />
-            <h4>User Name</h4>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
-              incidunt quasi labore dolorum nobis nesciunt maiores ad voluptate
-              explicabo deserunt accusantium accusamus sit voluptates, quos
-              cumque, sed repellat quis necessitatibus.
-            </p>
-            <Rating
-              size="medium"
-              name="read-only"
-              value={4}
-              precision={0.5}
-              readOnly
-            />
-            <p>0 Reviews</p>
-          </div>
-          <div className="RequestVendorSpecific">
-            <h2>Request a quote</h2>
-            {auth.currentUser && auth.currentUser.emailVerified ? (
-              <button>Request</button>
-            ) : (
-              <button
-                onClick={() => {
-                  navigate("/login");
-                }}
-              >
-                Login
-              </button>
-            )}
-          </div>
-          <div className="VendorAvailabilitySpecific">
-            <h3>Availability</h3>
-            <DatePicker
-              className="datePickerVendor"
-              selected={startDate}
-              onChange={onChangeDate}
-              startDate={startDate}
-              endDate={endDate}
-              // excludeDates={[addDays(new Date(), 1), addDays(new Date(), 5)]}
-              selectsRange
-              selectsDisabledDaysInRange
-              inline
-            />
-          </div>
-        </div>
+      <div>
+        {display === "About" ? (
+          <Details />
+        ) : display === "Photos" ? (
+          <SpecificPhotos />
+        ) : display === "Videos" ? (
+          <SpecificVideos />
+        ) : display === "Reviews" ? (
+          <SpecificReviews />
+        ) : (
+          display === "Map" && <SpecificMap />
+        )}
       </div>
     </div>
   );

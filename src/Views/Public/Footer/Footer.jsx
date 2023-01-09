@@ -2,8 +2,19 @@ import React from "react";
 import "./Footer.css";
 import Logo from "../../../media/images/logov2.svg";
 import { Link } from "react-router-dom";
+import { db } from "../../../firebase";
 
 export default function Footer() {
+  const [data, setData] = React.useState({});
+  React.useEffect(() => {
+    db.collection("Config")
+      .doc("Text")
+      .get()
+      .then((doc) => {
+        setData(doc.data());
+      });
+  }, []);
+
   return (
     <div className="Footer">
       <div className="line" />
@@ -19,10 +30,10 @@ export default function Footer() {
         </div>
       </div>
       <div className="partTwo">
-        <a href="/">loremipsum@domain.com</a>
-        <a href="/">00 - 123456</a>
+        <a href="/">{data.Email}</a>
+        <a href="/">{data.PhoneNumber}</a>
       </div>
-      <h6>Copyright 2022</h6>
+      <h6>Copyright {new Date().getFullYear()}</h6>
     </div>
   );
 }

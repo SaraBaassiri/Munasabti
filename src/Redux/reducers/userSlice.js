@@ -15,6 +15,7 @@ export const loadingSlice = createSlice({
         },
         setData: (state, action) => {
             state.data = action.payload;
+            console.log(state.data);
         },
     },
 });

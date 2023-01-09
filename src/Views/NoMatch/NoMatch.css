@@ -58,7 +58,7 @@
     font-family: "butler", sans-serif;
   }
   
-  .notfound a {
+  .notfound span {
     display: inline-block;
     text-decoration: none;
     color: #fff;
@@ -70,9 +70,10 @@
     background: #EEC0C0;
     font-size: 18px;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
   }
   
-  .notfound a:hover {
+  .notfound span:hover {
     color: #fff;
     background: #e9cccc;
     transition: all 0.2s ease-in-out;
@@ -95,7 +96,7 @@
     .notfound .notfound-404 h2 {
       font-size: 16px;
     }
-    .notfound a {
+    .notfound span {
       padding: 7px 15px;
       font-size: 14px;
     }

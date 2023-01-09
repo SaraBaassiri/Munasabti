@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./NoMatch.css";
 import { motion } from "framer-motion";
 
 export default function NoMatch() {
+  const navigate = useNavigate();
   React.useEffect(() => {
     document.title = "Munasabti | 404";
   }, []);
@@ -26,7 +27,13 @@ export default function NoMatch() {
             <h1>Oops!</h1>
             <h2>404 - The Page can't be found</h2>
           </div>
-          <Link to="/">Go Home</Link>
+          <span
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
+            Go Back
+          </span>
         </div>
       </div>
     </motion.div>

@@ -45,7 +45,7 @@ const SideBar = ({ sidebarOpen, closeSidebar }) => {
         </div>
         <div className="sidebar__link">
           <i className="fa fa-sign-out"></i>
-          <Link to="/admin/terms">Add Something later</Link>
+          <Link to="/admin/website-config">Website Configuration</Link>
         </div>
         <h2>Feedback</h2>
         <div className="sidebar__link">
@@ -59,17 +59,6 @@ const SideBar = ({ sidebarOpen, closeSidebar }) => {
         <div className="sidebar__link">
           <i className="fa fa-sign-out"></i>
           <Link to="/admin/terms">Edit Terms and Services</Link>
-        </div>
-        <div
-          className="sidebar__logout"
-          onClick={() => {
-            auth.signOut().then(() => {
-              navigate("/");
-            });
-          }}
-        >
-          <i className="fa fa-power-off"></i>
-          <p>Log out</p>
         </div>
       </div>
     </div>
