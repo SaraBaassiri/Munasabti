@@ -194,82 +194,32 @@ export default function Home() {
             >
               <Grid item xs={2} sm={4} md={4}>
                 <div className="grid">
-                  <img src="/images/filler.png" alt="" />
-                  <h4>Service #1</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
-                  </p>
+                  <img src="/images/Filler1.png" alt="" />
+                  <h4>Guest List</h4>
                 </div>
               </Grid>
               <Grid item xs={2} sm={4} md={4}>
                 <div className="grid">
-                  <img src="/images/filler.png" alt="" />
-                  <h4>Service #2</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
-                  </p>
+                  <img src="/images/Filler2.png" alt="" />
+                  <h4>Profile</h4>
                 </div>
               </Grid>
               <Grid item xs={2} sm={4} md={4}>
                 <div className="grid">
-                  <img src="/images/filler.png" alt="" />
-                  <h4>Service #3</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
-                  </p>
+                  <img src="/images/Filler3.png" alt="" />
+                  <h4>Chat</h4>
                 </div>
               </Grid>
               <Grid item xs={2} sm={4} md={4}>
                 <div className="grid">
-                  <img src="/images/filler.png" alt="" />
-                  <h4>Service #4</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
-                  </p>
+                  <img src="/images/Filler4.png" alt="" />
+                  <h4>My Events</h4>
                 </div>
               </Grid>
               <Grid item xs={2} sm={4} md={4}>
                 <div className="grid">
-                  <img src="/images/filler.png" alt="" />
-                  <h4>Service #5</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
-                  </p>
+                  <img src="/images/Filler5.png" alt="" />
+                  <h4>Manage Vendors</h4>
                 </div>
               </Grid>
             </Grid>
