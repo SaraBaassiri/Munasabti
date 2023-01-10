@@ -22,6 +22,7 @@ function Details(props) {
   const navigate = useNavigate();
   const [vendor, setVendor] = React.useState({});
   const [isFav, setIsFav] = React.useState(false);
+  const [isverified, setVerified] = React.useState(true);
   const [details, setDetails] = React.useState({
     Category: "",
     SubCategory: "",
@@ -72,17 +73,21 @@ function Details(props) {
   return (
     <div>
       <div className="vendorInfo">
-        {/* <button
-          onClick={() => {
-            props.closeModal(true);
-          }}
-        >
-          Open
-        </button> */}
         <div className="vendorInfo__left">
           <div className="VendorInfo__left__Inner">
             <div>
-              <h3>{vendor.name}</h3>
+              <div className="RowVendor">
+                <h3>{vendor.name}</h3>{
+                  isverified ? (
+                    <button   
+                    onClick={() => {
+                      props.closeModal(true);
+                    }}>Claim Business</button>
+                  ) : (
+                    <h5>Verified</h5>
+                  )
+                }
+              </div>
               <p>{vendor.Location}</p>
             </div>
             <div className="IconsInnerVendorInfo">

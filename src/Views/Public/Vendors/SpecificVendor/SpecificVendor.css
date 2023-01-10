@@ -368,3 +368,24 @@
 .datePickerVendor {
     color: #0C3651;
 }
+
+.RowVendor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.RowVendor button {
+    background-color: #EEC0C0;
+    color: #0C3651;
+    border: none;
+    font-size: 0.8em;    
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-top: 7%;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: "montserrat", sans-serif;
+    text-transform: capitalize;
+}
