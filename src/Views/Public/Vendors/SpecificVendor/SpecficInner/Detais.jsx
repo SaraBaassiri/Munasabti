@@ -100,18 +100,21 @@ function Details() {
             <BsInstagram
               size={"25"}
               id="insta"
+              color={"#707070"}
               onMouseOver={({ target }) => (target.style.color = "#0C3651")}
               onMouseOut={({ target }) => (target.style.color = "#707070")}
             />
             <BsGlobe2
               size={"25"}
               id="web"
+              color={"#707070"}
               onMouseOver={({ target }) => (target.style.color = "#0C3651")}
               onMouseOut={({ target }) => (target.style.color = "#707070")}
             />
             <BsTelephone
               size={"25"}
               id="phone"
+              color={"#707070"}
               onMouseOver={({ target }) => (target.style.color = "#0C3651")}
               onMouseOut={({ target }) => (target.style.color = "#707070")}
             />
