@@ -43,7 +43,21 @@ export default function PublicNav() {
       {auth.currentUser ? (
         <div className="PublicNav__LoggedIn">
           <Link to="/auth/profile">
-            <CgProfile size={35} />
+            <div>
+              {auth.currentUser?.photoURL !== "" ? (
+                <img
+                  src={auth.currentUser?.photoURL}
+                  alt="logo"
+                  className="ProfilePhotoNavbar"
+                />
+              ) : (
+                <img
+                  src="/images/profile_default.jpg"
+                  alt="logo"
+                  className="ProfilePhotoNavbar"
+                />
+              )}
+            </div>
           </Link>
           {admin && (
             <Link to="/admin">
