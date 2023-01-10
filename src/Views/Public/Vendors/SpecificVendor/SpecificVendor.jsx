@@ -10,12 +10,15 @@ import SpecificPhotos from "./SpecficInner/SpecificPhotos";
 import SpecificVideos from "./SpecficInner/SpecificVideos";
 import SpecificReviews from "./SpecficInner/SpecificReviews";
 import SpecificMap from "./SpecficInner/SpecificMap";
+import { Modal } from "@mui/material";
+import Box from "@mui/material/Box";
 
 function SpecificVendor() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [display, setDisplay] = React.useState("About");
   const [vendor, setVendor] = React.useState({});
+  const [modalOpen, setModalOpen] = React.useState(false);
   const [details, setDetails] = React.useState({
     Category: "",
     SubCategory: "",
@@ -111,9 +114,20 @@ function SpecificVendor() {
         </div>
       </div>
 
+      <Modal
+        open={modalOpen}
+        onClose={() => {
+          setModalOpen(false);
+        }}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <h1>Hello</h1>
+      </Modal>
+
       <div>
         {display === "About" ? (
-          <Details />
+          <Details open={modalOpen} closeModal={setModalOpen} />
         ) : display === "Photos" ? (
           <SpecificPhotos />
         ) : display === "Videos" ? (

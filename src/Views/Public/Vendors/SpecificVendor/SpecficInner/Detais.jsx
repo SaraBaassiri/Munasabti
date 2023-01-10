@@ -17,7 +17,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-function Details() {
+function Details(props) {
   const { id } = useParams();
   const navigate = useNavigate();
   const [vendor, setVendor] = React.useState({});
@@ -72,6 +72,13 @@ function Details() {
   return (
     <div>
       <div className="vendorInfo">
+        {/* <button
+          onClick={() => {
+            props.closeModal(true);
+          }}
+        >
+          Open
+        </button> */}
         <div className="vendorInfo__left">
           <div className="VendorInfo__left__Inner">
             <div>
