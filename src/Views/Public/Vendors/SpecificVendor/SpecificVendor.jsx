@@ -122,9 +122,17 @@ function SpecificVendor() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <div >
-
-        </div>
+        <div
+          style={{
+            backgroundColor: "white",
+            width: "50%",
+            height: "50%",
+            margin: "auto",
+            marginTop: "10%",
+            borderRadius: "10px",
+            border: "2px solid #A1CCD8",
+          }}
+        ></div>
       </Modal>
 
       <div>

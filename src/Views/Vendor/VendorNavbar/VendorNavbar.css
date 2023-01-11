@@ -1,0 +1,67 @@
+.navbarVendor {
+    background: #fff;
+    grid-area: nav;
+    height: 60px;
+    align-items: center;
+    padding: 0 30px 0 30px;
+  }
+  
+  .nav_icon {
+    display: none;
+  }
+  
+  .nav_icon>i {
+    font-size: 26px;
+    color: #a5aaad;
+  }    
+  .navbarVendor__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+  }
+
+  .navbarVendor__inner p {
+    color: #0C3651;
+    margin-right: 20px;
+    font-size: 1rem;
+  }
+  
+  .navbarVendor__inner> div {
+    margin-left: 20px;
+  }
+  
+  .navbarVendor__inner> div>i {
+    color: #000;
+    font-size: 23px;
+    cursor: pointer;
+  }
+
+  .navbarVendor__inner> a{
+    color: #000;
+    font-size: 23px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .navbarVendor__inner> div>i:hover {
+    color: red;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  @media only screen and (max-width: 978px) {
+    .nav_icon {
+      display: inline;
+    }
+    .navbarVendor__left {
+      display: none;
+    }
+  }
+  
+  .ProfilePhotonavbarVendor {
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+  }

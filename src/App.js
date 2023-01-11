@@ -41,6 +41,7 @@ import WebsiteConfig from "./Views/Admin/WebsiteConfig/WebsiteConfig";
 //Inspirations
 import Inspirations from "./Views/Public/Inspirations/Inspirations";
 import EditImages from "./Views/Admin/EditImages/EditImages";
+import { VendorRoute } from "./utils/VendorRoute";
 
 export default function App() {
   const loading = useSelector((state) => state.loading.value);
@@ -121,7 +122,7 @@ export default function App() {
               </Route>
 
               {/* Vendor Routes */}
-              <Route path="/vendor" element={<AuthRoute />}>
+              <Route path="/vendor" element={<VendorRoute />}>
                 <Route index element={<Vendor children={<VendorDashboard />} />} />
               </Route>
 
