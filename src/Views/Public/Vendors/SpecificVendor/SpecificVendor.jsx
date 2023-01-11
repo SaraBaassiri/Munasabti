@@ -11,7 +11,6 @@ import SpecificVideos from "./SpecficInner/SpecificVideos";
 import SpecificReviews from "./SpecficInner/SpecificReviews";
 import SpecificMap from "./SpecficInner/SpecificMap";
 import { Modal } from "@mui/material";
-import Box from "@mui/material/Box";
 
 function SpecificVendor() {
   const { id } = useParams();

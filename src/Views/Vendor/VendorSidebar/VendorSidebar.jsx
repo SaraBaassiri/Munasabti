@@ -51,6 +51,22 @@ const VendorSidebar = ({
         <div className={!sidebarSmaller ? "SideNavVendorName" : "hidden"}>
           <p>{auth.currentUser.displayName}</p>
         </div>
+
+        <div
+          className="SideBarMenuVendor"
+          style={{
+            marginTop: sidebarSmaller ? "20%" : "0px",
+          }}
+        >
+          <div className="MenuItemSideNavVendor">
+            <Link to="/vendor/dashboard" className="SideItemVendor">
+              <i class="fa-solid fa-gauge-high"></i>
+              <p className={!sidebarSmaller ? "SideNavVendorName" : "hidden"}>
+                Dashboard
+              </p>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

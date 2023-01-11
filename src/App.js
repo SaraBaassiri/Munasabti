@@ -9,7 +9,9 @@ import { setLoggedIn, setData } from "./Redux/reducers/userSlice";
 
 //Routes
 import { AdminRoute } from "./utils/AdminRoute";
-import { AuthRoute } from "./utils/AuthRoute";
+// import { AuthRoute } from "./utils/AuthRoute";
+import { VendorRoute } from "./utils/VendorRoute";
+
 
 //Admin Pages
 import Admin from "./Views/Admin/Admin";
@@ -35,13 +37,12 @@ import InnerVendor from "./Views/Public/Vendors/InnerVendor/InnerVendor";
 import SpecificVendor from "./Views/Public/Vendors/SpecificVendor/SpecificVendor";
 import AllVendors from "./Views/Public/Vendors/AllVendors/AllVendors";
 import AdminMan from "./Views/Admin/AdminManagment/AdminMan";
-import { AnimatePresence } from "framer-motion";
+// import { AnimatePresence } from "framer-motion";
 import WebsiteConfig from "./Views/Admin/WebsiteConfig/WebsiteConfig";
 
 //Inspirations
 import Inspirations from "./Views/Public/Inspirations/Inspirations";
 import EditImages from "./Views/Admin/EditImages/EditImages";
-import { VendorRoute } from "./utils/VendorRoute";
 
 export default function App() {
   const loading = useSelector((state) => state.loading.value);
