@@ -47,7 +47,7 @@ export default function PublicNav() {
       </div>
       {auth.currentUser ? (
         <div className="PublicNav__LoggedIn">
-          {admin && (
+          {vendor && (
             <Link to="/vendor">
               <AiFillDashboard size={30} />
             </Link>

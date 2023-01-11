@@ -46,12 +46,6 @@ function Details(props) {
   };
 
   React.useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = () => {
-    console.log(details);
-
     db.collection("Users")
       .doc(id)
       .get()
@@ -68,7 +62,7 @@ function Details(props) {
       .catch((error) => {
         console.log("Error getting document:", error);
       });
-  };
+  }, [id, navigate]);
 
   return (
     <div>
@@ -77,16 +71,18 @@ function Details(props) {
           <div className="VendorInfo__left__Inner">
             <div>
               <div className="RowVendor">
-                <h3>{vendor.name}</h3>{
-                  isverified ? (
-                    <button   
+                <h3>{vendor.name}</h3>
+                {isverified ? (
+                  <button
                     onClick={() => {
                       props.closeModal(true);
-                    }}>Claim Business</button>
-                  ) : (
-                    <h5>Verified</h5>
-                  )
-                }
+                    }}
+                  >
+                    Claim Business
+                  </button>
+                ) : (
+                  <h5>Verified</h5>
+                )}
               </div>
               <p>{vendor.Location}</p>
             </div>
