@@ -44,7 +44,11 @@ const VendorSidebar = ({
           <img
             src="/images/profile_default.jpg"
             alt="logo"
-            className="ProfilePhotoSideNav"
+            className={
+              !sidebarSmaller
+                ? "ProfilePhotoSideNav"
+                : "ProfilePhotoSideNavSmaller"
+            }
           />
         )}
 
@@ -63,6 +67,24 @@ const VendorSidebar = ({
               <i class="fa-solid fa-gauge-high"></i>
               <p className={!sidebarSmaller ? "SideNavVendorName" : "hidden"}>
                 Dashboard
+              </p>
+            </Link>
+            <Link to="/vendor/dashboard" className="SideItemVendor">
+              <i class="fa-solid fa-gauge-high"></i>
+              <p className={!sidebarSmaller ? "SideNavVendorName" : "hidden"}>
+                Profile
+              </p>
+            </Link>
+            <Link to="/vendor/dashboard" className="SideItemVendor">
+              <i class="fa-solid fa-gauge-high"></i>
+              <p className={!sidebarSmaller ? "SideNavVendorName" : "hidden"}>
+                Details
+              </p>
+            </Link>
+            <Link to="/vendor/dashboard" className="SideItemVendor">
+              <i class="fa-solid fa-gauge-high"></i>
+              <p className={!sidebarSmaller ? "SideNavVendorName" : "hidden"}>
+                Media
               </p>
             </Link>
           </div>

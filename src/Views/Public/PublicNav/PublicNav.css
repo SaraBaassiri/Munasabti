@@ -32,7 +32,7 @@
     align-items: center;
 }
 .PublicNav__links a {
-    color: #0C3651;
+    /* color: #0C3651; */
     font-size: 0.9rem;
     font-weight: normal;
     margin-right: 40px;

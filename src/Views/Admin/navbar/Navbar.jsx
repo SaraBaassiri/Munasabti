@@ -45,7 +45,7 @@ const Navbar = ({ openSidebar }) => {
             });
           }}
         >
-          <i className="fa fa-power-off"></i>
+          <i className="fa fa-sign-out"></i>
         </div>
       </div>
     </div>

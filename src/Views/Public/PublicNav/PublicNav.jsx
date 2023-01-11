@@ -4,7 +4,6 @@ import { auth, db } from "../../../firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { RiAdminLine } from "react-icons/ri";
 import { AiFillDashboard } from "react-icons/ai";
-import { useSelector } from "react-redux";
 
 export default function PublicNav() {
   const navigate = useNavigate();
@@ -40,21 +39,39 @@ export default function PublicNav() {
         <img src="/images/Logo.jpg" alt="logo" />
       </div>
       <div className="PublicNav__links">
-        <Link to="/" className= {document.location.pathname !== "/" ? "inactive" : "active"} >
+        <Link
+          to="/"
+          className={document.location.pathname !== "/" ? "inactive" : "active"}
+        >
           Home
-          <span className={document.location.pathname !== "/" ? "" : "activeNav"}/>
         </Link>
-        <Link to="/Vendors" className= {document.location.pathname != "/Vendors" ? "inactive" : "active"} >
+        <Link
+          to="/Vendors"
+          className={
+            document.location.pathname !== "/Vendors" ? "inactive" : "active"
+          }
+        >
           Vendors
-          <span className={document.location.pathname !== "/Vendors" ? "" : "activeNav"}/>
         </Link>
-        <Link to="/PlanningTools" className= {document.location.pathname !== "/PlanningTools" ? "inactive" : "active"} >
-          Planning Tools 
-          <span className={document.location.pathname !== "/PlanningTools" ? "" : "activeNav"}/>
+        <Link
+          to="/PlanningTools"
+          className={
+            document.location.pathname !== "/PlanningTools"
+              ? "inactive"
+              : "active"
+          }
+        >
+          Planning Tools
         </Link>
-        <Link to="/Inspirations" className= {document.location.pathname !== "/Inspirations" ? "inactive" : "active"} >
+        <Link
+          to="/Inspirations"
+          className={
+            document.location.pathname !== "/Inspirations"
+              ? "inactive"
+              : "active"
+          }
+        >
           Inspirations
-          <span className={document.location.pathname !== "/Inspirations" ? "" : "activeNav"}/>
         </Link>
       </div>
       {auth.currentUser ? (
