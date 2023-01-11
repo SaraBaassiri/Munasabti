@@ -2,13 +2,14 @@ import React from "react";
 import "./PublicNav.css";
 import { auth, db } from "../../../firebase";
 import { Link, useNavigate } from "react-router-dom";
-import { CgProfile } from "react-icons/cg";
 import { RiAdminLine } from "react-icons/ri";
+import { AiFillDashboard } from "react-icons/ai";
 import { useSelector } from "react-redux";
 
 export default function PublicNav() {
   const navigate = useNavigate();
   const [admin, setAdmin] = React.useState(false);
+  const [vendor, setVendor] = React.useState(false);
 
   React.useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -18,6 +19,10 @@ export default function PublicNav() {
         .then((doc) => {
           if (doc.data().isAdmin) {
             setAdmin(true);
+          }
+
+          if (doc.data().isVendor) {
+            setVendor(true);
           }
         });
     });
@@ -42,6 +47,16 @@ export default function PublicNav() {
       </div>
       {auth.currentUser ? (
         <div className="PublicNav__LoggedIn">
+          {admin && (
+            <Link to="/vendor">
+              <AiFillDashboard size={30} />
+            </Link>
+          )}
+          {admin && (
+            <Link to="/admin">
+              <RiAdminLine size={30} />
+            </Link>
+          )}
           <Link to="/auth/profile">
             <div>
               {auth.currentUser?.photoURL !== "" ? (
@@ -59,11 +74,6 @@ export default function PublicNav() {
               )}
             </div>
           </Link>
-          {admin && (
-            <Link to="/admin">
-              <RiAdminLine size={35} />
-            </Link>
-          )}
         </div>
       ) : (
         <div className="PublicNav__Logins">
